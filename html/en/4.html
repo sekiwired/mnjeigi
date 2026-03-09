@@ -1,0 +1,59 @@
+<div class="contact-section">
+    <div class="contact-hero">
+        <div class="contact-eyebrow">Contact</div>
+        <div class="contact-title">Let’s talk about your project.</div>
+        <div class="contact-lede">Share context, goals, and constraints. I’ll get back quickly with next steps.</div>
+    </div>
+
+    <div class="contact-card">
+        <form id="form-contact">
+            <div class="contact-row">
+                <div class="contact-field">
+                    <label for="firstname">First name <span class="contact-req-hint">*</span></label>
+                    <input type="text" id="firstname" name="firstname" required />
+                </div>
+                <div class="contact-field">
+                    <label for="lastname">Last name <span class="contact-req-hint">*</span></label>
+                    <input type="text" id="lastname" name="lastname" required />
+                </div>
+            </div>
+            <div class="contact-field">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" />
+            </div>
+            <div class="contact-row">
+                <div class="contact-field">
+                    <label for="mail">Email <span class="contact-req-hint">*</span></label>
+                    <input type="email" id="mail" name="user_email" />
+                </div>
+                <div class="contact-field">
+                    <label for="phone">Phone <span class="contact-req-hint">*</span></label>
+                    <input type="tel" id="phone" name="phone" />
+                </div>
+            </div>
+            <div id="contact-either-error" class="contact-error" style="display:none;">Please provide at least an email address or a phone number.</div>
+            <div class="contact-req-note">* At least one of email or phone is required.</div>
+            <div class="contact-field">
+                <label for="topic-select">Topic</label>
+                <select name="topic" id="topic-select">
+                    <option value="">-- Please choose a topic --</option>
+                    <option value="website-build">Website Build</option>
+                    <option value="git-training">Git & SCM Training</option>
+                    <option value="cicd-training">CI/CD Pipeline Training</option>
+                    <option value="devops-audit">DevOps Audit</option>
+                    <option value="architecture">Architecture Consulting</option>
+                    <option value="interim-coo">Interim COO / Operational Consulting</option>
+                    <option value="consulting">Consulting (other)</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="contact-field">
+                <label for="msg">Message <span class="contact-req-hint">*</span></label>
+                <textarea id="msg" name="user_message" rows="5" required></textarea>
+            </div>
+        </form>
+        <div class="contact-actions">
+            <button id="btn" class="contact-btn">Send message</button>
+        </div>
+    </div>
+</div>

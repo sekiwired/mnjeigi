@@ -1,0 +1,54 @@
+<div class="contact-section">
+    <div class="contact-hero">
+        <div class="contact-eyebrow">Contact</div>
+        <div class="contact-title">Parlons de votre projet.</div>
+        <div class="contact-lede">Partagez le contexte, les objectifs et les contraintes. Je reviens vite avec la suite.</div>
+    </div>
+
+    <div class="contact-card">
+        <form id="form-contact">
+            <div class="contact-row">
+                <div class="contact-field">
+                    <label for="firstname">Prénom <span class="contact-req-hint">*</span></label>
+                    <input type="text" id="firstname" name="firstname" required />
+                </div>
+                <div class="contact-field">
+                    <label for="lastname">Nom <span class="contact-req-hint">*</span></label>
+                    <input type="text" id="lastname" name="lastname" required />
+                </div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-field">
+                    <label for="mail">Email <span class="contact-req-hint">*</span></label>
+                    <input type="email" id="mail" name="user_email" required />
+                </div>
+                <div class="contact-field">
+                    <label for="phone">Téléphone (optionnel)</label>
+                    <input type="tel" id="phone" name="phone" />
+                </div>
+            </div>
+            <div class="contact-field">
+                <label for="topic-select">Sujet</label>
+                <select name="topic" id="topic-select">
+                    <option value="">-- Veuillez choisir un sujet --</option>
+                    <option value="website-build">Création de site web</option>
+                    <option value="git-training">Formation Git & SCM</option>
+                    <option value="cicd-training">Formation CI/CD</option>
+                    <option value="devops-audit">Audit DevOps</option>
+                    <option value="architecture">Conseil en architecture</option>
+                    <option value="interim-coo">COO Intérimaire / Conseil opérationnel</option>
+                    <option value="consulting">Conseil (autre)</option>
+                    <option value="other">Autre</option>
+                </select>
+            </div>
+            <div class="contact-field">
+                <label for="msg">Message <span class="contact-req-hint">*</span></label>
+                <textarea id="msg" name="user_message" rows="5" required></textarea>
+            </div>
+        </form>
+        <div class="contact-actions">
+            <button id="btn" class="contact-btn">Envoyer</button>
+            <div class="contact-note">Je vous répondrai avec une proposition de suite et un timing.</div>
+        </div>
+    </div>
+</div>
