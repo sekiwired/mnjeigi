@@ -92,6 +92,7 @@ detectLang = () => {
 pages = ["","what","why","how","contact"]
 loadPage = function(page){
     if (![0,1,2,3,4].includes(Number(page))) return;
+    if (window._trackPage) _trackPage(page, lang);
     $.ajax("html/"+lang+"/"+page+".html").done(function (reply) {
        $('#dynamic_content').html(reply);
        url_name_for_browser = pages[Number(page)];
