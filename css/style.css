@@ -1476,4 +1476,21 @@ body{width:100%;}
     .typewrite-animation{flex-direction:column;}
     .menu_pop .main-nav a {font-size:22px;}
     .flags_menu {height:22px;}
+    .site-footer{padding:16px 15px;}
 }
+.site-footer {
+    padding: 24px 50px;
+    text-align: right;
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    margin-top: 10px;
+}
+.site-footer a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.site-footer a:hover { color: #d0d0d0; }
+.site-footer-sep { margin: 0 10px; color: #555; }
