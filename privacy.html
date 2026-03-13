@@ -91,7 +91,27 @@
                     <img class="linkedin_icon" src="images/icons/in.png">
                 </a>
             </div>
+            <div class="menu-burger">
+                <a id="burger-toggle" class="burger-toggle">
+                    <span class="burger-toggle-bar burger-toggle-bar--top"></span>
+                    <span class="burger-toggle-bar burger-toggle-bar--bottom"></span>
+                </a>
+            </div>
         </div>
+    </div>
+
+    <div id="pop" class="menu_pop">
+        <nav id="menu_pop" class="main-nav">
+            <ul>
+                <li><a href="/index.html">#</a></li>
+                <li><a href="/index.html" data-en="What?" data-fr="Quoi ?">What?</a></li>
+                <li><a href="/index.html" data-en="Why?" data-fr="Pourquoi ?">Why?</a></li>
+                <li><a href="/index.html" data-en="How?" data-fr="Comment ?">How?</a></li>
+                <li><a href="/index.html" data-en="Contact Me" data-fr="Me Contacter">Contact Me</a></li>
+                <li><a href="#" id="lang-en"><img class="flags_menu" src="images/icons/uk.png"></a></li>
+                <li><a href="#" id="lang-fr"><img class="flags_menu" src="images/icons/fr.png"></a></li>
+            </ul>
+        </nav>
     </div>
 
     <!-- EN -->
@@ -318,6 +338,28 @@
         document.getElementById('footer-year').textContent = new Date().getFullYear();
         document.getElementById('flag-en').addEventListener('click', function() { setLang('en'); });
         document.getElementById('flag-fr').addEventListener('click', function() { setLang('fr'); });
+
+        // Burger menu toggle
+        document.getElementById('burger-toggle').addEventListener('click', function(e) {
+            document.body.classList.toggle('nav-open');
+            document.getElementById('pop').classList.toggle('open');
+            e.preventDefault();
+        });
+
+        // Language switchers in mobile menu
+        document.getElementById('lang-en').addEventListener('click', function(e) {
+            setLang('en');
+            document.body.classList.remove('nav-open');
+            document.getElementById('pop').classList.remove('open');
+            e.preventDefault();
+        });
+        document.getElementById('lang-fr').addEventListener('click', function(e) {
+            setLang('fr');
+            document.body.classList.remove('nav-open');
+            document.getElementById('pop').classList.remove('open');
+            e.preventDefault();
+        });
+
         setLang(lang);
     })();
     </script>
