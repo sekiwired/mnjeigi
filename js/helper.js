@@ -59,17 +59,19 @@ let rotateInit = function () {
 
 attach_next_page_link = function() {
     $(".next_page").off().on('click','*', function() {
-        console.log("weird shit on mobile")
         let id_ = $(this).attr('id');
-        loadPage(id_);
+        let btn = $(this);
+        let originalText = btn.text();
+        btn.text('');
+        btn.append(createDots());
+        btn.css('pointer-events', 'none');
         $(".menu_inline").find('.active').removeClass('active');
         $(this).addClass('active');
-        if (id_=="1") {
-            setTimeout(function(){rotateInit();},100);
-        } else {
-            isRotating = false;
-        }
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        if (id_ != "1") { isRotating = false; }
+        loadPage(id_).then(function() {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            if (id_ == "1") { isRotating = false; rotateInit(); }
+        });
     });
 }
 
@@ -91,9 +93,9 @@ detectLang = () => {
 }
 pages = ["","what","why","how","contact"]
 loadPage = function(page){
-    if (![0,1,2,3,4].includes(Number(page))) return;
+    if (![0,1,2,3,4].includes(Number(page))) return $.Deferred().resolve().promise();
     if (window._trackPage) _trackPage(page, lang);
-    $.ajax("html/"+lang+"/"+page+".html").done(function (reply) {
+    let contentReady = $.ajax("html/"+lang+"/"+page+".html").done(function (reply) {
        $('#dynamic_content').html(reply);
        url_name_for_browser = pages[Number(page)];
        window.history.pushState(page,null, '#'+url_name_for_browser);
@@ -116,22 +118,21 @@ loadPage = function(page){
         } else {
             $("#menu_inline").removeClass('fr');
         }
-        
+
     }).then(() => {
         makeActive(page);
         attach_next_page_link();
     });
-    
+    return contentReady;
 }
 
 loadPageWithActiveClass = (page) => {
-    loadPage(page);
-    $(".menu_inline").find('.active').removeClass('active');
-    sel = document.querySelector(".menu_inline").children;
-    sel[Number(page)].classList.add("active"); 
-    if(Number(page)==1) {
-        setTimeout(function(){rotateInit();},300);
-    }
+    loadPage(page).then(function() {
+        $(".menu_inline").find('.active').removeClass('active');
+        let sel = document.querySelector(".menu_inline").children;
+        if (sel[Number(page)]) sel[Number(page)].classList.add("active");
+        if (Number(page) == 1) { isRotating = false; rotateInit(); }
+    });
 }
 
 let timeStart, timeEnd, timeDiff;
@@ -239,15 +240,14 @@ $(document).ready( function() {
     }
     $(".menu_inline").on('click','*', function() {
         let id_ = $(this).attr('id');
-        loadPage(id_);
-        $(".menu_inline").find('.active').removeClass('active');
-        $(this).addClass('active');
-        if (id_=="1") {
-            setTimeout(function(){rotateInit();},300);
-        } else {
-            isRotating = false;
-        }
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        let el = $(this);
+        if (id_ != "1") { isRotating = false; }
+        loadPage(id_).then(function() {
+            $(".menu_inline").find('.active').removeClass('active');
+            el.addClass('active');
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            if (id_ == "1") { isRotating = false; rotateInit(); }
+        });
     });
     $(".flags").on('click','*', function(e) {
         let id_ = $(this).attr('id');
@@ -259,48 +259,44 @@ $(document).ready( function() {
     $(".menu_pop").off().on('click','li', function(e){
         e.preventDefault();
         let id_ = $(this).attr('id');
-        console.log(id_,window.history.state);
         if(id_ != window.history.state) {
             if(id_.includes("linkedin")) {
-                console.log("fuck")
                 window.open('https://www.Linkedin.com/in/juliengrimal','_blank');
             }
             else if (!id_.includes("lang")){
-                loadPage(id_);
-                $('.menu_pop').removeClass('open');
-                $('body').removeClass('nav-open');
-                $(".menu_inline").find('.active').removeClass('active');
-                $(".menu_inline").find("#"+$(this).attr('id')).addClass('active');
-                if (id_=="1") {
-                    setTimeout(function(){rotateInit();},300);
-                } else {
-                    isRotating = false;
-                }
+                let elId = $(this).attr('id');
+                if (id_ != "1") { isRotating = false; }
+                loadPage(id_).then(function() {
+                    $('.menu_pop').removeClass('open');
+                    $('body').removeClass('nav-open');
+                    $(".menu_inline").find('.active').removeClass('active');
+                    $(".menu_inline").find("#"+elId).addClass('active');
+                    document.body.scrollTop = document.documentElement.scrollTop = 0;
+                    if (id_ == "1") { isRotating = false; rotateInit(); }
+                });
             }
             else {
                 isRotating = false;
                 let newLang = id_.split("-")[1];
                 changeLang(newLang);
-                console.log("state is ", window.history.state);
                 loadPageWithActiveClass(window.history.state);
-                console.log("change lang", id_.split("-")[1]);
                 $('.menu_pop').removeClass('open');
                 $('body').removeClass('nav-open');
             }
         }
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
     $(".menu_pop").on('click',function(e) {
         $('.menu_pop').removeClass('open');
         $('body').removeClass('nav-open');
     });
     $(".title").on('click',function() {
-        $(".menu_inline").find('.active').removeClass('active');
-        loadPage("0");
-        $('.menu_pop').removeClass('open');
-        $('body').removeClass('nav-open');
         isRotating = false;
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        loadPage("0").then(function() {
+            $(".menu_inline").find('.active').removeClass('active');
+            $('.menu_pop').removeClass('open');
+            $('body').removeClass('nav-open');
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        });
     });
     $('.burger-toggle').on('click', function(e){
       $('body').toggleClass('nav-open');
@@ -309,9 +305,11 @@ $(document).ready( function() {
     });
     $(document).on('click', '.offer-card[data-topic]', function() {
         pendingTopic = $(this).data('topic');
-        loadPage("4");
-        $(".menu_inline").find('.active').removeClass('active');
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        isRotating = false;
+        loadPage("4").then(function() {
+            $(".menu_inline").find('.active').removeClass('active');
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+        });
     });
     $(".form-box").on('mouseover', function(e){
         console.log("event is",e);
