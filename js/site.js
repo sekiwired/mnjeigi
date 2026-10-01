@@ -140,7 +140,7 @@
                 for (var c = 0; c < COLS; c++) {
                     mesh[r].push({
                         x: c + (Math.random() - 0.5) * 0.62,  // home place, off the regular grid: no two cells alike
-                        z: r + (Math.random() - 0.5) * 0.62,
+                        z: r === 0 ? Math.random() * 0.3 : r + (Math.random() - 0.5) * 0.62,   // nothing sits in front of the front row
                         hold: r === 0 ? 0.3 : 1,              // the front dots move less, so they stay close to the front edge
                         phase: Math.random() * Math.PI * 2,
                         pace: 0.5 + Math.random() * 0.7
@@ -172,10 +172,11 @@
             var away = z / (ROWS - 1);
             var near = 1 / (1 + away * (1 / FAR - 1));                      // 1 for the nearest row, FAR for the farthest
             var wide = 1 / (1 + away * (1 / FAR_WIDE - 1));
-            var horizon = 4, front = h - 10;
+            var swing = h * 0.08;                                           // how far the wave lifts a near dot, in px
+            var back = 4 + swing * FAR, front = h - 14 - swing * 0.3;              // the farthest row sits at the top of the zone, the nearest at its bottom
             return [
                 w / 2 + (x / (COLS - 1) - 0.5) * (w / FAR_WIDE) * wide,         // the farthest row spans the band; nearer rows run past its sides
-                horizon + (front - horizon) * near * (0.86 + lift * 0.11),   // near rows low in the band, far rows rise to the horizon
+                back + (front - back) * (near - FAR) / (1 - FAR) + lift * swing * near,
                 near,
                 dot.shown
             ];
