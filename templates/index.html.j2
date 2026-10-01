@@ -1,0 +1,415 @@
+{% extends "base.html.j2" %}
+{% from "_macros.html.j2" import arrow, down, plus, eyebrow, section_text with context %}
+{% block main %}
+
+<section class="hero wrap">
+  <p class="hero__eyebrow eyebrow">{% for e in c.hero.eyebrow %}<span>{{ e }}</span>{% endfor %}</p>
+  <h1 class="hero__title">
+    {% for line in c.hero.title_lines %}
+    <span class="line"><span class="line__in">{{ line }}{% if loop.last %} <em class="land"><span class="land__in">{{ c.hero.title_accent }}</span></em>{% endif %}</span></span>
+    {% endfor %}
+  </h1>
+  <div class="hero__ground" aria-hidden="true"></div>
+  <div class="hero__base">
+    <p class="hero__sub">{{ c.hero.sub }}</p>
+    <div class="hero__act">
+      <div class="hero__btns">
+        <a class="btn btn--blue" href="#contact">{{ c.hero.cta }}{{ arrow() }}</a>
+        <a class="link" href="#track-record">{{ c.hero.cta_secondary }}{{ down() }}</a>
+      </div>
+      <p class="hero__cred">{{ c.hero.credential }}</p>
+    </div>
+  </div>
+  <dl class="stats">
+    {% for s in c.stats %}
+    <div class="stat" data-reveal style="--i:{{ loop.index0 }}">
+      <dt>{{ s.value }}{% if s.get('unit') %}<small>{{ s.unit }}</small>{% endif %}</dt>
+      <dd>{{ s.label }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+
+<section class="situations" id="situations" data-track>
+  <div class="wrap split">
+    <header class="split__aside">
+      {{ eyebrow(c.situations.eyebrow) }}
+      <h2 class="h2">{{ c.situations.title }}</h2>
+      {% for p in c.situations.intro %}
+      <p class="{{ 'lede' if loop.first else 'lede lede--strong' }}">{{ p }}</p>
+      {% endfor %}
+    </header>
+    <div class="split__main">
+      <ol class="sit">
+        {% for it in c.situations.rows %}
+        <li class="sit__row" data-reveal>
+          <span class="sit__num">0{{ loop.index }}</span>
+          <div>
+            <h3 class="sit__title">{{ it.title }}</h3>
+            <div class="sit__proof">
+              {% if it.get('quote') %}
+              <p><span class="sit__source">{{ it.source }}</span> {{ quote(it.quote.mission, it.quote.has) }}</p>
+              {% else %}
+              <p><span class="sit__source">{{ it.source }}</span> <a class="link link--inline" href="{{ it.link.href }}">{{ it.link.label }}{{ arrow() }}</a></p>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ol>
+      <div class="inline-cta" data-reveal>
+        <p>{{ c.situations.cta_text }}</p>
+        <a class="btn btn--blue" href="#contact">{{ c.situations.cta }}{{ arrow() }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" data-track>
+  <div class="wrap">
+    <header class="head">
+      <div>
+        {{ eyebrow(c.services.eyebrow) }}
+        <h2 class="h2">{{ c.services.title }}</h2>
+      </div>
+      <p class="lede">{{ c.services.intro }}</p>
+    </header>
+
+    {% set lead = c.services.lead %}
+    <article class="lead offer-card" data-topic="{{ lead.topic }}" data-reveal>
+      <div class="lead__main">
+        <p class="tag"><span>01</span>{{ lead.tag }}</p>
+        <h3 class="lead__title">{{ lead.title }}</h3>
+        <p class="lead__tagline">{{ lead.tagline }}</p>
+        <a class="btn btn--paper" href="#contact" data-topic="{{ lead.topic }}">{{ c.services.discuss }}{{ arrow() }}</a>
+      </div>
+      <div class="lead__detail">
+        <ul class="ticks">
+          {% for p in lead.points %}<li>{{ p }}</li>{% endfor %}
+        </ul>
+        <p class="lead__format">{{ lead.format }}</p>
+        <div class="lead__proof">
+          <p class="lead__label">{{ lead.proof_label }}</p>
+          {% for proof in lead.proofs %}
+          <p class="lead__source">{{ proof.source }}</p>
+          <ul>
+            {% for q in proof.quotes %}<li>{{ quote(q.mission, q.has) }}</li>{% endfor %}
+          </ul>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+
+    <div class="ai" id="ai">
+      <header class="head head--sub">
+        <div>
+          {{ eyebrow(c.services.ai.eyebrow) }}
+          <h3 class="h3">{{ c.services.ai.title }}</h3>
+        </div>
+        <p class="lede">{{ c.services.ai.intro }}</p>
+      </header>
+      <div class="ai__grid">
+        {% for o in c.services.ai.offers %}
+        <article class="card offer-card" data-topic="{{ o.topic }}" data-reveal style="--i:{{ loop.index0 }}">
+          <p class="tag"><span>0{{ loop.index + 1 }}</span>{{ o.tag }}</p>
+          <h4 class="card__title">{{ o.title }}</h4>
+          <p class="card__q">{{ o.question }}</p>
+          <ul class="dashes">
+            {% for p in o.points %}
+            {% set head, rest = p.split(':', 1) %}
+            <li><strong>{{ head.strip() }}</strong>{{ rest.strip() }}</li>
+            {% endfor %}
+          </ul>
+          <p class="card__out"><span>{{ c.services.output_label }}</span>{{ o.output }}</p>
+          <a class="link" href="#contact" data-topic="{{ o.topic }}">{{ c.services.discuss }}{{ arrow() }}</a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="cat">
+      <header class="head head--sub">
+        <div>
+          {{ eyebrow(c.services.catalogue.eyebrow) }}
+          <h3 class="h3">{{ c.services.catalogue.title }}</h3>
+        </div>
+        <p class="lede">{{ c.services.catalogue.intro }}</p>
+      </header>
+      <div class="acc">
+        {% for o in catalogue %}
+        <details class="acc__item offer-card" data-topic="{{ o.topic }}">
+          <summary>
+            <span class="acc__title">{{ o.title }}</span>
+            <span class="acc__tagline">{{ o.tagline }}</span>
+            {{ plus() }}
+          </summary>
+          <div class="acc__body">
+            <ul class="dashes dashes--cols">
+              {% for p in o.points %}<li>{{ p }}</li>{% endfor %}
+            </ul>
+            <div class="acc__foot">
+              <p class="acc__format">{{ o.format }}</p>
+              <a class="link" href="#contact" data-topic="{{ o.topic }}">{{ c.services.catalogue.cta }}{{ arrow() }}</a>
+            </div>
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="track-record" data-track data-dark>
+  <div class="wrap">
+    <header class="head head--proof">
+      <div>
+        {{ eyebrow(c.proof.eyebrow) }}
+        <h2 class="h2 h2--xl">{% for l in c.proof.title_lines %}<span>{{ l | replace('{logo_count}', logos | length) }}</span> {% endfor %}</h2>
+      </div>
+      <p class="lede">{{ c.proof.lede }}</p>
+    </header>
+
+    <div class="wall" data-reveal>
+      <p class="wall__title">{{ c.proof.wall_title }}</p>
+      <ul class="wall__grid">
+        {% for l in logos %}
+        <li style="--n:{{ loop.index0 }}"><img src="{{ root }}images/{{ l.file }}" alt="{{ l.name }}" loading="lazy" class="logo logo--{{ l.id }}"></li>
+        {% endfor %}
+      </ul>
+      <p class="wall__caption">{{ c.proof.wall_caption }}</p>
+    </div>
+
+    {{ eyebrow(c.proof.cases_eyebrow) }}
+    <div class="cases">
+      {% for case in c.proof.cases %}
+      {% set m = by_key[case.mission] %}
+      <article class="case" data-reveal>
+        <div class="case__id">
+          <p class="tag"><span>0{{ loop.index }}</span>{{ case.kicker }}</p>
+          {% for l in m.logos %}<img src="{{ root }}images/{{ l.file }}" alt="{{ l.name }}" loading="lazy" class="case__logo logo--{{ l.id }}">{% endfor %}
+          <p class="case__role">{{ m.role }}</p>
+          <p class="case__period">{{ m.period }}</p>
+        </div>
+        <div class="case__body">
+          <p class="case__context">{{ case.context }}</p>
+          <ul class="case__results">
+            {% for q in case.quotes %}<li>{{ quote(case.mission, q.has, q.mark) }}</li>{% endfor %}
+          </ul>
+        </div>
+        <dl class="case__figs">
+          {% for f in case.figures %}
+          <div><dt>{{ f.value }}{% if f.get('unit') %}<small>{{ f.unit }}</small>{% endif %}</dt><dd>{{ f.label }}</dd></div>
+          {% endfor %}
+        </dl>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="marquee" aria-label="{{ c.proof.sectors_label }}">
+    <p class="marquee__label wrap eyebrow">{{ c.proof.sectors_label }}</p>
+    <div class="marquee__track">
+      {% for copy in range(2) %}
+      <ul {% if copy %}aria-hidden="true"{% endif %}>
+        {% for s in inventory.sectors %}<li>{{ s }}</li>{% endfor %}
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="head head--sub head--record">
+      <div>
+        {{ eyebrow(c.proof.record.eyebrow) }}
+        <h3 class="h3">{{ c.proof.record.title }}</h3>
+      </div>
+      <p class="lede">{{ c.proof.record.intro }}</p>
+    </header>
+    <div class="rec">
+      {% for m in record %}
+      <details class="rec__item">
+        <summary>
+          <span class="rec__period">{{ m.period }}</span>
+          <span class="rec__name">{{ m.name }}</span>
+          <span class="rec__role">{{ m.role }}</span>
+          <span class="rec__logos">{% for l in m.logos %}<img src="{{ root }}images/{{ l.file }}" alt="" loading="lazy" class="logo--{{ l.id }}">{% endfor %}</span>
+          {{ plus() }}
+        </summary>
+        <div class="rec__body">
+          <div>
+            <h4>{{ c.proof.record.labels.context }}</h4>{{ section_text(m.context) }}
+            <h4>{{ c.proof.record.labels.challenges }}</h4>{{ section_text(m.challenges) }}
+          </div>
+          <div class="rec__results"><h4>{{ c.proof.record.labels.results }}</h4>{{ section_text(m.results) }}</div>
+          {% if m.stack %}
+          <p class="rec__stack"><span>{{ c.proof.record.labels.stack }}</span>{% for s in m.stack %}<i>{{ s }}</i>{% endfor %}</p>
+          {% endif %}
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+
+    <div class="band" data-reveal>
+      <p class="band__title">{{ c.proof.cta_title }}</p>
+      <a class="btn btn--paper" href="#contact">{{ c.proof.cta }}{{ arrow() }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach" data-track>
+  <div class="wrap">
+    <header class="head">
+      <div>
+        {{ eyebrow(c.approach.eyebrow) }}
+        <h2 class="h2 h2--long">{{ c.approach.title }}</h2>
+      </div>
+      <p class="lede">{{ c.approach.lede }}</p>
+    </header>
+
+    <h3 class="eyebrow">{{ c.approach.steps_title }}</h3>
+    <ol class="steps">
+      {% for s in c.approach.steps %}
+      <li class="step" data-reveal style="--i:{{ loop.index0 % 3 }}">
+        <span class="step__num">{{ s.num }}</span>
+        <h4 class="step__title">{{ s.title }}</h4>
+        <p>{{ s.desc }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+
+    <h3 class="eyebrow">{{ c.approach.includes_title }}</h3>
+    <ul class="incl">
+      {% for d in c.approach.includes %}
+      <li data-reveal style="--i:{{ loop.index0 }}"><strong>{{ d.name }}</strong><span>{{ d.desc }}</span></li>
+      {% endfor %}
+    </ul>
+
+    {% set q1, q2 = c.approach.quote.split('. ', 1) %}
+    <blockquote class="pull" data-reveal><p>{{ q1 }}. <span>{{ q2 }}</span></p></blockquote>
+
+    <div class="inline-cta inline-cta--wide" data-reveal>
+      <p>{{ c.approach.cta_text }}</p>
+      <a class="btn btn--blue" href="#contact">{{ c.approach.cta }}{{ arrow() }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about" data-track>
+  <div class="wrap">
+    <div class="about__top">
+      <header>
+        {{ eyebrow(c.about.eyebrow) }}
+        <h2 class="h2">{{ c.about.title }}</h2>
+      </header>
+      <div>
+        <p class="about__bio">{{ c.about.bio | safe }}</p>
+        <dl class="facts">
+          {% for f in c.about.facts %}
+          <div><dt>{{ f.label }}</dt>{% for l in f.lines %}<dd>{{ l }}</dd>{% endfor %}</div>
+          {% endfor %}
+          <div class="facts__wide"><dt>{{ c.about.roles_label }}</dt><dd>{{ c.about.roles | join(', ') }}</dd></div>
+        </dl>
+        <div class="about__links">
+          <a class="btn btn--ink" href="{{ root }}{{ c.about.cv.href }}" download>{{ c.about.cv.label }}{{ down() }}</a>
+          <a class="link" href="{{ c.about.linkedin.href }}" target="_blank" rel="noopener">{{ c.about.linkedin.label }}{{ arrow() }}</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="eyebrow">{{ c.about.principles_title }}</h3>
+    <ul class="principles">
+      {% for p in c.about.principles %}
+      <li data-reveal style="--i:{{ loop.index0 }}"><span class="principles__num">0{{ loop.index }}</span><h4>{{ p.title }}</h4><p>{{ p.text | safe }}</p></li>
+      {% endfor %}
+    </ul>
+
+    <div class="inv">
+      <div class="inv__ref">
+        <h3 class="eyebrow">{{ c.about.reference.title }}</h3>
+        <ul>
+          {% for r in c.about.reference.rows %}
+          <li><strong>{{ r.skill }}</strong><span>{{ r.proof }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="inv__all">
+        <h3 class="eyebrow">{{ c.about.inventory_title }}</h3>
+        <div class="acc acc--tight">
+          <details class="acc__item">
+            <summary><span class="acc__title">{{ c.about.capabilities_title }}</span><span class="acc__count">{{ inventory.capabilities | length }}</span>{{ plus() }}</summary>
+            <div class="acc__body caps">
+              {% for cap in inventory.capabilities %}
+              <div><h4>{{ cap.title }}</h4><ul class="dashes">{% for p in cap.points %}<li>{{ p }}</li>{% endfor %}</ul></div>
+              {% endfor %}
+            </div>
+          </details>
+          {% for g in inventory.pill_groups %}
+          <details class="acc__item">
+            <summary><span class="acc__title">{{ g.title }}</span><span class="acc__count">{{ g['items'] | length }}</span>{{ plus() }}</summary>
+            <div class="acc__body"><ul class="pills">{% for p in g['items'] %}<li>{{ p }}</li>{% endfor %}</ul></div>
+          </details>
+          {% endfor %}
+          <details class="acc__item">
+            <summary><span class="acc__title">{{ c.proof.sectors_label }}</span><span class="acc__count">{{ inventory.sectors | length }}</span>{{ plus() }}</summary>
+            <div class="acc__body"><ul class="pills">{% for s in inventory.sectors %}<li>{{ s }}</li>{% endfor %}</ul></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" data-track data-dark>
+  <div class="wrap contact__in">
+    <header>
+      {{ eyebrow(c.contact.eyebrow) }}
+      <h2 class="h2 h2--xl">{% for l in c.contact.title_lines %}<span>{{ l }}</span> {% endfor %}</h2>
+      <p class="lede">{{ c.contact.lede }}</p>
+      <div class="contact__alt">
+        <p class="eyebrow">{{ c.contact.alt_title }}</p>
+        <a class="link" href="{{ c.about.linkedin.href }}" target="_blank" rel="noopener">{{ c.about.linkedin.label }}{{ arrow() }}</a>
+        <a class="link" href="{{ root }}{{ c.about.cv.href }}" download>{{ c.about.cv.label }}{{ down() }}</a>
+      </div>
+    </header>
+
+    <form class="form" id="contact-form" novalidate
+          data-lang="{{ c.lang }}"
+          data-sending="{{ c.contact.sending }}" data-success="{{ c.contact.success }}"
+          data-failure="{{ c.contact.failure }}" data-network="{{ c.contact.network }}"
+          data-preview="{{ c.contact.preview }}" data-either="{{ c.contact.either_error }}"
+          data-required="{{ c.contact.required_error }}" data-email="{{ c.contact.email_error }}">
+      <div class="form__row">
+        <label class="field"><span>{{ c.contact.labels.firstname }}</span><input type="text" name="firstname" autocomplete="given-name" maxlength="90" required></label>
+        <label class="field"><span>{{ c.contact.labels.lastname }}</span><input type="text" name="lastname" autocomplete="family-name" maxlength="90" required></label>
+      </div>
+      <label class="field"><span>{{ c.contact.labels.company }} <em>{{ c.contact.optional }}</em></span><input type="text" name="company" autocomplete="organization" maxlength="200"></label>
+      <div class="form__row">
+        <label class="field"><span>{{ c.contact.labels.email }}</span><input type="email" name="email" autocomplete="email" maxlength="254"></label>
+        <label class="field"><span>{{ c.contact.labels.phone }}</span><input type="tel" name="phone" autocomplete="tel" maxlength="50"></label>
+      </div>
+      <p class="form__note">{{ c.contact.either_note }}</p>
+      <label class="field"><span>{{ c.contact.labels.topic }} <em>{{ c.contact.optional }}</em></span>
+        <select name="topic">
+          <option value="">{{ c.contact.topic_placeholder }}</option>
+          <optgroup label="{{ c.contact.topics_new_label }}">
+            <option value="{{ c.services.lead.topic }}">{{ c.services.lead.title }}</option>
+            {% for o in c.services.ai.offers %}<option value="{{ o.topic }}">{{ o.title }}</option>{% endfor %}
+          </optgroup>
+          <optgroup label="{{ c.contact.topics_catalogue_label }}">
+            {% for o in catalogue %}<option value="{{ o.topic }}">{{ o.title }}</option>{% endfor %}
+          </optgroup>
+          {% for t in c.contact.topics_extra %}<option value="{{ t.value }}">{{ t.label }}</option>{% endfor %}
+        </select>
+      </label>
+      <label class="field"><span>{{ c.contact.labels.message }}</span><textarea name="message" rows="5" maxlength="5000" required></textarea></label>
+      <p class="form__status" role="status" aria-live="polite"></p>
+      <div class="form__end">
+        <button class="btn btn--blue" type="submit">{{ c.contact.send }}{{ arrow() }}</button>
+        <p class="form__privacy">{{ c.contact.privacy_note }} <a href="{{ root }}{{ c.path }}privacy.html">{{ c.contact.privacy_link }}</a></p>
+      </div>
+      <noscript><p class="form__note">{{ c.contact.nojs }}</p></noscript>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

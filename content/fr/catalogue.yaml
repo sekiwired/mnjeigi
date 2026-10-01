@@ -1,0 +1,54 @@
+- topic: devops-audit
+  title: Audit des Opérations IT
+  tagline: Un état des lieux honnête et un chemin clair vers là où vous devez aller.
+  points:
+  - 'Analyse de l''état actuel : outils, processus et chaîne de livraison'
+  - Identification des écarts par rapport aux pratiques du marché
+  - Plan d'action priorisé avec quick wins et roadmap long terme
+  - 'Livrable : synthèse exécutive + rapport technique détaillé'
+  format: 1 – 2 semaines d'audit + 1 semaine de rapport · Kickoff on-site + delivery remote
+- topic: architecture
+  title: Conseil en architecture
+  tagline: Des exigences à un système qui scale, évolue et se documente.
+  points:
+  - Conception ou revue d'architecture
+  - Planification scalabilité, résilience et coûts
+  - Décision records et documentation TOGAF
+  - Support RFP/RFQ pour la sélection de fournisseurs
+  format: Mission cadrée · Remote ou on-site
+- topic: interim-coo
+  title: Opérations Tech & Management de transition
+  tagline: Intégrer un expert opérationnel sénior pour stabiliser, restructurer et transmettre.
+  points:
+  - Prendre le lead opérationnel lors d'une crise, d'une transition ou d'un manque d'équipe
+  - 'Reconstruire les processus : recrutement, delivery, backlog, gestion fournisseurs'
+  - Réduire les coûts opérationnels et débloquer les projets en attente
+  - Passation structurée — pour une autonomie garantie
+  format: Contrat mensuel · Minimum 6 mois · Hybride
+- topic: git-training
+  title: Formation Git
+  tagline: La formation que j'ai conçue et dispensée pour le Groupe Thales — disponible pour votre équipe.
+  points:
+  - Concepts Git, stratégies de branching et workflows (Gitflow, trunk-based)
+  - Exercices pratiques de la configuration aux opérations avancées (rebase, cherry-pick, submodules)
+  - Modèles de collaboration, revue de code et gouvernance
+  - 'Intégration outils : Bitbucket, GitHub, pipelines CI/CD'
+  format: 3 jours · Groupe ou individuel · Remote ou on-site
+- topic: cicd-training
+  title: Atelier CI/CD
+  tagline: Passez d'une mise en production anxiogène à une livraison continue en toute sérénité.
+  points:
+  - Comprendre les principes CI/CD et ce qu'ils changent au quotidien
+  - Cartographier votre processus de livraison actuel et identifier les blocages
+  - Concevoir un plan de transition réaliste et progressif — pas de big bang
+  - 'Agnostique en termes d''outils : centré sur les pratiques, pas sur les plateformes'
+  format: 1 – 2 jours · Groupe · Remote ou on-site
+- topic: product-build
+  title: Conception & livraison de produit sur mesure
+  tagline: Vous avez le besoin métier. Je prends en charge la construction — cahier des charges, équipe et livraison.
+  points:
+  - Applications métier, outils internes et applications mobiles
+  - Rédaction du cahier des charges et traduction en plan de construction
+  - 'Constitution et pilotage de l''équipe : développeurs, design, prestataires'
+  - Passation structurée — documentation, processus et une équipe que vous gardez
+  format: Cadrage par produit · Engagement de plusieurs mois · Remote ou hybride

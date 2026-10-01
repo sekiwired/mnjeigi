@@ -1,0 +1,103 @@
+{% from "_macros.html.j2" import arrow, down with context %}
+<!doctype html>
+<html lang="{{ c.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_description }}">
+<meta name="author" content="Julien Grimal">
+<meta name="robots" content="{{ robots }}">
+<meta name="theme-color" content="#F4F1EA">
+<link rel="canonical" href="{{ site_url }}{{ c.path }}{{ page_file }}">
+{% for l in langs %}
+<link rel="alternate" hreflang="{{ l.lang }}" href="{{ site_url }}{{ l.path }}{{ page_file }}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site_url }}{{ page_file }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site_url }}{{ c.path }}{{ page_file }}">
+<meta property="og:locale" content="{{ c.locale }}">
+<meta property="og:image" content="{{ site_url }}images/wallpaper2.webp">
+<meta name="twitter:card" content="summary_large_image">
+{% if not page_file %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Julien Grimal",
+  "jobTitle": c.meta.job_title,
+  "description": c.meta.description,
+  "url": site_url ~ c.path,
+  "sameAs": [c.about.linkedin.href],
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Telecom SudParis"},
+  "address": {"@type": "PostalAddress", "addressCountry": "FR"}
+} | tojson }}
+</script>
+{% endif %}
+<link rel="preload" href="{{ root }}fonts/HankenGrotesk.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="{{ root }}css/site.css">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ root }}apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ root }}favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ root }}favicon-16x16.png">
+<link rel="manifest" href="{{ root }}site.webmanifest">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">{{ c.nav.skip }}</a>
+
+<header class="header" id="top">
+  <div class="header__in wrap">
+    <a class="brand" href="{{ home }}#top" aria-label="{{ c.nav.home_label }}">Julien Grimal<span class="brand__dot">.</span></a>
+    <nav class="nav" aria-label="Sections">
+      {% for l in c.nav.links %}
+      <a href="{{ home }}{{ l.href }}">{{ l.label }}</a>
+      {% endfor %}
+    </nav>
+    <div class="header__end">
+      <div class="lang" aria-label="Language">
+        <span aria-current="true">{{ c.this_lang_label }}</span>
+        <a href="{{ root }}{{ c.other_lang.href }}{{ page_file }}" hreflang="{{ c.other_lang.code }}" lang="{{ c.other_lang.code }}" title="{{ c.other_lang.title }}" data-lang-switch>{{ c.other_lang.label }}</a>
+      </div>
+      <a class="btn btn--ink btn--sm" href="{{ home }}#contact"><span class="btn__long">{{ c.nav.cta }}</span><span class="btn__short">{{ c.nav.cta_short }}</span>{{ arrow() }}</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-open="{{ c.nav.menu_open }}" data-close="{{ c.nav.menu_close }}" aria-label="{{ c.nav.menu_open }}"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <nav class="menu__nav wrap" aria-label="Menu">
+    {% for l in c.nav.links %}
+    <a href="{{ home }}{{ l.href }}"><span>0{{ loop.index }}</span>{{ l.label }}</a>
+    {% endfor %}
+    <a class="btn btn--blue" href="{{ home }}#contact">{{ c.nav.cta }}{{ arrow() }}</a>
+    <a class="menu__lang" href="{{ root }}{{ c.other_lang.href }}{{ page_file }}" hreflang="{{ c.other_lang.code }}" lang="{{ c.other_lang.code }}">{{ c.other_lang.title }}</a>
+  </nav>
+</div>
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="footer" data-dark>
+  <div class="wrap footer__in">
+    <p class="footer__tag">{{ c.footer.tagline }}</p>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="{{ c.about.linkedin.href }}" target="_blank" rel="noopener">{{ c.about.linkedin.label }}</a>
+      <a href="{{ root }}{{ c.about.cv.href }}" download>{{ c.about.cv.label }}</a>
+      <a href="{{ root }}{{ c.path }}terms.html">{{ c.footer.terms }}</a>
+      <a href="{{ root }}{{ c.path }}privacy.html">{{ c.footer.privacy }}</a>
+      <a href="#top">{{ c.footer.top }}</a>
+    </nav>
+    <p class="footer__copy">© <span data-year>2026</span> juliengrimal.com</p>
+  </div>
+  <p class="footer__mark" aria-hidden="true">Julien Grimal</p>
+</footer>
+
+<script src="{{ root }}js/config.js" defer></script>
+<script src="{{ root }}js/tracker.js" defer></script>
+<script src="{{ root }}js/site.js" defer></script>
+</body>
+</html>

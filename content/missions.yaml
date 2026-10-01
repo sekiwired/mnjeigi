@@ -1,0 +1,26 @@
+# Presentation of each mission in the full record.
+# key: the mission heading shared by Detailed_Missions_EN.md and Detailed_Missions_FR.md
+# (the text itself is read from those files at build time).
+# logos: ids from logos.yaml.
+- {key: NXTPOP, name: NXTPOP, logos: [nxtpop]}
+- {key: MELUDIA, name: Meludia, logos: [meludia]}
+- {key: THALES GROUP, name: Thales Group, logos: [thales]}
+- {key: SANOFI, name: Sanofi, logos: [sanofi]}
+- {key: PaulineService.com, name: PaulineService.com, logos: [paulineservice]}
+- {key: BZV, name: BZV, logos: []}
+- {key: L'ORÉAL GROUPE, name: L'Oréal Groupe, logos: [loreal]}
+- {key: L'ORÉAL FRANCE, name: L'Oréal France, logos: [loreal]}
+- {key: AON / SFR, name: AON / SFR, logos: [aon, sfr]}
+- {key: CENTQUATRE PARIS, name: CentQuatre Paris, logos: [cq]}
+- {key: AXA FRANCE, name: AXA France, logos: [axa]}
+- {key: SAFRAN NACELLES, name: Safran Nacelles, logos: [safran]}
+- {key: ETAP, name: ETAP, logos: [etap]}
+- {key: MELUDIA (Freelance), name: Meludia, logos: [meludia]}
+- {key: FLUBBER, name: Flubber, logos: [flubber]}
+- {key: LE MONDE APRÈS (OPENWORK), name: Le Monde Après (Openwork), logos: [openwork]}
+- {key: GDF SUEZ (ENGIE), name: GDF Suez (Engie), logos: [engie]}
+- {key: CRÉDIT AGRICOLE, name: Crédit Agricole, logos: [ca]}
+- {key: NATIXIS, name: Natixis, logos: [natixis]}
+- {key: TOTAL, name: Total, logos: [total]}
+- {key: SOCIÉTÉ GÉNÉRALE, name: Société Générale, logos: [socgen]}
+- {key: ADP GSI, name: ADP GSI, logos: [adp]}

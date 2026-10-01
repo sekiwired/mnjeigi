@@ -1,0 +1,289 @@
+# All English copy of the page. Mission sentences are never written here:
+# `quote` entries point at a result line in Detailed_Missions_EN.md
+# (mission = heading, has = text that identifies the line, mark = words to emphasise).
+
+lang: en
+locale: en_US
+path: ""
+other_lang: {code: fr, label: FR, href: "fr/", title: Version française}
+this_lang_label: EN
+
+meta:
+  title: "Julien Grimal — Independent consultant & fractional CTO"
+  description: "Complex projects, brought to completion. 18 years of delivery for Thales, Sanofi and L'Oréal, as CTO then COO, and as a founder. Fractional CTO, AI audit, AI training, process transformation."
+  job_title: "Independent consultant & fractional CTO"
+
+nav:
+  skip: Skip to content
+  home_label: Julien Grimal, back to top
+  links:
+    - {href: "#services", label: Services}
+    - {href: "#track-record", label: Track record}
+    - {href: "#approach", label: Approach}
+    - {href: "#about", label: About}
+  cta: Discuss your project
+  cta_short: Let's talk
+  menu_open: Open menu
+  menu_close: Close menu
+
+hero:
+  eyebrow: [Julien Grimal, Independent consultant, Fractional CTO]
+  title_lines: ["Complex projects,", "brought to"]
+  title_accent: "completion."
+  sub: "I step in when delivery is a challenge, taking ownership of the whole and carrying the project through. Audit, counsel or direct intervention, across business, organization, operations and technology."
+  cta: Discuss your project
+  cta_secondary: See the track record
+  credential: "18 years. Thales, Sanofi and L'Oréal at group scale. CTO then COO of a company in restructuring. Founder."
+
+stats:
+  - {value: "18", unit: yrs, label: "Engineering, architecture, and operations"}
+  - {value: "35B+", unit: "", label: "transactions a year: the architecture designed and validated for Sanofi, across 400 factories"}
+  - {value: "5×", unit: "", label: "lower cloud costs at Meludia, with 3× the load capacity"}
+  - {value: "12", unit: "", label: "B2B SaaS products built and shipped as founder and CTO"}
+
+situations:
+  eyebrow: When to bring me in
+  title: "When delivery is a challenge."
+  intro:
+    - "Projects rarely stall inside a specialty. They stall at the seams: between architecture and delivery, between the vendor and the internal team, between the decision and its adoption."
+    - "Everyone holds their part. Carrying the whole is a role of its own. That is the one I take."
+  rows:
+    - title: "A project that is not reaching completion."
+      source: "Meludia · CTO then COO · 2016 – 2020"
+      quote: {mission: MELUDIA, has: "Google Play"}
+    - title: "A transition, or a seat left empty in the team."
+      source: "Meludia · interim CTO, one day a week · 2012 – 2013"
+      quote: {mission: MELUDIA (Freelance), has: "CTO profile"}
+    - title: "An information system that has outgrown its own map."
+      source: "L'Oréal France · 2016"
+      quote: {mission: L'ORÉAL FRANCE, has: "complete mapping"}
+    - title: "A decision that needs an independent basis."
+      source: "L'Oréal Groupe · 2016"
+      quote: {mission: L'ORÉAL GROUPE, has: "selection committee"}
+    - title: "A standard to define, then to get adopted."
+      source: "Thales Group · 2013 – 2016"
+      quote: {mission: THALES GROUP, has: "officially distributed"}
+    - title: "AI adopted, and the gains yet to show in delivery."
+      source: "Three engagements address it"
+      link: {href: "#ai", label: "Audit, training, process transformation"}
+  cta_text: "Recognize one of these?"
+  cta: Discuss your project
+
+services:
+  eyebrow: Services
+  title: "Four ways in."
+  intro: "Each is a complete engagement. None is a prerequisite for another. We define the outcome and the scope of my involvement together."
+  discuss: Discuss this
+  output_label: You get
+  lead:
+    topic: fractional-cto
+    tag: Lead
+    title: Fractional CTO
+    tagline: "A senior CTO on your side of the table, part-time."
+    points:
+      - "Technology strategy and IT budget, decided with the leadership team"
+      - "Architecture owned: core-model, technical choices, vendor selection"
+      - "Team built: technical recruitment, development and deployment processes"
+      - "A successor trained to ensure continuity"
+    format: "Scope and cadence agreed together"
+    proof_label: Done before
+    proofs:
+      - source: "Meludia · CTO then COO · 2016 – 2020"
+        quotes:
+          - {mission: MELUDIA, has: "Azure to AWS"}
+          - {mission: MELUDIA, has: "6 technical profiles"}
+      - source: "Meludia · interim CTO, one day a week · 2012 – 2013"
+        quotes:
+          - {mission: MELUDIA (Freelance), has: "CTO profile"}
+  ai:
+    eyebrow: Artificial intelligence
+    title: "AI changed how work is produced. The organization has to follow."
+    intro: "Three engagements to turn AI capacity into dependable business value, while keeping control of meaning, responsibility, quality, cost and future evolution."
+    offers:
+      - topic: ai-audit
+        tag: Assess
+        title: AI Audit
+        question: "Where are AI value, quality and control being lost?"
+        points:
+          - "Delivery economics: where AI output moves waiting, correction, verification and operating cost"
+          - "Meaning, responsibility and authority: whether intent, commitments and scope keep a shared meaning across stakeholders, tools and decisions"
+          - "Quality and future change: what success evidence establishes, and what remains unknown about maintainability and evolution"
+        output: "Findings and a prioritized decision basis."
+      - topic: ai-training
+        tag: Teach
+        title: AI Training
+        question: "Which professional judgment must our people develop and retain?"
+        points:
+          - "Professional judgment in AI interactions: recognizing shifts of meaning, superficial expertise and persuasive claims of completion"
+          - "Continuity and informed delegation: the judgment each role retains"
+          - "AI economics and evidence literacy: telling activity from delivery, quality, risk and lifetime cost"
+        output: "Role-specific capability and learning outcomes."
+      - topic: ai-transformation
+        tag: Transform
+        title: AI Process Transformation
+        question: "How must our organization change to realize value durably?"
+        points:
+          - "Alignment of intent, decisions and delivery: how business intent becomes shared obligations and accepted outcomes"
+          - "Capacity, quality and pace: verification capacity adapted to increased production"
+          - "Enterprise architecture and evolution: business capabilities, legacy integration and future choices under economic and governance constraints"
+        output: "Agreed operating and architectural changes, connected to business outcomes."
+  catalogue:
+    eyebrow: Focused engagements
+    title: "Scoped work, defined format."
+    intro: "I help teams move faster with clearer architecture, stronger delivery, and simpler systems."
+    cta: Contact me about this
+
+proof:
+  eyebrow: Track record
+  title_lines: ["18 years.", "{logo_count} organizations."]
+  lede: "I have been both a consultant for large enterprises and a product builder — founding companies, leading tech and operations, and delivering critical systems at scale. I understand the relationship between business needs and technical constraints, which lets me cut noise and focus on what moves the needle."
+  wall_title: They trusted me with their projects
+  wall_caption: "Clients, employers and companies I helped build."
+  cases_eyebrow: Selected missions
+  cases:
+    - mission: MELUDIA
+      kicker: Company turnaround
+      context: "After 7 years and near-total staff reduction, the founders mandated me to restructure, transform, and reduce operational and technical costs — and to lead full production of a new mobile application from spec to delivery."
+      figures:
+        - {value: "5×", label: "lower cloud costs"}
+        - {value: "3×", label: "load capacity"}
+        - {value: "168", label: "countries, 15,000+ users"}
+      quotes:
+        - {has: "Azure to AWS", mark: "reducing costs by a factor of 5"}
+        - {has: "technical debt", mark: "reduced technical debt on the legacy by 60%"}
+        - {has: "6 technical profiles", mark: "Recruited"}
+        - {has: "Google Play", mark: "Delivered"}
+    - mission: THALES GROUP
+      kicker: Group-wide standard
+      context: "Sole Git reference and global point of contact for the entire Thales Group. Wrote the Group's Software Configuration Management standard, defined the enterprise-scale IBM GCL → Git migration strategy, designed infrastructure architectures, and delivered L3 technical support across all Thales entities worldwide."
+      figures:
+        - {value: "5", label: "countries trained: AU, DE, NO, UK, US"}
+        - {value: "1", label: "standard for the entire Group"}
+      quotes:
+        - {has: "officially distributed", mark: "officially distributed"}
+        - {has: "migration guide", mark: "published and distributed"}
+        - {has: "Train-the-trainer", mark: "delivered"}
+        - {has: "successor", mark: "A successor was trained"}
+    - mission: SANOFI
+      kicker: Critical system
+      context: "Defined and implemented the application core-model for EU pharmaceutical product traceability — collecting real-time manufacturing data from 400 production sites, detecting anomalies and counterfeits, and notifying health authorities for 35 billion transactions per year."
+      figures:
+        - {value: "35B+", label: "transactions per year, designed and validated"}
+        - {value: "400", label: "factories worldwide"}
+        - {value: "6", label: "months to deliver the project"}
+      quotes:
+        - {has: "high-availability", mark: "Designed and validated"}
+        - {has: "TOGAF", mark: "Integrated"}
+        - {has: "real load", mark: "validating the architecture under real load conditions"}
+        - {has: "Performance commitments", mark: "validated by the client and deadlines were met"}
+    - mission: L'ORÉAL GROUPE
+      kicker: Group strategy
+      context: "Two strategic engagements at Group headquarters: defining the 3-year global integration roadmap (ETI/SOA) and building the RFP for vendors; then designing a custom Agile/Waterfall hybrid project management framework as the Group's engineering standard, in collaboration with Ernst & Young."
+      figures:
+        - {value: "3", unit: yrs, label: "integration plan, validated by the Group CIO"}
+      quotes:
+        - {has: "macro planning", mark: "validated by the Group CIO"}
+        - {has: "selection committee", mark: "recommendations were provided to the selection committee"}
+        - {has: "Agile and Waterfall", mark: "validated as the group's development standard"}
+  sectors_label: Sectors
+  record:
+    eyebrow: Full career
+    title: "The full record."
+    intro: "Every mission, with its context, its challenges and its results."
+    labels: {context: Context, challenges: Challenges, results: Results, stack: Stack}
+    open: Read the mission
+  cta_title: "Your project next?"
+  cta: Discuss your project
+
+approach:
+  eyebrow: How it works
+  title: "You always know where we are, what's next, and how we measure success."
+  lede: "A structured process from first conversation to delivery. Every engagement follows the same six steps — whether it's a one-week audit or a six-month operational mandate."
+  steps_title: The six steps
+  steps:
+    - {num: "01", title: "Exchange & Discussion", desc: "Context, goals, constraints, and success criteria."}
+    - {num: "02", title: "Scope Refining", desc: "Define boundaries, risks, and dependencies."}
+    - {num: "03", title: "Proposal", desc: "Plan, timeline, staffing, and budget options."}
+    - {num: "04", title: "Validation", desc: "Confirm scope, delivery model, and KPIs."}
+    - {num: "05", title: "Execution", desc: "Build, test, run, and transfer with clear governance."}
+    - {num: "06", title: "Metrics & Documentation", desc: "Measurable impact, handover docs, and continuous improvement."}
+  includes_title: Every engagement includes
+  includes:
+    - {name: Full transparency, desc: "You see progress, blockers, and decisions in real time"}
+    - {name: Written documentation, desc: "Scope, decisions, and outcomes are always recorded"}
+    - {name: Structured handover, desc: "Everything is transferable to your team at the end"}
+    - {name: Measurable outcomes, desc: "Success criteria are defined upfront and tracked"}
+  quote: "Structured handover. You run it when I leave."
+  cta_text: "Step 01 is a conversation."
+  cta: Start it
+
+about:
+  eyebrow: About
+  title: "I'm Julien Grimal."
+  bio: 'I am 41 and have been passionate about apps and computing since I was 12. I graduated from <a href="https://www.telecom-sudparis.eu/en/about-us/about-telecom-sudparis/" target="_blank" rel="noopener">Telecom SudParis</a> in Information and Network Security, and I have 18 years of professional experience. I have built companies, products, and teams, and I still build systems for fun.'
+  roles_label: "I am"
+  roles: ["versatile", "a Digital Architect", "a Project Manager", "an Entrepreneur", "a full-stack dev", "a DevOps expert", "a Coach", "a Consultant", "a problem solver", "an innovator", "efficient"]
+  principles_title: "How I think & work"
+  principles:
+    - title: Everything is movement
+      text: "Digital and business trends are changing at an incredible pace. Building a system while assuming every part will change, and making evolution part of its <strong>DNA</strong>, is an <strong>expertise</strong> I have gathered."
+    - title: Out of the box thinking
+      text: "Used to <strong>build</strong> systems from the ground up and audit complex environments, I bring <strong>creativity</strong> to reduce complexity while planning <strong>for the future</strong>."
+    - title: Simpler is better
+      text: "I prefer building contexts where problems do not exist, rather than adding layers that become harder to <strong>document</strong>, <strong>maintain</strong> and pass along."
+    - title: Full package
+      text: "Together we tailor what is best for your <strong>needs</strong> — from <strong>strategic planning</strong> and <strong>product design</strong> to architecture, build, run, and audits."
+  facts:
+    - {label: Education, lines: ["Telecom SudParis", "Information Technology Security Engineer — 2008"]}
+    - {label: Languages, lines: ["French — Native", "English — Full professional proficiency · C2"]}
+  reference:
+    title: Where I have been the reference
+    rows:
+      - {skill: "Git & software configuration management", proof: "Thales Group standard"}
+      - {skill: "Enterprise architecture", proof: "Sanofi, 35B transactions a year"}
+      - {skill: "Cloud migration & cost", proof: "Meludia, 5× reduction"}
+      - {skill: "RFP & vendor selection", proof: "L'Oréal Groupe"}
+  inventory_title: The full inventory
+  capabilities_title: Capabilities
+  cv: {label: Download Resume, href: "resume/GRIMAL_EN.pdf"}
+  linkedin: {label: LinkedIn, href: "https://www.linkedin.com/in/juliengrimal"}
+
+contact:
+  eyebrow: Contact
+  title_lines: ["Let's talk about", "your project."]
+  lede: "Share context, goals, and constraints. I'll get back quickly with next steps."
+  labels:
+    firstname: First name
+    lastname: Last name
+    company: Company
+    email: Email
+    phone: Phone
+    topic: Topic
+    message: Message
+  optional: optional
+  either_note: "At least one of email or phone is required."
+  either_error: "Please provide at least an email address or a phone number."
+  required_error: "Please fill in your name and your message."
+  email_error: "This email address does not look valid."
+  topic_placeholder: "Let's define it together"
+  topics_new_label: Services
+  topics_catalogue_label: Focused engagements
+  topics_extra:
+    - {value: consulting, label: "Consulting (other)"}
+    - {value: other, label: Other}
+  send: Send message
+  sending: Sending…
+  success: "Thank you! I'll get back to you soon."
+  failure: "Failed, please try again later"
+  network: "Network issue, please try again later"
+  preview: "Local preview: nothing was sent."
+  nojs: "The form needs JavaScript. You can reach me on LinkedIn instead."
+  privacy_note: "Your details are used only to reply to your request."
+  privacy_link: Privacy policy
+  alt_title: "Or directly"
+
+footer:
+  tagline: "Complex projects, brought to completion."
+  terms: Terms
+  privacy: Privacy
+  top: Back to top

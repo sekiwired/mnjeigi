@@ -1,0 +1,289 @@
+# Tous les textes français de la page. Les phrases de mission ne sont jamais écrites ici :
+# les entrées `quote` désignent une ligne de résultat dans Detailed_Missions_FR.md
+# (mission = titre anglais de la mission, has = texte qui identifie la ligne, mark = mots à souligner).
+
+lang: fr
+locale: fr_FR
+path: "fr/"
+other_lang: {code: en, label: EN, href: "", title: English version}
+this_lang_label: FR
+
+meta:
+  title: "Julien Grimal — Consultant indépendant & CTO à temps partagé"
+  description: "Des projets complexes, menés à leur terme. 18 ans de livraison pour Thales, Sanofi et L'Oréal, comme CTO puis COO, et comme fondateur. CTO à temps partagé, audit IA, formation IA, transformation des processus."
+  job_title: "Consultant indépendant & CTO à temps partagé"
+
+nav:
+  skip: Aller au contenu
+  home_label: Julien Grimal, retour en haut de page
+  links:
+    - {href: "#services", label: Services}
+    - {href: "#track-record", label: Références}
+    - {href: "#approach", label: Approche}
+    - {href: "#about", label: À propos}
+  cta: Parlons de votre projet
+  cta_short: Échangeons
+  menu_open: Ouvrir le menu
+  menu_close: Fermer le menu
+
+hero:
+  eyebrow: [Julien Grimal, Consultant indépendant, CTO à temps partagé]
+  title_lines: ["Des projets complexes,", "menés à leur"]
+  title_accent: "terme."
+  sub: "J'interviens lorsque la livraison d'un projet devient un enjeu, afin d'en porter l'ensemble jusqu'à son aboutissement. Audit, conseil ou intervention directe, à travers les enjeux métier, l'organisation, les opérations et la technologie."
+  cta: Parlons de votre projet
+  cta_secondary: Voir les références
+  credential: "18 ans. Thales, Sanofi et L'Oréal à l'échelle du groupe. CTO puis COO d'une entreprise en restructuration. Fondateur."
+
+stats:
+  - {value: "18", unit: ans, label: "Ingénierie, Architecture et Opérations"}
+  - {value: "35 Md+", unit: "", label: "de transactions par an : l'architecture conçue et validée pour Sanofi, sur 400 usines"}
+  - {value: "÷5", unit: "", label: "sur les coûts cloud de Meludia, avec une capacité de charge multipliée par 3"}
+  - {value: "12", unit: "", label: "produits SaaS B2B construits et livrés comme fondateur et CTO"}
+
+situations:
+  eyebrow: Quand faire appel à moi
+  title: "Quand un projet n'aboutit pas."
+  intro:
+    - "Un projet s'enlise rarement au cœur d'une spécialité. Il s'enlise aux jointures : entre l'architecture et la livraison, entre le prestataire et l'équipe interne, entre la décision et son adoption."
+    - "Chacun porte sa part. Porter l'ensemble est un rôle à part entière. C'est celui que j'assume."
+  rows:
+    - title: "Un projet qui n'aboutit pas."
+      source: "Meludia · CTO puis COO · 2016 – 2020"
+      quote: {mission: MELUDIA, has: "Google Play"}
+    - title: "Une transition, ou un poste resté vacant dans l'équipe."
+      source: "Meludia · CTO intérimaire, un jour par semaine · 2012 – 2013"
+      quote: {mission: MELUDIA (Freelance), has: "profil CTO"}
+    - title: "Un système d'information dont la cartographie ne suit plus."
+      source: "L'Oréal France · 2016"
+      quote: {mission: L'ORÉAL FRANCE, has: "cartographie complète"}
+    - title: "Une décision qui appelle un regard indépendant."
+      source: "L'Oréal Groupe · 2016"
+      quote: {mission: L'ORÉAL GROUPE, has: "comité de sélection"}
+    - title: "Un standard à définir, puis à faire adopter."
+      source: "Thales Group · 2013 – 2016"
+      quote: {mission: THALES GROUP, has: "officiellement diffusé"}
+    - title: "L'IA est adoptée, et les gains tardent à se voir dans la livraison."
+      source: "Trois missions y répondent"
+      link: {href: "#ai", label: "Audit, formation, transformation des processus"}
+  cta_text: "Vous reconnaissez l'une de ces situations ?"
+  cta: Parlons de votre projet
+
+services:
+  eyebrow: Services
+  title: "Quatre portes d'entrée."
+  intro: "Chacune est une mission complète. Aucune n'est le préalable d'une autre. Nous définissons ensemble le résultat attendu et le périmètre de mon intervention."
+  discuss: En discuter
+  output_label: Vous obtenez
+  lead:
+    topic: fractional-cto
+    tag: Diriger
+    title: CTO à temps partagé
+    tagline: "Un CTO expérimenté à vos côtés, à temps partiel."
+    points:
+      - "Stratégie technologique et budget IT, arrêtés avec la direction"
+      - "Architecture portée : core-model, choix techniques, sélection des prestataires"
+      - "Équipe constituée : recrutement technique, processus de développement et de déploiement"
+      - "Un successeur formé pour assurer la continuité"
+    format: "Périmètre et rythme définis ensemble"
+    proof_label: Déjà fait
+    proofs:
+      - source: "Meludia · CTO puis COO · 2016 – 2020"
+        quotes:
+          - {mission: MELUDIA, has: "Azure vers AWS"}
+          - {mission: MELUDIA, has: "6 profils"}
+      - source: "Meludia · CTO intérimaire, un jour par semaine · 2012 – 2013"
+        quotes:
+          - {mission: MELUDIA (Freelance), has: "profil CTO"}
+  ai:
+    eyebrow: Intelligence artificielle
+    title: "L'IA a changé la manière de produire. L'organisation doit suivre."
+    intro: "Trois missions pour transformer la capacité de l'IA en valeur fiable, en gardant la maîtrise du sens, de la responsabilité, de la qualité, du coût et des évolutions futures."
+    offers:
+      - topic: ai-audit
+        tag: Évaluer
+        title: Audit IA
+        question: "Où la valeur, la qualité et la maîtrise de l'IA se perdent-elles ?"
+        points:
+          - "Économie de la livraison : où la production de l'IA déplace l'attente, la correction, la vérification et le coût d'exploitation"
+          - "Sens, responsabilité et autorité : l'intention, les engagements et le périmètre gardent-ils un sens partagé entre les parties prenantes, les outils et les décisions"
+          - "Qualité et évolutions futures : ce que les preuves de réussite établissent, et ce qui reste inconnu de la maintenabilité et de l'évolution"
+        output: "Des constats et une base de décision priorisée."
+      - topic: ai-training
+        tag: Former
+        title: Formation IA
+        question: "Quel jugement professionnel nos équipes doivent-elles développer et conserver ?"
+        points:
+          - "Le jugement professionnel face à l'IA : reconnaître les glissements de sens, l'expertise de surface et les affirmations convaincantes d'achèvement"
+          - "Continuité et délégation éclairée : le jugement que chaque rôle conserve"
+          - "Économie de l'IA et lecture des preuves : distinguer l'activité de la livraison, de la qualité, du risque et du coût sur la durée"
+        output: "Des compétences et des acquis définis par rôle."
+      - topic: ai-transformation
+        tag: Transformer
+        title: Transformation des processus par l'IA
+        question: "Comment notre organisation doit-elle évoluer pour créer de la valeur durablement ?"
+        points:
+          - "Alignement de l'intention, des décisions et de la livraison : comment l'intention métier devient des obligations partagées et des résultats acceptés"
+          - "Capacité, qualité et rythme : une capacité de vérification adaptée à une production accrue"
+          - "Architecture d'entreprise et évolution : capacités métier, intégration de l'existant et choix futurs sous contraintes économiques et de gouvernance"
+        output: "Des évolutions d'organisation et d'architecture convenues, reliées aux résultats métier."
+  catalogue:
+    eyebrow: Missions ciblées
+    title: "Un périmètre cadré, un format défini."
+    intro: "J'aide les équipes à aller plus vite avec une architecture claire, une delivery solide, et des systèmes plus simples."
+    cta: Me contacter pour ce service
+
+proof:
+  eyebrow: Références
+  title_lines: ["18 ans.", "{logo_count} organisations."]
+  lede: "J'ai été des deux côtés — consultant pour de grands groupes, fondateur d'entreprise et concepteur de produits. J'ai dirigé des équipes tech et ops et livré des systèmes critiques à grande échelle. Je comprends la relation entre besoins métiers et contraintes techniques, ce qui me permet d'éliminer le superflu et de me concentrer sur ce qui génère un impact réel."
+  wall_title: Ils m'ont confié leurs projets
+  wall_caption: "Clients, employeurs et sociétés que j'ai contribué à construire."
+  cases_eyebrow: Missions choisies
+  cases:
+    - mission: MELUDIA
+      kicker: Redressement d'entreprise
+      context: "Après 7 ans et une quasi-totalité des effectifs réduits, les fondateurs m'ont mandaté pour restructurer, transformer et réduire les coûts opérationnels et techniques — et pour piloter la production complète d'une nouvelle application mobile de bout en bout."
+      figures:
+        - {value: "÷5", label: "sur les coûts cloud"}
+        - {value: "×3", label: "de capacité de charge"}
+        - {value: "168", label: "pays, plus de 15 000 utilisateurs"}
+      quotes:
+        - {has: "Azure vers AWS", mark: "réduisant les coûts par un facteur 5"}
+        - {has: "dette technique", mark: "réduction de 60% de la dette technique"}
+        - {has: "6 profils", mark: "Recrutement"}
+        - {has: "Google Play", mark: "Livraison"}
+    - mission: THALES GROUP
+      kicker: Standard à l'échelle du groupe
+      context: "Seule référence Git et point de contact mondial pour l'ensemble du Groupe Thales. Rédaction du standard SCM du Groupe, définition de la stratégie de migration IBM GCL → Git à l'échelle entreprise, conception des architectures d'infrastructure, et support technique L3 auprès de toutes les entités Thales dans le monde."
+      figures:
+        - {value: "5", label: "pays formés : AU, DE, NO, UK, US"}
+        - {value: "1", label: "standard pour l'ensemble du Groupe"}
+      quotes:
+        - {has: "officiellement diffusé", mark: "officiellement diffusé"}
+        - {has: "guide de migration", mark: "publié et distribué"}
+        - {has: "Formation de formateurs", mark: "Formation de formateurs"}
+        - {has: "successeur", mark: "Un successeur a été formé"}
+    - mission: SANOFI
+      kicker: Système critique
+      context: "Définition et implémentation du core-model applicatif pour la traçabilité pharmaceutique européenne — collecte en temps réel des données de fabrication de 400 sites de production, détection d'anomalies et de contrefaçons, notification des autorités sanitaires pour 35 milliards de transactions par an."
+      figures:
+        - {value: "35 Md+", label: "de transactions par an, conçu et validé"}
+        - {value: "400", label: "usines dans le monde"}
+        - {value: "6", label: "mois pour livrer le projet"}
+      quotes:
+        - {has: "haute disponibilité", mark: "Conception et validation"}
+        - {has: "TOGAF", mark: "Intégration"}
+        - {has: "charge réelles", mark: "validant l'architecture sous des conditions de charge réelles"}
+        - {has: "engagements de performance", mark: "validés par le client et les délais respectés"}
+    - mission: L'ORÉAL GROUPE
+      kicker: Stratégie groupe
+      context: "Deux missions stratégiques au siège du Groupe : définition de la roadmap d'intégration groupe sur 3 ans (ETI/SOA) et construction de l'appel d'offres fournisseurs ; puis conception d'un référentiel méthodologique Agile/Waterfall hybride comme standard d'ingénierie du Groupe, en collaboration avec Ernst & Young."
+      figures:
+        - {value: "3", unit: ans, label: "de plan d'intégration, validé par le DSI Groupe"}
+      quotes:
+        - {has: "macro planning", mark: "validés par le DSI Groupe"}
+        - {has: "comité de sélection", mark: "des recommandations ont été fournies au comité de sélection"}
+        - {has: "Agile et Waterfall", mark: "validé comme standard de développement du groupe"}
+  sectors_label: Secteurs
+  record:
+    eyebrow: Parcours complet
+    title: "Le parcours complet."
+    intro: "Chaque mission, avec son contexte, ses enjeux et ses résultats."
+    labels: {context: Contexte, challenges: Enjeux, results: Résultats, stack: Stack}
+    open: Lire la mission
+  cta_title: "Et votre projet ?"
+  cta: Parlons de votre projet
+
+approach:
+  eyebrow: Comment cela se passe
+  title: "Vous savez toujours où nous en sommes, ce qui vient ensuite, et comment nous mesurons le succès."
+  lede: "Un processus structuré de la première conversation à la livraison. Chaque mission suit les mêmes six étapes — qu'il s'agisse d'un audit d'une semaine ou d'un mandat opérationnel de six mois."
+  steps_title: Les six étapes
+  steps:
+    - {num: "01", title: "Échange & Discussion", desc: "Contexte, objectifs, contraintes et critères de succès."}
+    - {num: "02", title: "Affinage du scope", desc: "Définition des limites, risques et dépendances."}
+    - {num: "03", title: "Proposition", desc: "Plan, timing, staffing et options budgétaires."}
+    - {num: "04", title: "Validation", desc: "Alignement sur le scope, le modèle de delivery et les KPIs."}
+    - {num: "05", title: "Exécution", desc: "Build, tests, run et transfert avec une gouvernance claire."}
+    - {num: "06", title: "Métriques & Documentation", desc: "Impact mesuré, documents de transfert, amélioration continue."}
+  includes_title: Chaque mission inclut
+  includes:
+    - {name: Transparence totale, desc: "Vous voyez l'avancement, les blocages et les décisions en temps réel"}
+    - {name: Documentation écrite, desc: "Le périmètre ainsi que les décisions et résultats sont toujours consignés"}
+    - {name: Transmission structurée, desc: "Tout est transférable à votre équipe en fin de mission"}
+    - {name: Résultats mesurables, desc: "Les critères de succès sont définis en amont et suivis"}
+  quote: "Passation structurée. Vous reprenez la main à mon départ."
+  cta_text: "L'étape 01 est une conversation."
+  cta: Commençons
+
+about:
+  eyebrow: À propos
+  title: "Je suis Julien Grimal."
+  bio: 'J''ai 41 ans et je suis passionné par les apps et l''informatique depuis l''âge de 12 ans. Diplômé de <a href="https://www.telecom-sudparis.eu/en/about-us/about-telecom-sudparis/" target="_blank" rel="noopener">Telecom SudParis</a> en sécurité des systèmes d''information, j''ai 18 ans d''expérience professionnelle. J''ai créé des entreprises, des produits et des équipes, et je continue à construire des systèmes pour le plaisir.'
+  roles_label: "Je suis"
+  roles: ["polyvalent", "un Architecte digital", "un Chef de projet", "un Entrepreneur", "un développeur full-stack", "un expert DevOps", "un Coach", "un Consultant", "un solveur de problèmes", "un innovateur", "efficace"]
+  principles_title: "Mon approche"
+  principles:
+    - title: Tout est mouvement
+      text: "Les tendances business et digitales évoluent à une vitesse folle. Concevoir un système en pensant que chaque partie va changer, et faire de l'évolution une composante de son <strong>ADN</strong>, c'est une <strong>expertise</strong> que j'ai acquise."
+    - title: Changer de paradigme
+      text: "Habitué à <strong>construire</strong> des systèmes from scratch à auditer des environnements complexes, j'apporte la <strong>créativité</strong> nécessaire pour réduire la complexité tout en préparant <strong>l'avenir</strong>."
+    - title: "Plus simple, c'est mieux"
+      text: "Je préfère créer un contexte où le problème n'existe pas plutôt que d'ajouter des couches difficiles à <strong>documenter</strong>, <strong>maintenir</strong> et transmettre."
+    - title: Un accompagnement complet
+      text: "De la <strong>planification stratégique</strong> au <strong>product design</strong>, en passant par l'architecture, le build, le run et les audits — Je peux vous accompagner sur l'ensemble de la chaîne en fonction <strong>besoins</strong>"
+  facts:
+    - {label: Formation, lines: ["Telecom SudParis", "Ingénieur en Sécurité des Systèmes d'Information — 2008"]}
+    - {label: Langues, lines: ["Français — Langue maternelle", "Anglais — Professionnel · C2"]}
+  reference:
+    title: Là où j'ai été la référence
+    rows:
+      - {skill: "Git & gestion de configuration logicielle", proof: "Standard du Groupe Thales"}
+      - {skill: "Architecture d'entreprise", proof: "Sanofi, 35 Md de transactions par an"}
+      - {skill: "Migration cloud & coûts", proof: "Meludia, coûts divisés par 5"}
+      - {skill: "Appels d'offres & sélection de prestataires", proof: "L'Oréal Groupe"}
+  inventory_title: L'inventaire complet
+  capabilities_title: Savoir-faire
+  cv: {label: Télécharger le CV, href: "resume/GRIMAL_FR.pdf"}
+  linkedin: {label: LinkedIn, href: "https://www.linkedin.com/in/juliengrimal"}
+
+contact:
+  eyebrow: Contact
+  title_lines: ["Parlons de", "votre projet."]
+  lede: "Partagez le contexte, les objectifs et les contraintes. Je reviens vite avec la suite."
+  labels:
+    firstname: Prénom
+    lastname: Nom
+    company: Société
+    email: Email
+    phone: Téléphone
+    topic: Sujet
+    message: Message
+  optional: optionnel
+  either_note: "Un email ou un numéro de téléphone est requis."
+  either_error: "Merci d'indiquer au moins un email ou un numéro de téléphone."
+  required_error: "Merci d'indiquer votre nom et votre message."
+  email_error: "Cette adresse email ne semble pas valide."
+  topic_placeholder: "Définissons-le ensemble"
+  topics_new_label: Services
+  topics_catalogue_label: Missions ciblées
+  topics_extra:
+    - {value: consulting, label: "Conseil (autre)"}
+    - {value: other, label: Autre}
+  send: Envoyer
+  sending: Envoi…
+  success: "Merci ! Je reviens vers vous rapidement."
+  failure: "Échec, réessayez plus tard"
+  network: "Erreur réseau, réessayez plus tard"
+  preview: "Aperçu local : rien n'a été envoyé."
+  nojs: "Le formulaire nécessite JavaScript. Vous pouvez me joindre sur LinkedIn."
+  privacy_note: "Vos coordonnées servent uniquement à répondre à votre demande."
+  privacy_link: Politique de confidentialité
+  alt_title: "Ou directement"
+
+footer:
+  tagline: "Des projets complexes, menés à leur terme."
+  terms: Mentions légales
+  privacy: Confidentialité
+  top: Haut de page

@@ -1,0 +1,8 @@
+{% macro arrow() %}<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>{% endmacro %}
+{% macro down() %}<svg class="arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v11M3.5 9 8 13.5 12.5 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>{% endmacro %}
+{% macro plus() %}<span class="plus" aria-hidden="true"></span>{% endmacro %}
+{% macro eyebrow(text) %}<p class="eyebrow">{{ text }}</p>{% endmacro %}
+{% macro section_text(section) %}
+{% for p in section.paragraphs %}<p>{{ p }}</p>{% endfor %}
+{% if section.bullets %}<ul>{% for b in section.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
+{% endmacro %}

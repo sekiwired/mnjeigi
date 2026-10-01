@@ -1,0 +1,176 @@
+capabilities:
+- title: Opérations
+  points:
+  - Cartographier et optimiser les processus métier pour éliminer les blocages
+  - Définir des KPIs, mettre en place des boucles de feedback, piloter par la data
+  - 'Lean management : standardiser, réduire les gaspillages, responsabiliser'
+- title: Conseil & Audit
+  points:
+  - Rédiger et relire des RFP/RFQ pour web/app/infra/mobile
+  - Auditer les processus de livraison et d'exploitation afin de réduire les risques
+  - Réconcilier la roadmap technique avec les objectifs métier
+- title: Formation
+  points:
+  - Formations sur mesure pour équipes produit/tech/ops
+  - Langage commun et pratiques alignées
+  - Faire le pont entre les contraintes métier et la réalité technique
+- title: Produit
+  points:
+  - Définir les specs, recruter l'équipe et piloter la construction
+  - Livrer des produits web et mobile de bout en bout
+  - Gestion de la feuille de route produit
+- title: Delivery
+  points:
+  - Définir et piloter le cycle de conception/déploiement/exploitation de bout en bout
+  - Mettre en place la cadence de release, les quality gates et les rituels d'équipe
+  - Libérer les points de blocage assurer la mise en production des livrables
+- title: Infrastructure
+  points:
+  - Concevoir, construire ou auditer des stacks complètes
+  - Planifier des migrations et dimensionner l'architecture
+  - Améliorer fiabilité, scalabilité et coûts
+pill_groups:
+- title: Compétences
+  items:
+  - Conception d'architectures complexes
+  - Compréhension d'environnements complexes
+  - Conception d'architecture
+  - Conception d'infrastructure
+  - Pilotage opérationnel d'équipes multi-disciplinaires
+  - Coordination multi-sites
+  - Conception de déploiements de solutions
+  - Déploiement d'outils complexes/hétérogènes
+  - Rédaction de documents
+  - Rédaction de spécifications
+  - Rédaction de présentations
+  - Coaching d'équipes de développement
+  - Coaching d'équipes opérationnelles
+  - Coaching d'équipes projets
+  - Conception de processus build/test/run
+  - Définition de solutions
+  - Alignement besoins métier et techniques
+  - Animation d'ateliers
+  - Création de sessions de formation
+  - Animation de sessions de formation
+  - Conseil en gestion d'activité
+  - Analyse des besoins entreprise
+  - Définition d'objectifs d'intervention
+  - Cadrage d'intervention
+  - Amélioration organisationnelle
+  - Amélioration de gestion
+  - Amélioration de procédures
+  - Implémentation concrète de solutions
+  - Conception d'indicateurs
+  - Accompagnement mise en œuvre
+  - Recherche & innovation
+  - Prospective
+  - Transformation digitale
+  - Gestion de la production
+  - Information stratégique
+  - Conduite du changement
+  - Organisation & évolution des SI
+  - Assistance à maîtrise d'ouvrage
+  - Gestion de projet
+  - Démarche qualité
+  - Direction de service/structure
+  - Cadrage des besoins
+  - Choix de solutions
+  - Coordination d'équipe
+  - Prospection client
+  - Négociation de prestation
+  - Contractualisation
+  - Gestion budgétaire
+  - Recrutement technique
+- title: Domaines & Méthodes
+  items:
+  - Gestion de projet
+  - Architecture
+  - Architecture d'entreprise (TOGAF)
+  - DevOps
+  - Product Management
+  - Roadmap Produit
+  - Continuous Delivery
+  - Agile
+  - Scrum
+  - SAFe
+  - Kanban
+  - Lean Operations
+  - COBIT
+  - Conduite du changement
+  - Transformation digitale
+  - Microservices
+  - Haute Disponibilité
+  - SOA
+  - KPI / OKR
+  - Tests de performance
+  - A/B Testing
+  - Sécurité / SMSI
+  - IAM
+  - Mobile
+  - Coaching
+  - Formation
+  - Organisation d'équipe
+  - Management opérationnel
+  - Stratégie
+  - Cloud
+  - RFP/RFQ
+- title: Tech Stack
+  items:
+  - AWS
+  - Azure
+  - GCP
+  - Linux
+  - Docker
+  - VMWare
+  - Ansible
+  - Chef
+  - Puppet
+  - Git
+  - Jenkins
+  - GitHub
+  - GitLab
+  - Bitbucket
+  - JIRA
+  - Fastlane
+  - Python
+  - Node.js
+  - PHP
+  - TypeScript
+  - JavaScript
+  - C#
+  - Shell
+  - HTML/CSS
+  - Angular
+  - Symfony
+  - Flask
+  - FastAPI
+  - Ionic
+  - iOS
+  - Android
+  - PostgreSQL
+  - MySQL
+  - MongoDB
+  - MariaDB
+  - Redis
+  - Oracle
+  - Elasticsearch
+  - Nginx
+  - Apache
+  - HAProxy
+  - Cloudflare
+  - Grafana
+  - Telegraf
+  - Nagios
+sectors:
+- Défense
+- Pharma
+- Banque & Assurance
+- Energie
+- Oil & Gas
+- Télécom
+- Retail
+- Education & E-Learning
+- Culture
+- Web3 / Blockchain
+- PME
+- Startups

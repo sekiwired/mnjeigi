@@ -1,0 +1,166 @@
+capabilities:
+- title: Operations
+  points:
+  - Map and redesign core business processes to eliminate bottlenecks
+  - Define KPIs and implement feedback loops for data-driven performance monitoring
+  - 'Apply lean management: standardize operations, eliminate waste, empower teams'
+- title: Consulting & Audit
+  points:
+  - Write and review RFP/RFQ for web/app/infra
+  - Audit delivery and run processes to reduce risk
+  - Bridge business goals and technical reality
+- title: Training
+  points:
+  - Tailored training for product, tech, and ops teams
+  - Shared language and practices to align delivery
+  - Focus on pragmatic, usable outcomes
+- title: Product
+  points:
+  - Define specs, recruit the team, and manage the build
+  - Ship web and mobile products end to end
+  - Own the roadmap from backlog to release
+- title: Delivery
+  points:
+  - Define and run the build/ship/run cycle end to end
+  - Set up release cadence, quality gates, and team rituals
+  - Unblock what's stuck and get things out the door
+- title: Infrastructure
+  points:
+  - Design, build, or audit complete infrastructure stacks
+  - Plan migrations and size resilient architectures
+  - Improve reliability, scalability, and cost control
+pill_groups:
+- title: Skills
+  items:
+  - Complex architecture & environment design
+  - Infrastructure design
+  - Multi-disciplinary team steering
+  - Multi-site team coordination
+  - Solution & tool deployment design
+  - Document & specification writing
+  - Presentation writing
+  - Development team coaching
+  - Operational team coaching
+  - Project team coaching
+  - Build/test/run process design
+  - Solution definition
+  - Business & technical needs alignment
+  - Workshop facilitation
+  - Training session creation & animation
+  - Activity management consulting
+  - Company needs analysis
+  - Intervention scope definition
+  - Organizational improvement
+  - Management & procedural improvement
+  - Solution implementation
+  - Indicator design
+  - Research & innovation
+  - Digital transformation piloting
+  - Production management
+  - Strategic information management
+  - Change management
+  - IS organization & evolution studies
+  - Project ownership assistance
+  - Project management
+  - Quality approach implementation
+  - Department leadership
+  - Needs scoping & solution selection
+  - Team activity coordination
+  - Client prospecting
+  - Service negotiation
+  - Service contracting
+  - Budget management
+  - Technical recruiting
+- title: Domains & Methods
+  items:
+  - Project Management
+  - Architecture
+  - Enterprise Architecture (TOGAF)
+  - DevOps
+  - Product Management
+  - Roadmapping
+  - Continuous Delivery
+  - Agile
+  - Scrum
+  - SAFe
+  - Kanban
+  - Lean Operations
+  - COBIT
+  - Change Management
+  - Digital Transformation
+  - Microservices
+  - High Availability
+  - SOA
+  - KPI / OKR
+  - Performance Testing
+  - A/B Testing
+  - Security / SMSI
+  - IAM
+  - Mobile
+  - Coaching
+  - Training
+  - Team Organization
+  - Operational Management
+  - Strategy
+  - Cloud
+  - RFP/RFQ
+- title: Tech Stack
+  items:
+  - AWS
+  - Azure
+  - GCP
+  - Linux
+  - Docker
+  - VMWare
+  - Ansible
+  - Chef
+  - Puppet
+  - Git
+  - Jenkins
+  - GitHub
+  - GitLab
+  - Bitbucket
+  - JIRA
+  - Fastlane
+  - Python
+  - Node.js
+  - PHP
+  - TypeScript
+  - JavaScript
+  - C#
+  - Shell
+  - HTML/CSS
+  - Angular
+  - Symfony
+  - Flask
+  - FastAPI
+  - Ionic
+  - iOS
+  - Android
+  - PostgreSQL
+  - MySQL
+  - MongoDB
+  - MariaDB
+  - Redis
+  - Oracle
+  - Elasticsearch
+  - Nginx
+  - Apache
+  - HAProxy
+  - Cloudflare
+  - Grafana
+  - Telegraf
+  - Nagios
+sectors:
+- Defense
+- Pharmaceutical
+- Finance & Insurance
+- Energy
+- Oil & Gas
+- Telecom
+- Retail
+- Education & E-Learning
+- Culture
+- Web3 / Blockchain
+- Digital Products & SMB
+- Startups

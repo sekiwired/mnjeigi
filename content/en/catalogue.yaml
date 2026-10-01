@@ -1,0 +1,54 @@
+- topic: devops-audit
+  title: IT Operations Audit
+  tagline: An honest assessment of where you are and a clear path to where you need to be.
+  points:
+  - 'Current state analysis: tooling, processes, and delivery pipeline'
+  - Gap identification against industry practices
+  - Prioritized action plan with quick wins and long-term roadmap
+  - 'Delivery: executive summary + detailed technical report'
+  format: 1 – 2 weeks audit + 1 week report · On-site kickoff + remote delivery
+- topic: architecture
+  title: Architecture Consulting
+  tagline: From requirements to a system that can scale, evolve, and be documented.
+  points:
+  - Architecture design or review
+  - Scalability, reliability, and cost planning
+  - Decision records and TOGAF-aligned documentation
+  - RFP/RFQ support for vendor selection
+  format: Scoped engagement · Remote or on-site
+- topic: interim-coo
+  title: Tech Operations & Transition Management
+  tagline: Embed a senior operator to stabilize, restructure, and hand over.
+  points:
+  - Step in as hands-on operational lead during a crisis, transition, or team gap
+  - 'Rebuild processes: hiring, delivery, backlog, vendor management'
+  - Cut operational costs and ship what's stuck
+  - Structured handover — you run it when I leave
+  format: Monthly contract · Minimum 6 months · Hybrid
+- topic: git-training
+  title: Git Training
+  tagline: The training I built and delivered for Thales Group — now available for your team.
+  points:
+  - Git concepts, branching strategies, and workflows (Gitflow, trunk-based)
+  - Hands-on exercises from configuration to advanced operations (rebase, cherry-pick, submodules)
+  - Team collaboration models, code review, and governance
+  - 'Tooling integration: Bitbucket, GitHub, CI/CD pipelines'
+  format: 3 days · Group or 1-to-1 · Remote or on-site
+- topic: cicd-training
+  title: CI/CD Workshop
+  tagline: Help your team move from manual releases to continuous, repeatable delivery.
+  points:
+  - Understand CI/CD principles and what they change in daily work
+  - Map your current delivery process and identify bottlenecks
+  - Design a realistic, incremental plan — no big bang
+  - 'Tool-agnostic: focuses on practices, not specific platforms'
+  format: 1 – 2 days · Group · Remote or on-site
+- topic: product-build
+  title: Custom Product Delivery
+  tagline: You have the business need. I own the build — specification, team, and delivery.
+  points:
+  - Business applications, internal tools, and mobile apps
+  - Specification written and turned into a buildable plan
+  - 'Team assembled and steered: developers, design, vendors'
+  - Structured handover — documentation, processes, and a team you keep
+  format: Scoped per product · Multi-month engagement · Remote or hybrid
