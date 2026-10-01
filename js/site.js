@@ -125,7 +125,7 @@
 
     // Mesh behind the name: a sheet of linked dots receding into the distance, in perspective.
     // Every dot keeps its neighbours (it only sways around its own place), and a wave runs through the sheet.
-    // Which dots are drawn is settled once from their resting place, so no link appears or vanishes while it moves.
+    // The sheet is wider than the screen at every depth: its outer dots sit off screen and the screen cuts the links that reach them.
     var net = document.querySelector('.net');
     if (net && net.getContext) {
         var ctx = net.getContext('2d');
@@ -135,6 +135,7 @@
         var FAR_WIDE = 0.64;       // width of its cells relative to the nearest: closer to 1 = less fanning out sideways
         var FORE_Z = -0.8;         // one extra row stands this many rows in front of the sheet: bigger, lower, one dot every two columns
         var NEAREST = 1 / (1 + FORE_Z / (ROWS - 1) * (1 / FAR - 1));        // its size relative to the front row of the sheet
+        var OVERRUN = 1.14;        // width of the farthest row relative to the screen: above 1, even that row ends off screen
         var SWAY = 0.16;           // how far a dot wanders from its place, in cells
         var SPEED = 0.55;          // 1 = the wave crosses a cell in about a second
         var w = 0, h = 0, visible = false, started = performance.now();
@@ -164,22 +165,14 @@
             w = net.clientWidth; h = net.clientHeight;
             net.width = w * ratio; net.height = h * ratio;
             ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-            var cols = Math.max(10, Math.round(w / FAR_WIDE / 46) + 1);
+            var cols = Math.max(10, Math.round(w * OVERRUN / FAR_WIDE / 46) + 1);
             if (cols !== COLS) { COLS = cols; build(); }
-            var cell = w / FAR_WIDE / (COLS - 1);             // width of a cell in the nearest row
-            mesh.concat([fore]).forEach(function (row) {
-                row.forEach(function (dot) {
-                    var rest = place(dot, null), reach = cell * SWAY + 6;
-                    dot.shown = rest[0] >= reach && rest[0] <= w - reach;
-                });
-            });
         }
-        // sheet coordinates (x across, z away from the viewer) to a place on screen; t === null gives the resting place
+        // sheet coordinates (x across, z away from the viewer) to a place on screen
         function place(dot, t) {
-            var still = t === null;
-            var x = dot.x + (still ? 0 : Math.cos(t * dot.pace + dot.phase) * SWAY);
-            var z = dot.z + (still ? 0 : Math.sin(t * dot.pace * 0.8 + dot.phase) * SWAY * dot.hold);
-            var lift = still ? 0 : dot.zig
+            var x = dot.x + Math.cos(t * dot.pace + dot.phase) * SWAY;
+            var z = dot.z + Math.sin(t * dot.pace * 0.8 + dot.phase) * SWAY * dot.hold;
+            var lift = dot.zig
                 ? dot.zig * (0.5 + 0.5 * Math.sin(t * dot.pace * 1.3 + dot.phase))          // each tooth grows and shrinks on its own rhythm
                 : (Math.sin(x * 0.75 + t * 0.9) * Math.cos(z * 0.9 - t * 0.6) + Math.sin(t * dot.pace + dot.phase) * 0.25) * dot.hold;
             var away = z / (ROWS - 1);
@@ -188,16 +181,14 @@
             var swing = h * 0.08;                                           // how far the wave lifts a near dot, in px
             var back = 4 + swing * FAR, front = h - 10 - swing * NEAREST;       // the farthest row sits at the top of the zone, the extra front row at its bottom
             return [
-                w / 2 + (x / (COLS - 1) - 0.5) * (w / FAR_WIDE) * wide,         // the farthest row spans the band; nearer rows run past its sides
+                w / 2 + (x / (COLS - 1) - 0.5) * (w * OVERRUN / FAR_WIDE) * wide,   // every row runs past both sides of the screen
                 back + (front - back) * (near - FAR) / (NEAREST - FAR) + lift * swing * near,
-                near,
-                dot.shown
+                near
             ];
         }
         // 0 at the back of the sheet, 1 at the extra front row: the back fades out
         function depth(near) { return (near - FAR) / (NEAREST - FAR); }
         function link(a, b) {
-            if (!a[3] || !b[3]) return;
             ctx.strokeStyle = 'rgba(' + BLUE + ',' + (0.03 + depth(Math.min(a[2], b[2])) * 0.34) + ')';
             ctx.beginPath();
             ctx.moveTo(a[0], a[1]);
@@ -226,7 +217,6 @@
             });
             at.concat([front]).forEach(function (row) {
                 row.forEach(function (p) {
-                    if (!p[3]) return;
                     ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.15 + depth(p[2]) * 0.8) + ')';
                     ctx.beginPath();
                     ctx.arc(p[0], p[1], 0.5 + p[2] * p[2] * 2.2, 0, Math.PI * 2);
