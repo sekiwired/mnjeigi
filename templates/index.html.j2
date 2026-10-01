@@ -192,9 +192,12 @@
         </div>
         <div class="case__body">
           <p class="case__context">{{ case.context }}</p>
-          <ul class="case__results">
-            {% for q in case.quotes %}<li>{{ quote(case.mission, q.has, q.mark) }}</li>{% endfor %}
-          </ul>
+          <details class="case__more" open>
+            <summary><span>{{ c.proof.record.labels.results }}</span>{{ plus() }}</summary>
+            <ul class="case__results">
+              {% for q in case.quotes %}<li>{{ quote(case.mission, q.has, q.mark) }}</li>{% endfor %}
+            </ul>
+          </details>
         </div>
         <dl class="case__figs">
           {% for f in case.figures %}
@@ -300,15 +303,15 @@
       <header>
         {{ eyebrow(c.about.eyebrow) }}
         <h2 class="h2">{{ c.about.title }}</h2>
-      </header>
-      <div>
-        <p class="about__bio">{{ c.about.bio | safe }}</p>
+        <p class="roles" data-roles='{{ c.about.roles | tojson }}'><span class="roles__prefix">{{ c.about.roles_label }}</span> <span class="roles__word">{{ c.about.roles | join(', ') }}</span></p>
         <dl class="facts">
           {% for f in c.about.facts %}
           <div><dt>{{ f.label }}</dt>{% for l in f.lines %}<dd>{{ l }}</dd>{% endfor %}</div>
           {% endfor %}
-          <div class="facts__wide"><dt>{{ c.about.roles_label }}</dt><dd>{{ c.about.roles | join(', ') }}</dd></div>
         </dl>
+      </header>
+      <div>
+        <p class="about__bio">{{ c.about.bio | safe }}</p>
         <div class="about__links">
           <a class="btn btn--ink" href="{{ root }}{{ c.about.cv.href }}" download>{{ c.about.cv.label }}{{ down() }}</a>
           <a class="link" href="{{ c.about.linkedin.href }}" target="_blank" rel="noopener">{{ c.about.linkedin.label }}{{ arrow() }}</a>

@@ -83,6 +83,30 @@
 
     document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
+    // Selected missions: results fold away on phones
+    if (matchMedia('(max-width: 640px)').matches) {
+        document.querySelectorAll('.case__more').forEach(function (d) { d.open = false; });
+    }
+
+    // Roles typewriter
+    var roles = document.querySelector('.roles');
+    if (roles && !reducedMotion) {
+        var words = JSON.parse(roles.dataset.roles);
+        var word = roles.querySelector('.roles__word');
+        var i = 0, n = 0, deleting = false;
+        roles.classList.add('is-typing');
+        word.textContent = '';
+        (function tick() {
+            var full = words[i % words.length];
+            n += deleting ? -1 : 1;
+            word.textContent = full.slice(0, n);
+            var delay = deleting ? 45 : 95;
+            if (!deleting && n === full.length) { deleting = true; delay = 1400; }
+            else if (deleting && n === 0) { deleting = false; i++; delay = 350; }
+            setTimeout(tick, delay);
+        })();
+    }
+
     // "Discuss this" links carry their topic into the form
     var form = document.getElementById('contact-form');
     if (!form) return; // legal pages carry no form

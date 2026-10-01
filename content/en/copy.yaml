@@ -39,7 +39,7 @@ stats:
   - {value: "18", unit: yrs, label: "Engineering, architecture, and operations"}
   - {value: "35B+", unit: "", label: "transactions a year: the architecture designed and validated for Sanofi, across 400 factories"}
   - {value: "5×", unit: "", label: "lower cloud costs at Meludia, with 3× the load capacity"}
-  - {value: "12", unit: "", label: "B2B SaaS products built and shipped as founder and CTO"}
+  - {value: "12", unit: "", label: "B2B SaaS ERP tools built and delivered as founder and CTO"}
 
 situations:
   eyebrow: When to bring me in
@@ -71,7 +71,7 @@ situations:
 
 services:
   eyebrow: Services
-  title: "Four ways in."
+  title: "What can I help you with?"
   intro: "Each is a complete engagement. None is a prerequisite for another. We define the outcome and the scope of my involvement together."
   discuss: Discuss this
   output_label: You get
@@ -240,7 +240,7 @@ about:
     title: Where I have been the reference
     rows:
       - {skill: "Git & software configuration management", proof: "Thales Group standard"}
-      - {skill: "Enterprise architecture", proof: "Sanofi, 35B transactions a year"}
+      - {skill: "Enterprise architecture", proof: "Sanofi, 35B+ transactions a year"}
       - {skill: "Cloud migration & cost", proof: "Meludia, 5× reduction"}
       - {skill: "RFP & vendor selection", proof: "L'Oréal Groupe"}
   inventory_title: The full inventory

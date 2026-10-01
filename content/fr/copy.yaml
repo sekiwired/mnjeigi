@@ -30,7 +30,7 @@ hero:
   eyebrow: [Julien Grimal, Consultant indépendant, CTO à temps partagé]
   title_lines: ["Des projets complexes,", "menés à leur"]
   title_accent: "terme."
-  sub: "J'interviens lorsque la livraison d'un projet devient un enjeu, afin d'en porter l'ensemble jusqu'à son aboutissement. Audit, conseil ou intervention directe, à travers les enjeux métier, l'organisation, les opérations et la technologie."
+  sub: "J'interviens lorsqu'un projet peine à aboutir, afin d'en porter l'ensemble jusqu'à sa livraison. Audit, conseil ou intervention directe, à travers les enjeux métier, l'organisation, les opérations et la technologie."
   cta: Parlons de votre projet
   cta_secondary: Voir les références
   credential: "18 ans. Thales, Sanofi et L'Oréal à l'échelle du groupe. CTO puis COO d'une entreprise en restructuration. Fondateur."
@@ -39,7 +39,7 @@ stats:
   - {value: "18", unit: ans, label: "Ingénierie, Architecture et Opérations"}
   - {value: "35 Md+", unit: "", label: "de transactions par an : l'architecture conçue et validée pour Sanofi, sur 400 usines"}
   - {value: "÷5", unit: "", label: "sur les coûts cloud de Meludia, avec une capacité de charge multipliée par 3"}
-  - {value: "12", unit: "", label: "produits SaaS B2B construits et livrés comme fondateur et CTO"}
+  - {value: "12", unit: "", label: "outils ERP SaaS B2B construits et livrés comme fondateur et CTO"}
 
 situations:
   eyebrow: Quand faire appel à moi
@@ -71,7 +71,7 @@ situations:
 
 services:
   eyebrow: Services
-  title: "Quatre portes d'entrée."
+  title: "En quoi puis-je vous être utile ?"
   intro: "Chacune est une mission complète. Aucune n'est le préalable d'une autre. Nous définissons ensemble le résultat attendu et le périmètre de mon intervention."
   discuss: En discuter
   output_label: Vous obtenez
@@ -240,7 +240,7 @@ about:
     title: Là où j'ai été la référence
     rows:
       - {skill: "Git & gestion de configuration logicielle", proof: "Standard du Groupe Thales"}
-      - {skill: "Architecture d'entreprise", proof: "Sanofi, 35 Md de transactions par an"}
+      - {skill: "Architecture d'entreprise", proof: "Sanofi, 35 Md+ de transactions par an"}
       - {skill: "Migration cloud & coûts", proof: "Meludia, coûts divisés par 5"}
       - {skill: "Appels d'offres & sélection de prestataires", proof: "L'Oréal Groupe"}
   inventory_title: L'inventaire complet
