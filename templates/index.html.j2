@@ -301,18 +301,18 @@
   <div class="wrap">
     <div class="about__top">
       <header>
-        <canvas class="net" aria-hidden="true"></canvas>
         {{ eyebrow(c.about.eyebrow) }}
         <h2 class="h2">{{ c.about.title }}</h2>
         <p class="roles" data-roles='{{ c.about.roles | tojson }}'><span class="roles__prefix">{{ c.about.roles_label }}</span> <span class="roles__word">{{ c.about.roles | join(', ') }}</span></p>
+        <canvas class="net" aria-hidden="true"></canvas>
+      </header>
+      <div>
+        <p class="about__bio">{{ c.about.bio | safe }}</p>
         <dl class="facts">
           {% for f in c.about.facts %}
           <div><dt>{{ f.label }}</dt>{% for l in f.lines %}<dd>{{ l }}</dd>{% endfor %}</div>
           {% endfor %}
         </dl>
-      </header>
-      <div>
-        <p class="about__bio">{{ c.about.bio | safe }}</p>
         <div class="about__links">
           <a class="btn btn--ink" href="{{ root }}{{ c.about.cv.href }}" download>{{ c.about.cv.label }}{{ down() }}</a>
           <a class="link" href="{{ c.about.linkedin.href }}" target="_blank" rel="noopener">{{ c.about.linkedin.label }}{{ arrow() }}</a>

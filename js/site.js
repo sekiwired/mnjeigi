@@ -121,12 +121,14 @@
 
     // Mesh behind the name: a sheet of linked dots receding into the distance, in perspective.
     // Every dot keeps its neighbours (it only sways around its own place), and a wave runs through the sheet.
+    // Which dots are drawn is settled once from their resting place, so no link appears or vanishes while it moves.
     var net = document.querySelector('.net');
     if (net && net.getContext) {
         var ctx = net.getContext('2d');
         var BLUE = '31, 53, 255';
         var COLS = 31, ROWS = 7;
         var FAR = 0.36;            // size of the farthest row relative to the nearest
+        var SWAY = 0.16;           // how far a dot wanders from its place, in cells
         var SPEED = 0.55;          // 1 = the wave crosses a cell in about a second
         var w = 0, h = 0, visible = false, started = performance.now();
         var mesh = [];
@@ -146,23 +148,31 @@
             w = net.clientWidth; h = net.clientHeight;
             net.width = w * ratio; net.height = h * ratio;
             ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+            var cell = w / FAR / (COLS - 1);                  // width of a cell in the nearest row
+            mesh.forEach(function (row) {
+                row.forEach(function (dot) {
+                    var rest = place(dot, null), reach = cell * rest[2] * SWAY + 4;
+                    dot.shown = rest[0] >= reach && rest[0] <= w - reach;
+                });
+            });
         }
-        // sheet coordinates (x across, z away from the viewer) to a place on screen
+        // sheet coordinates (x across, z away from the viewer) to a place on screen; t === null gives the resting place
         function place(dot, t) {
-            var x = dot.x + Math.cos(t * dot.pace + dot.phase) * 0.16;
-            var z = dot.z + Math.sin(t * dot.pace * 0.8 + dot.phase) * 0.16;
-            var lift = Math.sin(x * 0.75 + t * 0.9) * Math.cos(z * 0.9 - t * 0.6) + Math.sin(t * dot.pace + dot.phase) * 0.25;
+            var still = t === null;
+            var x = dot.x + (still ? 0 : Math.cos(t * dot.pace + dot.phase) * SWAY);
+            var z = dot.z + (still ? 0 : Math.sin(t * dot.pace * 0.8 + dot.phase) * SWAY);
+            var lift = still ? 0 : Math.sin(x * 0.75 + t * 0.9) * Math.cos(z * 0.9 - t * 0.6) + Math.sin(t * dot.pace + dot.phase) * 0.25;
             var near = 1 / (1 + (z / (ROWS - 1)) * (1 / FAR - 1));          // 1 for the nearest row, FAR for the farthest
             var horizon = 4, front = h - 10;
             return [
                 w / 2 + (x / (COLS - 1) - 0.5) * (w / FAR) * near,              // the farthest row spans the band; nearer rows run past its sides
                 horizon + (front - horizon) * near * (0.86 + lift * 0.11),   // near rows low in the band, far rows rise to the horizon
-                near
+                near,
+                dot.shown
             ];
         }
-        function inside(p) { return p[0] >= 4 && p[0] <= w - 4; }
         function link(a, b) {
-            if (!inside(a) || !inside(b)) return;
+            if (!a[3] || !b[3]) return;
             ctx.strokeStyle = 'rgba(' + BLUE + ',' + (0.05 + Math.min(a[2], b[2]) * 0.3) + ')';
             ctx.beginPath();
             ctx.moveTo(a[0], a[1]);
@@ -185,7 +195,7 @@
             }
             at.forEach(function (row) {
                 row.forEach(function (p) {
-                    if (!inside(p)) return;
+                    if (!p[3]) return;
                     ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.3 + p[2] * 0.6) + ')';
                     ctx.beginPath();
                     ctx.arc(p[0], p[1], 0.7 + p[2] * 2.3, 0, Math.PI * 2);
