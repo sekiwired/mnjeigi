@@ -384,7 +384,7 @@ mark { background: none; color: var(--on-ink); font-weight: 600; box-shadow: ins
 .roles.is-rolling .roles__word { height: 1.4em; overflow: hidden; }
 .roles__reel { display: block; transition: transform .7s cubic-bezier(.6, 0, .2, 1); }
 .roles__reel span { display: block; height: 1.4em; white-space: nowrap; }
-/* network of drifting dots behind the name, kept inside a horizontal band */
+/* mesh of linked dots behind the name, drawn in perspective inside a horizontal band */
 .about__top header { position: relative; }
 .about__top header > :not(.net) { position: relative; z-index: 1; }
 .net { position: absolute; z-index: 0; left: 0; bottom: -1.5rem; width: 100%; height: 15rem; pointer-events: none; }

@@ -119,57 +119,77 @@
         }, 2200);
     }
 
-    // Network behind the name: dots drift on their own and stay inside a horizontal band,
-    // and a line appears between two dots whenever they come close
+    // Mesh behind the name: a sheet of linked dots seen from below, in perspective.
+    // Every dot keeps its neighbours (it only sways around its own place), and a wave runs through the sheet.
     var net = document.querySelector('.net');
     if (net && net.getContext) {
         var ctx = net.getContext('2d');
         var BLUE = '31, 53, 255';
-        var LINK = 120;            // px: two dots closer than this are linked
-        var w = 0, h = 0, dots = [], visible = false, last = 0;
+        var COLS = 31, ROWS = 7;
+        var FAR = 0.36;            // size of the farthest row relative to the nearest
+        var w = 0, h = 0, visible = false, started = performance.now();
+        var mesh = [];
+        for (var r = 0; r < ROWS; r++) {
+            mesh.push([]);
+            for (var c = 0; c < COLS; c++) {
+                mesh[r].push({
+                    x: c + (Math.random() - 0.5) * 0.62,      // home place, off the regular grid: no two cells alike
+                    z: r + (Math.random() - 0.5) * 0.62,
+                    phase: Math.random() * Math.PI * 2,
+                    pace: 0.5 + Math.random() * 0.7
+                });
+            }
+        }
         function size() {
             var ratio = Math.min(devicePixelRatio || 1, 2);
             w = net.clientWidth; h = net.clientHeight;
             net.width = w * ratio; net.height = h * ratio;
             ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-            var count = Math.round(Math.max(26, Math.min(64, w * h / 2600)));
-            dots = [];
-            for (var i = 0; i < count; i++) {
-                var angle = Math.random() * Math.PI * 2, speed = 9 + Math.random() * 17;   // px per second
-                dots.push({
-                    x: Math.random() * w, y: Math.random() * h,
-                    vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed * 0.6,
-                    r: 1.2 + Math.random() * 2.1
-                });
-            }
+        }
+        // sheet coordinates (x across, z away from the viewer) to a place on screen
+        function place(dot, t) {
+            var x = dot.x + Math.cos(t * dot.pace + dot.phase) * 0.16;
+            var z = dot.z + Math.sin(t * dot.pace * 0.8 + dot.phase) * 0.16;
+            var lift = Math.sin(x * 0.75 + t * 0.9) * Math.cos(z * 0.9 - t * 0.6) + Math.sin(t * dot.pace + dot.phase) * 0.25;
+            var near = 1 / (1 + (z / (ROWS - 1)) * (1 / FAR - 1));          // 1 for the nearest row, FAR for the farthest
+            var horizon = h - 4, top = 10;
+            return [
+                w / 2 + (x / (COLS - 1) - 0.5) * (w / FAR) * near,              // the farthest row spans the band; nearer rows run past its sides
+                horizon - (horizon - top) * near * (0.86 + lift * 0.11),     // near rows high in the band, far rows sink to the horizon
+                near
+            ];
+        }
+        function inside(p) { return p[0] >= 4 && p[0] <= w - 4; }
+        function link(a, b) {
+            if (!inside(a) || !inside(b)) return;
+            ctx.strokeStyle = 'rgba(' + BLUE + ',' + (0.05 + Math.min(a[2], b[2]) * 0.3) + ')';
+            ctx.beginPath();
+            ctx.moveTo(a[0], a[1]);
+            ctx.lineTo(b[0], b[1]);
+            ctx.stroke();
         }
         function draw(now) {
-            var dt = Math.min((now - last) / 1000, 0.05);
-            last = now;
+            var t = (now - started) / 1000;
+            var at = mesh.map(function (row) { return row.map(function (dot) { return place(dot, t); }); });
             ctx.clearRect(0, 0, w, h);
-            dots.forEach(function (d) {
-                d.x += d.vx * dt; d.y += d.vy * dt;
-                if (d.x < d.r || d.x > w - d.r) { d.vx = -d.vx; d.x = Math.max(d.r, Math.min(w - d.r, d.x)); }
-                if (d.y < d.r || d.y > h - d.r) { d.vy = -d.vy; d.y = Math.max(d.r, Math.min(h - d.r, d.y)); }
-            });
             ctx.lineWidth = 1;
-            for (var a = 0; a < dots.length; a++) {
-                for (var b = a + 1; b < dots.length; b++) {
-                    var dx = dots[a].x - dots[b].x, dy = dots[a].y - dots[b].y;
-                    var dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist > LINK) continue;
-                    ctx.strokeStyle = 'rgba(' + BLUE + ',' + ((1 - dist / LINK) * 0.42) + ')';
-                    ctx.beginPath();
-                    ctx.moveTo(dots[a].x, dots[a].y);
-                    ctx.lineTo(dots[b].x, dots[b].y);
-                    ctx.stroke();
+            for (var r = 0; r < ROWS; r++) {
+                for (var c = 0; c < COLS; c++) {
+                    if (c + 1 < COLS) link(at[r][c], at[r][c + 1]);
+                    if (r + 1 < ROWS) link(at[r][c], at[r + 1][c]);
+                    if (c + 1 < COLS && r + 1 < ROWS) {
+                        if ((c + r) % 2) link(at[r][c], at[r + 1][c + 1]); else link(at[r][c + 1], at[r + 1][c]);
+                    }
                 }
             }
-            dots.forEach(function (d) {
-                ctx.fillStyle = 'rgba(' + BLUE + ', 0.8)';
-                ctx.beginPath();
-                ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-                ctx.fill();
+            at.forEach(function (row) {
+                row.forEach(function (p) {
+                    if (!inside(p)) return;
+                    ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.3 + p[2] * 0.6) + ')';
+                    ctx.beginPath();
+                    ctx.arc(p[0], p[1], 0.7 + p[2] * 2.3, 0, Math.PI * 2);
+                    ctx.fill();
+                });
             });
             if (visible && !reducedMotion) requestAnimationFrame(draw);
         }
@@ -179,7 +199,7 @@
             new IntersectionObserver(function (entries) {
                 var was = visible;
                 visible = entries[0].isIntersecting;
-                if (visible && !was) { last = performance.now(); requestAnimationFrame(draw); }
+                if (visible && !was) requestAnimationFrame(draw);
             }).observe(net);
         } else {
             draw(performance.now());
