@@ -301,6 +301,7 @@
   <div class="wrap">
     <div class="about__top">
       <header>
+        <canvas class="wave" aria-hidden="true"></canvas>
         {{ eyebrow(c.about.eyebrow) }}
         <h2 class="h2">{{ c.about.title }}</h2>
         <p class="roles" data-roles='{{ c.about.roles | tojson }}'><span class="roles__prefix">{{ c.about.roles_label }}</span> <span class="roles__word">{{ c.about.roles | join(', ') }}</span></p>

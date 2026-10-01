@@ -88,23 +88,93 @@
         document.querySelectorAll('.case__more').forEach(function (d) { d.open = false; });
     }
 
-    // Roles typewriter
+    // Roles: one word rolls up after another, like a reel
     var roles = document.querySelector('.roles');
     if (roles && !reducedMotion) {
         var words = JSON.parse(roles.dataset.roles);
-        var word = roles.querySelector('.roles__word');
-        var i = 0, n = 0, deleting = false;
-        roles.classList.add('is-typing');
-        word.textContent = '';
-        (function tick() {
-            var full = words[i % words.length];
-            n += deleting ? -1 : 1;
-            word.textContent = full.slice(0, n);
-            var delay = deleting ? 45 : 95;
-            if (!deleting && n === full.length) { deleting = true; delay = 1400; }
-            else if (deleting && n === 0) { deleting = false; i++; delay = 350; }
-            setTimeout(tick, delay);
-        })();
+        var slot = roles.querySelector('.roles__word');
+        var reel = document.createElement('span');
+        reel.className = 'roles__reel';
+        words.concat(words[0]).forEach(function (w) {
+            var item = document.createElement('span');
+            item.textContent = w;
+            reel.appendChild(item);
+        });
+        slot.textContent = '';
+        slot.appendChild(reel);
+        roles.classList.add('is-rolling');
+        var at = 0;
+        setInterval(function () {
+            at++;
+            reel.style.transition = '';
+            reel.style.transform = 'translateY(' + (-at * 1.4) + 'em)';
+            if (at === words.length) {
+                // the last item repeats the first: jump back unseen once the roll has ended
+                setTimeout(function () {
+                    at = 0;
+                    reel.style.transition = 'none';
+                    reel.style.transform = 'translateY(0)';
+                }, 800);
+            }
+        }, 2200);
+    }
+
+    // Wave of linked dots behind the name
+    var wave = document.querySelector('.wave');
+    if (wave && wave.getContext) {
+        var ctx = wave.getContext('2d');
+        var COLS = 26, ROWS = 9, BLUE = '31, 53, 255';
+        var w = 0, h = 0, visible = false, started = performance.now();
+        function size() {
+            var ratio = Math.min(devicePixelRatio || 1, 2);
+            w = wave.clientWidth; h = wave.clientHeight;
+            wave.width = w * ratio; wave.height = h * ratio;
+            ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        }
+        function point(c, r, t) {
+            var depth = r / (ROWS - 1);                       // 0 far, 1 near
+            var spread = 0.55 + depth * 0.75;                 // near rows fan out
+            var x = w / 2 + (c / (COLS - 1) - 0.5) * w * 1.5 * spread;
+            var y = h * (0.5 + depth * depth * 0.42);
+            var lift = Math.sin(c * 0.42 + t * 0.9) * Math.cos(r * 0.55 + t * 0.6) + Math.sin(c * 0.17 - t * 0.5) * 0.6;
+            return [x, y + lift * h * (0.018 + depth * 0.03), depth];
+        }
+        function draw(now) {
+            var t = (now - started) / 1000;
+            var grid = [];
+            ctx.clearRect(0, 0, w, h);
+            for (var r = 0; r < ROWS; r++) {
+                grid.push([]);
+                for (var c = 0; c < COLS; c++) grid[r].push(point(c, r, t));
+            }
+            ctx.lineWidth = 1;
+            for (r = 0; r < ROWS; r++) {
+                for (c = 0; c < COLS; c++) {
+                    var p = grid[r][c], alpha = 0.07 + p[2] * 0.2;
+                    ctx.strokeStyle = 'rgba(' + BLUE + ',' + alpha + ')';
+                    ctx.beginPath();
+                    if (c + 1 < COLS) { ctx.moveTo(p[0], p[1]); ctx.lineTo(grid[r][c + 1][0], grid[r][c + 1][1]); }
+                    if (r + 1 < ROWS) { ctx.moveTo(p[0], p[1]); ctx.lineTo(grid[r + 1][c][0], grid[r + 1][c][1]); }
+                    ctx.stroke();
+                    ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.25 + p[2] * 0.6) + ')';
+                    ctx.beginPath();
+                    ctx.arc(p[0], p[1], 1 + p[2] * 1.6, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+            if (visible && !reducedMotion) requestAnimationFrame(draw);
+        }
+        size();
+        addEventListener('resize', function () { size(); if (!visible || reducedMotion) draw(performance.now()); });
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function (entries) {
+                var was = visible;
+                visible = entries[0].isIntersecting;
+                if (visible && !was) requestAnimationFrame(draw);
+            }).observe(wave);
+        } else {
+            draw(performance.now());
+        }
     }
 
     // "Discuss this" links carry their topic into the form
