@@ -119,52 +119,58 @@
         }, 2200);
     }
 
-    // Flat lattice of diamonds behind the name: a few linked dots, barely moving
-    var wave = document.querySelector('.wave');
-    if (wave && wave.getContext) {
-        var ctx = wave.getContext('2d');
-        var COLS = 9, ROWS = 5, BLUE = '31, 53, 255';
-        var w = 0, h = 0, visible = false, started = performance.now();
+    // Network behind the name: dots drift on their own and stay inside a horizontal band,
+    // and a line appears between two dots whenever they come close
+    var net = document.querySelector('.net');
+    if (net && net.getContext) {
+        var ctx = net.getContext('2d');
+        var BLUE = '31, 53, 255';
+        var LINK = 120;            // px: two dots closer than this are linked
+        var w = 0, h = 0, dots = [], visible = false, last = 0;
         function size() {
             var ratio = Math.min(devicePixelRatio || 1, 2);
-            w = wave.clientWidth; h = wave.clientHeight;
-            wave.width = w * ratio; wave.height = h * ratio;
+            w = net.clientWidth; h = net.clientHeight;
+            net.width = w * ratio; net.height = h * ratio;
             ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-        }
-        function point(c, r, t) {
-            var depth = r / (ROWS - 1);                       // 0 far, 1 near
-            var step = w * 1.1 / (COLS - 1) * (0.72 + depth * 0.45);
-            var x = w * 0.46 + (c - (COLS - 1) / 2 + (r % 2 ? 0.5 : 0)) * step;   // odd rows sit half a step over: diamonds
-            var y = h * (0.52 + depth * 0.16);                // rows close together: a flat sheet seen from the side
-            var lift = Math.sin(c * 0.7 + r * 0.5 + t * 0.45);
-            return [x, y + lift * h * 0.006 * (0.6 + depth), depth];
+            var count = Math.round(Math.max(26, Math.min(64, w * h / 2600)));
+            dots = [];
+            for (var i = 0; i < count; i++) {
+                var angle = Math.random() * Math.PI * 2, speed = 9 + Math.random() * 17;   // px per second
+                dots.push({
+                    x: Math.random() * w, y: Math.random() * h,
+                    vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed * 0.6,
+                    r: 1.2 + Math.random() * 2.1
+                });
+            }
         }
         function draw(now) {
-            var t = (now - started) / 1000;
-            var grid = [];
+            var dt = Math.min((now - last) / 1000, 0.05);
+            last = now;
             ctx.clearRect(0, 0, w, h);
-            for (var r = 0; r < ROWS; r++) {
-                grid.push([]);
-                for (var c = 0; c < COLS; c++) grid[r].push(point(c, r, t));
-            }
+            dots.forEach(function (d) {
+                d.x += d.vx * dt; d.y += d.vy * dt;
+                if (d.x < d.r || d.x > w - d.r) { d.vx = -d.vx; d.x = Math.max(d.r, Math.min(w - d.r, d.x)); }
+                if (d.y < d.r || d.y > h - d.r) { d.vy = -d.vy; d.y = Math.max(d.r, Math.min(h - d.r, d.y)); }
+            });
             ctx.lineWidth = 1;
-            for (r = 0; r < ROWS; r++) {
-                for (c = 0; c < COLS; c++) {
-                    var p = grid[r][c], alpha = 0.12 + p[2] * 0.22;
-                    ctx.strokeStyle = 'rgba(' + BLUE + ',' + alpha + ')';
+            for (var a = 0; a < dots.length; a++) {
+                for (var b = a + 1; b < dots.length; b++) {
+                    var dx = dots[a].x - dots[b].x, dy = dots[a].y - dots[b].y;
+                    var dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist > LINK) continue;
+                    ctx.strokeStyle = 'rgba(' + BLUE + ',' + ((1 - dist / LINK) * 0.42) + ')';
                     ctx.beginPath();
-                    if (r + 1 < ROWS) {
-                        var left = r % 2 ? c : c - 1, right = left + 1;
-                        if (left >= 0) { ctx.moveTo(p[0], p[1]); ctx.lineTo(grid[r + 1][left][0], grid[r + 1][left][1]); }
-                        if (right < COLS) { ctx.moveTo(p[0], p[1]); ctx.lineTo(grid[r + 1][right][0], grid[r + 1][right][1]); }
-                    }
+                    ctx.moveTo(dots[a].x, dots[a].y);
+                    ctx.lineTo(dots[b].x, dots[b].y);
                     ctx.stroke();
-                    ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.25 + p[2] * 0.6) + ')';
-                    ctx.beginPath();
-                    ctx.arc(p[0], p[1], 1.4 + p[2] * 1.2, 0, Math.PI * 2);
-                    ctx.fill();
                 }
             }
+            dots.forEach(function (d) {
+                ctx.fillStyle = 'rgba(' + BLUE + ', 0.8)';
+                ctx.beginPath();
+                ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+                ctx.fill();
+            });
             if (visible && !reducedMotion) requestAnimationFrame(draw);
         }
         size();
@@ -173,8 +179,8 @@
             new IntersectionObserver(function (entries) {
                 var was = visible;
                 visible = entries[0].isIntersecting;
-                if (visible && !was) requestAnimationFrame(draw);
-            }).observe(wave);
+                if (visible && !was) { last = performance.now(); requestAnimationFrame(draw); }
+            }).observe(net);
         } else {
             draw(performance.now());
         }
