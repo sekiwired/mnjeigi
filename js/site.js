@@ -119,7 +119,7 @@
         }, 2200);
     }
 
-    // Mesh behind the name: a sheet of linked dots seen from below, in perspective.
+    // Mesh behind the name: a sheet of linked dots receding into the distance, in perspective.
     // Every dot keeps its neighbours (it only sways around its own place), and a wave runs through the sheet.
     var net = document.querySelector('.net');
     if (net && net.getContext) {
@@ -127,6 +127,7 @@
         var BLUE = '31, 53, 255';
         var COLS = 31, ROWS = 7;
         var FAR = 0.36;            // size of the farthest row relative to the nearest
+        var SPEED = 0.55;          // 1 = the wave crosses a cell in about a second
         var w = 0, h = 0, visible = false, started = performance.now();
         var mesh = [];
         for (var r = 0; r < ROWS; r++) {
@@ -152,10 +153,10 @@
             var z = dot.z + Math.sin(t * dot.pace * 0.8 + dot.phase) * 0.16;
             var lift = Math.sin(x * 0.75 + t * 0.9) * Math.cos(z * 0.9 - t * 0.6) + Math.sin(t * dot.pace + dot.phase) * 0.25;
             var near = 1 / (1 + (z / (ROWS - 1)) * (1 / FAR - 1));          // 1 for the nearest row, FAR for the farthest
-            var horizon = h - 4, top = 10;
+            var horizon = 4, front = h - 10;
             return [
                 w / 2 + (x / (COLS - 1) - 0.5) * (w / FAR) * near,              // the farthest row spans the band; nearer rows run past its sides
-                horizon - (horizon - top) * near * (0.86 + lift * 0.11),     // near rows high in the band, far rows sink to the horizon
+                horizon + (front - horizon) * near * (0.86 + lift * 0.11),   // near rows low in the band, far rows rise to the horizon
                 near
             ];
         }
@@ -169,7 +170,7 @@
             ctx.stroke();
         }
         function draw(now) {
-            var t = (now - started) / 1000;
+            var t = (now - started) / 1000 * SPEED;
             var at = mesh.map(function (row) { return row.map(function (dot) { return place(dot, t); }); });
             ctx.clearRect(0, 0, w, h);
             ctx.lineWidth = 1;
