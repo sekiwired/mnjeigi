@@ -49,19 +49,19 @@ situations:
     - "Chacun porte sa part. Porter l'ensemble est un rôle à part entière. C'est celui que j'assume."
   rows:
     - title: "Un standard à définir, puis à faire adopter."
-      source: "Thales Group · 2013 – 2016"
-      quote: {mission: THALES GROUP, has: "Formation de formateurs"}
+      source: "Thales Group"
+      quote: {mission: THALES GROUP, has: "a été défini"}
     - title: "Un système critique, avec une échéance et des engagements de performance."
-      source: "Sanofi · Lead Architect · 2013 – 2016"
+      source: "Sanofi · Lead Architect"
       quote: {mission: SANOFI, has: "engagements de performance"}
     - title: "Un projet qui s'enlise."
-      source: "Meludia · CTO puis COO · 2016 – 2020"
+      source: "Meludia · CTO puis COO"
       quote: {mission: MELUDIA, has: "Google Play"}
     - title: "Une transition, ou un poste resté vacant dans l'équipe."
-      source: "Meludia · CTO intérimaire, un jour par semaine · 2012 – 2013"
+      source: "Meludia · CTO intérimaire, un jour par semaine"
       quote: {mission: MELUDIA (Freelance), has: "profil CTO"}
     - title: "Une décision qui appelle un regard indépendant."
-      source: "L'Oréal Groupe · 2016"
+      source: "L'Oréal Groupe"
       quote: {mission: L'ORÉAL GROUPE, has: "comité de sélection"}
   cta_text: "Vous reconnaissez l'une de ces situations ?"
   cta: Parlons de votre projet
@@ -144,7 +144,7 @@ proof:
       figures:
         - {value: "5", label: "pays formés : AU, DE, NO, UK, US"}
       quotes:
-        - {has: "socle technique", mark: "a été livré"}
+        - {has: "a été défini", mark: "a été défini pour le groupe Thales"}
         - {has: "guide de migration", mark: "publié et distribué"}
         - {has: "Formation de formateurs", mark: "Formation de formateurs"}
         - {has: "successeur", mark: "Un successeur a été formé"}

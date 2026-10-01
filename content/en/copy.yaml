@@ -49,19 +49,19 @@ situations:
     - "Everyone holds their part. Carrying the whole is a role of its own. That is the one I take."
   rows:
     - title: "A standard to define, then to get adopted."
-      source: "Thales Group · 2013 – 2016"
-      quote: {mission: THALES GROUP, has: "Train-the-trainer"}
+      source: "Thales Group"
+      quote: {mission: THALES GROUP, has: "standard was defined"}
     - title: "A critical system, with a deadline and performance commitments."
-      source: "Sanofi · Lead Architect · 2013 – 2016"
+      source: "Sanofi · Lead Architect"
       quote: {mission: SANOFI, has: "Performance commitments"}
     - title: "A project that is not reaching completion."
-      source: "Meludia · CTO then COO · 2016 – 2020"
+      source: "Meludia · CTO then COO"
       quote: {mission: MELUDIA, has: "Google Play"}
     - title: "A transition, or a seat left empty in the team."
-      source: "Meludia · interim CTO, one day a week · 2012 – 2013"
+      source: "Meludia · interim CTO, one day a week"
       quote: {mission: MELUDIA (Freelance), has: "CTO profile"}
     - title: "A decision that needs an independent basis."
-      source: "L'Oréal Groupe · 2016"
+      source: "L'Oréal Groupe"
       quote: {mission: L'ORÉAL GROUPE, has: "selection committee"}
   cta_text: "Recognize one of these?"
   cta: Discuss your project
@@ -144,7 +144,7 @@ proof:
       figures:
         - {value: "5", label: "countries trained: AU, DE, NO, UK, US"}
       quotes:
-        - {has: "reference baseline", mark: "was delivered"}
+        - {has: "standard was defined", mark: "was defined for the Thales Group"}
         - {has: "migration guide", mark: "published and distributed"}
         - {has: "Train-the-trainer", mark: "delivered"}
         - {has: "successor", mark: "A successor was trained"}
