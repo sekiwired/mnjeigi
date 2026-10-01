@@ -411,7 +411,7 @@ mark { background: none; color: var(--on-ink); font-weight: 600; box-shadow: ins
 .caps { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 2rem; }
 .caps h4 { font-size: 1rem; font-weight: 650; margin-bottom: .7rem; }
 .pills { display: flex !important; flex-wrap: wrap; gap: .45rem; }
-.pills li { font-size: .875rem; line-height: 1.2; padding: .45rem .8rem; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); background: var(--card); }
+.pills li { font-size: .875rem; line-height: 1.2; padding: .45rem .8rem; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(14, 14, 12, .42); }
 
 /* ---------- contact ---------- */
 .contact { background: var(--ink); color: var(--on-ink); padding-block: var(--section); }
