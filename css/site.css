@@ -531,9 +531,6 @@ mark { background: none; color: var(--on-ink); font-weight: 600; box-shadow: ins
   .header__end { gap: .35rem; }
   .btn--sm { padding: .7rem .95rem; }
   .hero__btns .btn { width: 100%; justify-content: space-between; }
-  .net { order: 2; margin-top: 0; }
-  .about__top > header { order: 1; }
-  .about__top > div { order: 3; }
   .wall__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .case { grid-template-columns: minmax(0, 1fr); }
   .case__body, .case__figs { grid-column: 1; grid-row: auto; }
