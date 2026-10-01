@@ -304,7 +304,6 @@
         {{ eyebrow(c.about.eyebrow) }}
         <h2 class="h2">{{ c.about.title }}</h2>
         <p class="roles" data-roles='{{ c.about.roles | tojson }}'><span class="roles__prefix">{{ c.about.roles_label }}</span> <span class="roles__word">{{ c.about.roles | join(', ') }}</span></p>
-        <canvas class="net" aria-hidden="true"></canvas>
       </header>
       <div>
         <p class="about__bio">{{ c.about.bio | safe }}</p>
@@ -318,6 +317,7 @@
           <a class="link" href="{{ c.about.linkedin.href }}" target="_blank" rel="noopener">{{ c.about.linkedin.label }}{{ arrow() }}</a>
         </div>
       </div>
+      <canvas class="net" aria-hidden="true"></canvas>
     </div>
 
     <h3 class="eyebrow">{{ c.about.principles_title }}</h3>

@@ -126,21 +126,24 @@
     if (net && net.getContext) {
         var ctx = net.getContext('2d');
         var BLUE = '31, 53, 255';
-        var COLS = 31, ROWS = 7;
+        var ROWS = 9, COLS = 0;    // columns follow the width: about one dot every 12px in the farthest row
         var FAR = 0.36;            // size of the farthest row relative to the nearest
         var SWAY = 0.16;           // how far a dot wanders from its place, in cells
         var SPEED = 0.55;          // 1 = the wave crosses a cell in about a second
         var w = 0, h = 0, visible = false, started = performance.now();
         var mesh = [];
-        for (var r = 0; r < ROWS; r++) {
-            mesh.push([]);
-            for (var c = 0; c < COLS; c++) {
-                mesh[r].push({
-                    x: c + (Math.random() - 0.5) * 0.62,      // home place, off the regular grid: no two cells alike
-                    z: r + (Math.random() - 0.5) * 0.62,
-                    phase: Math.random() * Math.PI * 2,
-                    pace: 0.5 + Math.random() * 0.7
-                });
+        function build() {
+            mesh = [];
+            for (var r = 0; r < ROWS; r++) {
+                mesh.push([]);
+                for (var c = 0; c < COLS; c++) {
+                    mesh[r].push({
+                        x: c + (Math.random() - 0.5) * 0.62,  // home place, off the regular grid: no two cells alike
+                        z: r + (Math.random() - 0.5) * 0.62,
+                        phase: Math.random() * Math.PI * 2,
+                        pace: 0.5 + Math.random() * 0.7
+                    });
+                }
             }
         }
         function size() {
@@ -148,6 +151,8 @@
             w = net.clientWidth; h = net.clientHeight;
             net.width = w * ratio; net.height = h * ratio;
             ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+            var cols = Math.max(16, Math.round(w / 12) + 1);
+            if (cols !== COLS) { COLS = cols; build(); }
             var cell = w / FAR / (COLS - 1);                  // width of a cell in the nearest row
             mesh.forEach(function (row) {
                 row.forEach(function (dot) {
@@ -198,7 +203,7 @@
                     if (!p[3]) return;
                     ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.3 + p[2] * 0.6) + ')';
                     ctx.beginPath();
-                    ctx.arc(p[0], p[1], 0.7 + p[2] * 2.3, 0, Math.PI * 2);
+                    ctx.arc(p[0], p[1], 0.6 + p[2] * 2, 0, Math.PI * 2);
                     ctx.fill();
                 });
             });
