@@ -90,8 +90,8 @@ services:
     proofs:
       - source: "Meludia · CTO then COO · 2016 – 2020"
         quotes:
-          - {mission: MELUDIA, has: "Azure to AWS"}
           - {mission: MELUDIA, has: "6 technical profiles"}
+          - {mission: MELUDIA, has: "Design/Build/Run"}
       - source: "Meludia · interim CTO, one day a week · 2012 – 2013"
         quotes:
           - {mission: MELUDIA (Freelance), has: "CTO profile"}
@@ -152,13 +152,12 @@ proof:
         - {has: "Azure to AWS", mark: "reducing costs by a factor of 5"}
         - {has: "technical debt", mark: "reduced technical debt on the legacy by 60%"}
         - {has: "6 technical profiles", mark: "Recruited"}
-        - {has: "Google Play", mark: "Delivered"}
+        - {has: "Customer Support", mark: "reduced average ticket resolution time by a factor of 3"}
     - mission: THALES GROUP
       kicker: Group-wide standard
       context: "Sole Git reference and global point of contact for the entire Thales Group. Wrote the Group's Software Configuration Management standard, defined the enterprise-scale IBM GCL → Git migration strategy, designed infrastructure architectures, and delivered L3 technical support across all Thales entities worldwide."
       figures:
         - {value: "5", label: "countries trained: AU, DE, NO, UK, US"}
-        - {value: "1", label: "standard for the entire Group"}
       quotes:
         - {has: "officially distributed", mark: "officially distributed"}
         - {has: "migration guide", mark: "published and distributed"}

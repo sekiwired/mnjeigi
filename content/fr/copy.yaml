@@ -10,7 +10,7 @@ this_lang_label: FR
 
 meta:
   title: "Julien Grimal — Consultant indépendant & CTO à temps partagé"
-  description: "Des projets complexes, menés à leur terme. 18 ans de livraison pour Thales, Sanofi et L'Oréal, comme CTO puis COO, et comme fondateur. CTO à temps partagé, audit IA, formation IA, transformation des processus."
+  description: "Des projets complexes, menés à leur terme. 18 ans de projets livrés pour Thales, Sanofi et L'Oréal, comme CTO puis COO, et comme fondateur. CTO à temps partagé, audit IA, formation IA, transformation des processus."
   job_title: "Consultant indépendant & CTO à temps partagé"
 
 nav:
@@ -38,7 +38,7 @@ hero:
 stats:
   - {value: "18", unit: ans, label: "Ingénierie, Architecture et Opérations"}
   - {value: "35 Md+", unit: "", label: "de transactions par an : l'architecture conçue et validée pour Sanofi, sur 400 usines"}
-  - {value: "÷5", unit: "", label: "sur les coûts cloud de Meludia, avec une capacité de charge multipliée par 3"}
+  - {value: "÷5", unit: "", label: "les coûts cloud de Meludia, pour une capacité de charge multipliée par 3"}
   - {value: "12", unit: "", label: "outils ERP SaaS B2B construits et livrés comme fondateur et CTO"}
 
 situations:
@@ -48,7 +48,7 @@ situations:
     - "Un projet s'enlise rarement au cœur d'une spécialité. Il s'enlise aux jointures : entre l'architecture et la livraison, entre le prestataire et l'équipe interne, entre la décision et son adoption."
     - "Chacun porte sa part. Porter l'ensemble est un rôle à part entière. C'est celui que j'assume."
   rows:
-    - title: "Un projet qui n'aboutit pas."
+    - title: "Un projet qui s'enlise."
       source: "Meludia · CTO puis COO · 2016 – 2020"
       quote: {mission: MELUDIA, has: "Google Play"}
     - title: "Une transition, ou un poste resté vacant dans l'équipe."
@@ -90,8 +90,8 @@ services:
     proofs:
       - source: "Meludia · CTO puis COO · 2016 – 2020"
         quotes:
-          - {mission: MELUDIA, has: "Azure vers AWS"}
           - {mission: MELUDIA, has: "6 profils"}
+          - {mission: MELUDIA, has: "Design/Build/Run"}
       - source: "Meludia · CTO intérimaire, un jour par semaine · 2012 – 2013"
         quotes:
           - {mission: MELUDIA (Freelance), has: "profil CTO"}
@@ -152,13 +152,12 @@ proof:
         - {has: "Azure vers AWS", mark: "réduisant les coûts par un facteur 5"}
         - {has: "dette technique", mark: "réduction de 60% de la dette technique"}
         - {has: "6 profils", mark: "Recrutement"}
-        - {has: "Google Play", mark: "Livraison"}
+        - {has: "Customer Support", mark: "division par 3 du temps moyen de résolution des tickets"}
     - mission: THALES GROUP
       kicker: Standard à l'échelle du groupe
       context: "Seule référence Git et point de contact mondial pour l'ensemble du Groupe Thales. Rédaction du standard SCM du Groupe, définition de la stratégie de migration IBM GCL → Git à l'échelle entreprise, conception des architectures d'infrastructure, et support technique L3 auprès de toutes les entités Thales dans le monde."
       figures:
         - {value: "5", label: "pays formés : AU, DE, NO, UK, US"}
-        - {value: "1", label: "standard pour l'ensemble du Groupe"}
       quotes:
         - {has: "officiellement diffusé", mark: "officiellement diffusé"}
         - {has: "guide de migration", mark: "publié et distribué"}

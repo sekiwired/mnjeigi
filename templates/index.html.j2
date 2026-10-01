@@ -369,11 +369,6 @@
       {{ eyebrow(c.contact.eyebrow) }}
       <h2 class="h2 h2--xl">{% for l in c.contact.title_lines %}<span>{{ l }}</span> {% endfor %}</h2>
       <p class="lede">{{ c.contact.lede }}</p>
-      <div class="contact__alt">
-        <p class="eyebrow">{{ c.contact.alt_title }}</p>
-        <a class="link" href="{{ c.about.linkedin.href }}" target="_blank" rel="noopener">{{ c.about.linkedin.label }}{{ arrow() }}</a>
-        <a class="link" href="{{ root }}{{ c.about.cv.href }}" download>{{ c.about.cv.label }}{{ down() }}</a>
-      </div>
     </header>
 
     <form class="form" id="contact-form" novalidate
@@ -413,6 +408,11 @@
       </div>
       <noscript><p class="form__note">{{ c.contact.nojs }}</p></noscript>
     </form>
+    <div class="contact__alt">
+      <p class="eyebrow">{{ c.contact.alt_title }}</p>
+      <a class="link" href="{{ c.about.linkedin.href }}" target="_blank" rel="noopener">{{ c.about.linkedin.label }}{{ arrow() }}</a>
+      <a class="link" href="{{ root }}{{ c.about.cv.href }}" download>{{ c.about.cv.label }}{{ down() }}</a>
+    </div>
   </div>
 </section>
 

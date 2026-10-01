@@ -103,8 +103,12 @@
         slot.textContent = '';
         slot.appendChild(reel);
         roles.classList.add('is-rolling');
-        var at = 0;
+        var at = 0, inView = true;
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function (entries) { inView = entries[0].isIntersecting; }).observe(roles);
+        }
         setInterval(function () {
+            if (!inView || document.hidden) return;
             at++;
             reel.style.transition = '';
             reel.style.transform = 'translateY(' + (-at * 1.4) + 'em)';
