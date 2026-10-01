@@ -119,11 +119,11 @@
         }, 2200);
     }
 
-    // Wave of linked dots behind the name
+    // Flat lattice of diamonds behind the name: a few linked dots, barely moving
     var wave = document.querySelector('.wave');
     if (wave && wave.getContext) {
         var ctx = wave.getContext('2d');
-        var COLS = 26, ROWS = 9, BLUE = '31, 53, 255';
+        var COLS = 9, ROWS = 5, BLUE = '31, 53, 255';
         var w = 0, h = 0, visible = false, started = performance.now();
         function size() {
             var ratio = Math.min(devicePixelRatio || 1, 2);
@@ -133,11 +133,11 @@
         }
         function point(c, r, t) {
             var depth = r / (ROWS - 1);                       // 0 far, 1 near
-            var spread = 0.55 + depth * 0.75;                 // near rows fan out
-            var x = w / 2 + (c / (COLS - 1) - 0.5) * w * 1.5 * spread;
-            var y = h * (0.5 + depth * depth * 0.42);
-            var lift = Math.sin(c * 0.42 + t * 0.9) * Math.cos(r * 0.55 + t * 0.6) + Math.sin(c * 0.17 - t * 0.5) * 0.6;
-            return [x, y + lift * h * (0.018 + depth * 0.03), depth];
+            var step = w * 1.1 / (COLS - 1) * (0.72 + depth * 0.45);
+            var x = w * 0.46 + (c - (COLS - 1) / 2 + (r % 2 ? 0.5 : 0)) * step;   // odd rows sit half a step over: diamonds
+            var y = h * (0.52 + depth * 0.16);                // rows close together: a flat sheet seen from the side
+            var lift = Math.sin(c * 0.7 + r * 0.5 + t * 0.45);
+            return [x, y + lift * h * 0.006 * (0.6 + depth), depth];
         }
         function draw(now) {
             var t = (now - started) / 1000;
@@ -150,15 +150,18 @@
             ctx.lineWidth = 1;
             for (r = 0; r < ROWS; r++) {
                 for (c = 0; c < COLS; c++) {
-                    var p = grid[r][c], alpha = 0.07 + p[2] * 0.2;
+                    var p = grid[r][c], alpha = 0.12 + p[2] * 0.22;
                     ctx.strokeStyle = 'rgba(' + BLUE + ',' + alpha + ')';
                     ctx.beginPath();
-                    if (c + 1 < COLS) { ctx.moveTo(p[0], p[1]); ctx.lineTo(grid[r][c + 1][0], grid[r][c + 1][1]); }
-                    if (r + 1 < ROWS) { ctx.moveTo(p[0], p[1]); ctx.lineTo(grid[r + 1][c][0], grid[r + 1][c][1]); }
+                    if (r + 1 < ROWS) {
+                        var left = r % 2 ? c : c - 1, right = left + 1;
+                        if (left >= 0) { ctx.moveTo(p[0], p[1]); ctx.lineTo(grid[r + 1][left][0], grid[r + 1][left][1]); }
+                        if (right < COLS) { ctx.moveTo(p[0], p[1]); ctx.lineTo(grid[r + 1][right][0], grid[r + 1][right][1]); }
+                    }
                     ctx.stroke();
                     ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.25 + p[2] * 0.6) + ')';
                     ctx.beginPath();
-                    ctx.arc(p[0], p[1], 1 + p[2] * 1.6, 0, Math.PI * 2);
+                    ctx.arc(p[0], p[1], 1.4 + p[2] * 1.2, 0, Math.PI * 2);
                     ctx.fill();
                 }
             }
