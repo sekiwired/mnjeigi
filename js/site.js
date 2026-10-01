@@ -129,19 +129,25 @@
         var ROWS = 6, COLS = 0;    // columns follow the width: cells of the nearest row are about 46px wide
         var FAR = 0.36;            // size and height of the farthest row relative to the nearest
         var FAR_WIDE = 0.64;       // width of its cells relative to the nearest: closer to 1 = less fanning out sideways
+        var FORE_Z = -0.8;         // one extra row stands this many rows in front of the sheet: bigger, lower, one dot every two columns
+        var NEAREST = 1 / (1 + FORE_Z / (ROWS - 1) * (1 / FAR - 1));        // its size relative to the front row of the sheet
         var SWAY = 0.16;           // how far a dot wanders from its place, in cells
         var SPEED = 0.55;          // 1 = the wave crosses a cell in about a second
         var w = 0, h = 0, visible = false, started = performance.now();
-        var mesh = [];
+        var mesh = [], fore = [];
         function build() {
             mesh = [];
+            fore = [];
+            for (var f = 0; f < COLS; f += 2) {
+                fore.push({ col: f, x: f + (Math.random() - 0.5) * 0.9, z: FORE_Z + Math.random() * 0.15, hold: 0.3, phase: Math.random() * Math.PI * 2, pace: 0.5 + Math.random() * 0.7 });
+            }
             for (var r = 0; r < ROWS; r++) {
                 mesh.push([]);
                 for (var c = 0; c < COLS; c++) {
                     mesh[r].push({
                         x: c + (Math.random() - 0.5) * 0.62,  // home place, off the regular grid: no two cells alike
-                        z: r === 0 ? Math.random() * 0.3 : r + (Math.random() - 0.5) * 0.62,   // nothing sits in front of the front row
-                        hold: r === 0 ? 0.3 : 1,              // the front dots move less, so they stay close to the front edge
+                        z: r + (Math.random() - 0.5) * 0.62,
+                        hold: 1,                              // 1 = moves freely; the extra front row is held, so it stays near the bottom edge
                         phase: Math.random() * Math.PI * 2,
                         pace: 0.5 + Math.random() * 0.7
                     });
@@ -156,9 +162,9 @@
             var cols = Math.max(10, Math.round(w / FAR_WIDE / 46) + 1);
             if (cols !== COLS) { COLS = cols; build(); }
             var cell = w / FAR_WIDE / (COLS - 1);             // width of a cell in the nearest row
-            mesh.forEach(function (row) {
+            mesh.concat([fore]).forEach(function (row) {
                 row.forEach(function (dot) {
-                    var rest = place(dot, null), reach = cell * SWAY + 4;
+                    var rest = place(dot, null), reach = cell * SWAY + 6;
                     dot.shown = rest[0] >= reach && rest[0] <= w - reach;
                 });
             });
@@ -170,20 +176,22 @@
             var z = dot.z + (still ? 0 : Math.sin(t * dot.pace * 0.8 + dot.phase) * SWAY * dot.hold);
             var lift = still ? 0 : (Math.sin(x * 0.75 + t * 0.9) * Math.cos(z * 0.9 - t * 0.6) + Math.sin(t * dot.pace + dot.phase) * 0.25) * dot.hold;
             var away = z / (ROWS - 1);
-            var near = 1 / (1 + away * (1 / FAR - 1));                      // 1 for the nearest row, FAR for the farthest
+            var near = 1 / (1 + away * (1 / FAR - 1));                      // FAR for the farthest row, 1 for the front of the sheet, NEAREST for the extra row
             var wide = 1 / (1 + away * (1 / FAR_WIDE - 1));
             var swing = h * 0.08;                                           // how far the wave lifts a near dot, in px
-            var back = 4 + swing * FAR, front = h - 14 - swing * 0.3;              // the farthest row sits at the top of the zone, the nearest at its bottom
+            var back = 4 + swing * FAR, front = h - 12 - swing * 0.3;       // the farthest row sits at the top of the zone, the extra front row at its bottom
             return [
                 w / 2 + (x / (COLS - 1) - 0.5) * (w / FAR_WIDE) * wide,         // the farthest row spans the band; nearer rows run past its sides
-                back + (front - back) * (near - FAR) / (1 - FAR) + lift * swing * near,
+                back + (front - back) * (near - FAR) / (NEAREST - FAR) + lift * swing * near,
                 near,
                 dot.shown
             ];
         }
+        // 0 at the back of the sheet, 1 at the extra front row: the back fades out
+        function depth(near) { return (near - FAR) / (NEAREST - FAR); }
         function link(a, b) {
             if (!a[3] || !b[3]) return;
-            ctx.strokeStyle = 'rgba(' + BLUE + ',' + (0.05 + Math.min(a[2], b[2]) * 0.3) + ')';
+            ctx.strokeStyle = 'rgba(' + BLUE + ',' + (0.03 + depth(Math.min(a[2], b[2])) * 0.34) + ')';
             ctx.beginPath();
             ctx.moveTo(a[0], a[1]);
             ctx.lineTo(b[0], b[1]);
@@ -192,6 +200,7 @@
         function draw(now) {
             var t = (now - started) / 1000 * SPEED;
             var at = mesh.map(function (row) { return row.map(function (dot) { return place(dot, t); }); });
+            var front = fore.map(function (dot) { return place(dot, t); });
             ctx.clearRect(0, 0, w, h);
             ctx.lineWidth = 1;
             for (var r = 0; r < ROWS; r++) {
@@ -203,12 +212,17 @@
                     }
                 }
             }
-            at.forEach(function (row) {
+            front.forEach(function (p, i) {
+                var col = fore[i].col;
+                if (i + 1 < front.length) link(p, front[i + 1]);
+                [col - 1, col, col + 1].forEach(function (c) { if (c >= 0 && c < COLS) link(p, at[0][c]); });
+            });
+            at.concat([front]).forEach(function (row) {
                 row.forEach(function (p) {
                     if (!p[3]) return;
-                    ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.3 + p[2] * 0.6) + ')';
+                    ctx.fillStyle = 'rgba(' + BLUE + ',' + (0.15 + depth(p[2]) * 0.8) + ')';
                     ctx.beginPath();
-                    ctx.arc(p[0], p[1], 0.7 + p[2] * 2.2, 0, Math.PI * 2);
+                    ctx.arc(p[0], p[1], 0.5 + p[2] * p[2] * 2.2, 0, Math.PI * 2);
                     ctx.fill();
                 });
             });
