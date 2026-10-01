@@ -48,24 +48,21 @@ situations:
     - "Un projet s'enlise rarement au cœur d'une spécialité. Il s'enlise aux jointures : entre l'architecture et la livraison, entre le prestataire et l'équipe interne, entre la décision et son adoption."
     - "Chacun porte sa part. Porter l'ensemble est un rôle à part entière. C'est celui que j'assume."
   rows:
+    - title: "Un standard à définir, puis à faire adopter."
+      source: "Thales Group · 2013 – 2016"
+      quote: {mission: THALES GROUP, has: "Formation de formateurs"}
+    - title: "Un système critique, avec une échéance et des engagements de performance."
+      source: "Sanofi · Lead Architect · 2013 – 2016"
+      quote: {mission: SANOFI, has: "engagements de performance"}
     - title: "Un projet qui s'enlise."
       source: "Meludia · CTO puis COO · 2016 – 2020"
       quote: {mission: MELUDIA, has: "Google Play"}
     - title: "Une transition, ou un poste resté vacant dans l'équipe."
       source: "Meludia · CTO intérimaire, un jour par semaine · 2012 – 2013"
       quote: {mission: MELUDIA (Freelance), has: "profil CTO"}
-    - title: "Un système d'information dont la cartographie ne suit plus."
-      source: "L'Oréal France · 2016"
-      quote: {mission: L'ORÉAL FRANCE, has: "cartographie complète"}
     - title: "Une décision qui appelle un regard indépendant."
       source: "L'Oréal Groupe · 2016"
       quote: {mission: L'ORÉAL GROUPE, has: "comité de sélection"}
-    - title: "Un standard à définir, puis à faire adopter."
-      source: "Thales Group · 2013 – 2016"
-      quote: {mission: THALES GROUP, has: "officiellement diffusé"}
-    - title: "L'IA est adoptée, et les gains tardent à se voir dans la livraison."
-      source: "Trois missions y répondent"
-      link: {href: "#ai", label: "Audit, formation, transformation des processus"}
   cta_text: "Vous reconnaissez l'une de ces situations ?"
   cta: Parlons de votre projet
 
@@ -141,25 +138,13 @@ proof:
   wall_caption: "Clients, employeurs et sociétés que j'ai contribué à construire."
   cases_eyebrow: Missions choisies
   cases:
-    - mission: MELUDIA
-      kicker: Redressement d'entreprise
-      context: "Après 7 ans et une quasi-totalité des effectifs réduits, les fondateurs m'ont mandaté pour restructurer, transformer et réduire les coûts opérationnels et techniques — et pour piloter la production complète d'une nouvelle application mobile de bout en bout."
-      figures:
-        - {value: "÷5", label: "sur les coûts cloud"}
-        - {value: "×3", label: "de capacité de charge"}
-        - {value: "168", label: "pays, plus de 15 000 utilisateurs"}
-      quotes:
-        - {has: "Azure vers AWS", mark: "réduisant les coûts par un facteur 5"}
-        - {has: "dette technique", mark: "réduction de 60% de la dette technique"}
-        - {has: "6 profils", mark: "Recrutement"}
-        - {has: "Customer Support", mark: "division par 3 du temps moyen de résolution des tickets"}
     - mission: THALES GROUP
       kicker: Standard à l'échelle du groupe
       context: "Seule référence Git et point de contact mondial pour l'ensemble du Groupe Thales. Rédaction du standard SCM du Groupe, définition de la stratégie de migration IBM GCL → Git à l'échelle entreprise, conception des architectures d'infrastructure, et support technique L3 auprès de toutes les entités Thales dans le monde."
       figures:
         - {value: "5", label: "pays formés : AU, DE, NO, UK, US"}
       quotes:
-        - {has: "officiellement diffusé", mark: "officiellement diffusé"}
+        - {has: "socle technique", mark: "a été livré"}
         - {has: "guide de migration", mark: "publié et distribué"}
         - {has: "Formation de formateurs", mark: "Formation de formateurs"}
         - {has: "successeur", mark: "Un successeur a été formé"}
@@ -175,6 +160,18 @@ proof:
         - {has: "TOGAF", mark: "Intégration"}
         - {has: "charge réelles", mark: "validant l'architecture sous des conditions de charge réelles"}
         - {has: "engagements de performance", mark: "validés par le client et les délais respectés"}
+    - mission: MELUDIA
+      kicker: Redressement d'entreprise
+      context: "Après 7 ans et une quasi-totalité des effectifs réduits, les fondateurs m'ont mandaté pour restructurer, transformer et réduire les coûts opérationnels et techniques — et pour piloter la production complète d'une nouvelle application mobile de bout en bout."
+      figures:
+        - {value: "÷5", label: "sur les coûts cloud"}
+        - {value: "×3", label: "de capacité de charge"}
+        - {value: "168", label: "pays, plus de 15 000 utilisateurs"}
+      quotes:
+        - {has: "Azure vers AWS", mark: "réduisant les coûts par un facteur 5"}
+        - {has: "dette technique", mark: "réduction de 60% de la dette technique"}
+        - {has: "6 profils", mark: "Recrutement"}
+        - {has: "Customer Support", mark: "division par 3 du temps moyen de résolution des tickets"}
     - mission: L'ORÉAL GROUPE
       kicker: Stratégie groupe
       context: "Deux missions stratégiques au siège du Groupe : définition de la roadmap d'intégration groupe sur 3 ans (ETI/SOA) et construction de l'appel d'offres fournisseurs ; puis conception d'un référentiel méthodologique Agile/Waterfall hybride comme standard d'ingénierie du Groupe, en collaboration avec Ernst & Young."

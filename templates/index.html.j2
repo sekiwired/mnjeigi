@@ -40,23 +40,16 @@
       {% endfor %}
     </header>
     <div class="split__main">
-      <ol class="sit">
+      <ul class="sit">
         {% for it in c.situations.rows %}
         <li class="sit__row" data-reveal>
-          <span class="sit__num">0{{ loop.index }}</span>
-          <div>
-            <h3 class="sit__title">{{ it.title }}</h3>
-            <div class="sit__proof">
-              {% if it.get('quote') %}
-              <p><span class="sit__source">{{ it.source }}</span> {{ quote(it.quote.mission, it.quote.has) }}</p>
-              {% else %}
-              <p><span class="sit__source">{{ it.source }}</span> <a class="link link--inline" href="{{ it.link.href }}">{{ it.link.label }}{{ arrow() }}</a></p>
-              {% endif %}
-            </div>
+          <h3 class="sit__title">{{ it.title }}</h3>
+          <div class="sit__proof">
+            <p><span class="sit__source">{{ it.source }}</span> {{ quote(it.quote.mission, it.quote.has) }}</p>
           </div>
         </li>
         {% endfor %}
-      </ol>
+      </ul>
       <div class="inline-cta" data-reveal>
         <p>{{ c.situations.cta_text }}</p>
         <a class="btn btn--blue" href="#contact">{{ c.situations.cta }}{{ arrow() }}</a>

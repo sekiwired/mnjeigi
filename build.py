@@ -55,6 +55,12 @@ def parse_missions(lang):
     return missions
 
 
+def years(mission):
+    """(last year, first year) of a mission period such as '2013 – 2016', to order the career record by time."""
+    found = [int(y) for y in re.findall(r"\d{4}", mission["period"])]
+    return (max(found), min(found))
+
+
 def quote(missions, lang, mission, has, mark=None):
     """Return the one result line of `mission` containing `has`, with `mark` emphasised."""
     if mission not in missions:
@@ -97,6 +103,7 @@ def build(lang, env, logos, mission_list):
         sys.exit(f"[{lang}] missions.yaml out of step with {MISSIONS_FILE[lang]}: unknown={unknown} missing={missing}")
 
     record = [{**m, **missions[m["key"]], "logos": [logo_by_id[i] for i in m["logos"]]} for m in mission_list]
+    record.sort(key=years, reverse=True)
     by_key = {m["key"]: m for m in record}
 
     shared = dict(

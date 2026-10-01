@@ -48,24 +48,21 @@ situations:
     - "Projects rarely stall inside a specialty. They stall at the seams: between architecture and delivery, between the vendor and the internal team, between the decision and its adoption."
     - "Everyone holds their part. Carrying the whole is a role of its own. That is the one I take."
   rows:
+    - title: "A standard to define, then to get adopted."
+      source: "Thales Group · 2013 – 2016"
+      quote: {mission: THALES GROUP, has: "Train-the-trainer"}
+    - title: "A critical system, with a deadline and performance commitments."
+      source: "Sanofi · Lead Architect · 2013 – 2016"
+      quote: {mission: SANOFI, has: "Performance commitments"}
     - title: "A project that is not reaching completion."
       source: "Meludia · CTO then COO · 2016 – 2020"
       quote: {mission: MELUDIA, has: "Google Play"}
     - title: "A transition, or a seat left empty in the team."
       source: "Meludia · interim CTO, one day a week · 2012 – 2013"
       quote: {mission: MELUDIA (Freelance), has: "CTO profile"}
-    - title: "An information system that has outgrown its own map."
-      source: "L'Oréal France · 2016"
-      quote: {mission: L'ORÉAL FRANCE, has: "complete mapping"}
     - title: "A decision that needs an independent basis."
       source: "L'Oréal Groupe · 2016"
       quote: {mission: L'ORÉAL GROUPE, has: "selection committee"}
-    - title: "A standard to define, then to get adopted."
-      source: "Thales Group · 2013 – 2016"
-      quote: {mission: THALES GROUP, has: "officially distributed"}
-    - title: "AI adopted, and the gains yet to show in delivery."
-      source: "Three engagements address it"
-      link: {href: "#ai", label: "Audit, training, process transformation"}
   cta_text: "Recognize one of these?"
   cta: Discuss your project
 
@@ -141,25 +138,13 @@ proof:
   wall_caption: "Clients, employers and companies I helped build."
   cases_eyebrow: Selected missions
   cases:
-    - mission: MELUDIA
-      kicker: Company turnaround
-      context: "After 7 years and near-total staff reduction, the founders mandated me to restructure, transform, and reduce operational and technical costs — and to lead full production of a new mobile application from spec to delivery."
-      figures:
-        - {value: "5×", label: "lower cloud costs"}
-        - {value: "3×", label: "load capacity"}
-        - {value: "168", label: "countries, 15,000+ users"}
-      quotes:
-        - {has: "Azure to AWS", mark: "reducing costs by a factor of 5"}
-        - {has: "technical debt", mark: "reduced technical debt on the legacy by 60%"}
-        - {has: "6 technical profiles", mark: "Recruited"}
-        - {has: "Customer Support", mark: "reduced average ticket resolution time by a factor of 3"}
     - mission: THALES GROUP
       kicker: Group-wide standard
       context: "Sole Git reference and global point of contact for the entire Thales Group. Wrote the Group's Software Configuration Management standard, defined the enterprise-scale IBM GCL → Git migration strategy, designed infrastructure architectures, and delivered L3 technical support across all Thales entities worldwide."
       figures:
         - {value: "5", label: "countries trained: AU, DE, NO, UK, US"}
       quotes:
-        - {has: "officially distributed", mark: "officially distributed"}
+        - {has: "reference baseline", mark: "was delivered"}
         - {has: "migration guide", mark: "published and distributed"}
         - {has: "Train-the-trainer", mark: "delivered"}
         - {has: "successor", mark: "A successor was trained"}
@@ -175,6 +160,18 @@ proof:
         - {has: "TOGAF", mark: "Integrated"}
         - {has: "real load", mark: "validating the architecture under real load conditions"}
         - {has: "Performance commitments", mark: "validated by the client and deadlines were met"}
+    - mission: MELUDIA
+      kicker: Company turnaround
+      context: "After 7 years and near-total staff reduction, the founders mandated me to restructure, transform, and reduce operational and technical costs — and to lead full production of a new mobile application from spec to delivery."
+      figures:
+        - {value: "5×", label: "lower cloud costs"}
+        - {value: "3×", label: "load capacity"}
+        - {value: "168", label: "countries, 15,000+ users"}
+      quotes:
+        - {has: "Azure to AWS", mark: "reducing costs by a factor of 5"}
+        - {has: "technical debt", mark: "reduced technical debt on the legacy by 60%"}
+        - {has: "6 technical profiles", mark: "Recruited"}
+        - {has: "Customer Support", mark: "reduced average ticket resolution time by a factor of 3"}
     - mission: L'ORÉAL GROUPE
       kicker: Group strategy
       context: "Two strategic engagements at Group headquarters: defining the 3-year global integration roadmap (ETI/SOA) and building the RFP for vendors; then designing a custom Agile/Waterfall hybrid project management framework as the Group's engineering standard, in collaboration with Ernst & Young."
