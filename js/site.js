@@ -139,7 +139,8 @@
             mesh = [];
             fore = [];
             for (var f = 0; f < COLS; f += 2) {
-                fore.push({ col: f, x: f + (Math.random() - 0.5) * 0.9, z: FORE_Z + Math.random() * 0.15, hold: 0.3, phase: Math.random() * Math.PI * 2, pace: 0.5 + Math.random() * 0.7 });
+                fore.push({ col: f, x: f + (Math.random() - 0.5) * 0.9, z: FORE_Z + Math.random() * 0.15, hold: 0.3, phase: Math.random() * Math.PI * 2, pace: 0.5 + Math.random() * 0.7,
+                    zig: fore.length % 2 ? 1 : -1 });     // every other front dot sits high, the next one low: the front line is a row of teeth
             }
             for (var r = 0; r < ROWS; r++) {
                 mesh.push([]);
@@ -174,12 +175,14 @@
             var still = t === null;
             var x = dot.x + (still ? 0 : Math.cos(t * dot.pace + dot.phase) * SWAY);
             var z = dot.z + (still ? 0 : Math.sin(t * dot.pace * 0.8 + dot.phase) * SWAY * dot.hold);
-            var lift = still ? 0 : (Math.sin(x * 0.75 + t * 0.9) * Math.cos(z * 0.9 - t * 0.6) + Math.sin(t * dot.pace + dot.phase) * 0.25) * dot.hold;
+            var lift = still ? 0 : dot.zig
+                ? dot.zig * (0.5 + 0.5 * Math.sin(t * dot.pace * 1.3 + dot.phase))          // each tooth grows and shrinks on its own rhythm
+                : (Math.sin(x * 0.75 + t * 0.9) * Math.cos(z * 0.9 - t * 0.6) + Math.sin(t * dot.pace + dot.phase) * 0.25) * dot.hold;
             var away = z / (ROWS - 1);
             var near = 1 / (1 + away * (1 / FAR - 1));                      // FAR for the farthest row, 1 for the front of the sheet, NEAREST for the extra row
             var wide = 1 / (1 + away * (1 / FAR_WIDE - 1));
             var swing = h * 0.08;                                           // how far the wave lifts a near dot, in px
-            var back = 4 + swing * FAR, front = h - 12 - swing * 0.3;       // the farthest row sits at the top of the zone, the extra front row at its bottom
+            var back = 4 + swing * FAR, front = h - 10 - swing * NEAREST;       // the farthest row sits at the top of the zone, the extra front row at its bottom
             return [
                 w / 2 + (x / (COLS - 1) - 0.5) * (w / FAR_WIDE) * wide,         // the farthest row spans the band; nearer rows run past its sides
                 back + (front - back) * (near - FAR) / (NEAREST - FAR) + lift * swing * near,
