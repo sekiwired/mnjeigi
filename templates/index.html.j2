@@ -81,15 +81,6 @@
           {% for p in lead.points %}<li>{{ p }}</li>{% endfor %}
         </ul>
         <p class="lead__format">{{ lead.format }}</p>
-        <div class="lead__proof">
-          <p class="lead__label">{{ lead.proof_label }}</p>
-          {% for proof in lead.proofs %}
-          <p class="lead__source">{{ proof.source }}</p>
-          <ul>
-            {% for q in proof.quotes %}<li>{{ quote(q.mission, q.has) }}</li>{% endfor %}
-          </ul>
-          {% endfor %}
-        </div>
       </div>
     </article>
 

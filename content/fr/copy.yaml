@@ -83,15 +83,6 @@ services:
       - "Équipe constituée : recrutement technique, processus de développement et de déploiement"
       - "Un successeur formé pour assurer la continuité"
     format: "Périmètre et rythme définis ensemble"
-    proof_label: Déjà fait
-    proofs:
-      - source: "Meludia · CTO puis COO · 2016 – 2020"
-        quotes:
-          - {mission: MELUDIA, has: "6 profils"}
-          - {mission: MELUDIA, has: "Design/Build/Run"}
-      - source: "Meludia · CTO intérimaire, un jour par semaine · 2012 – 2013"
-        quotes:
-          - {mission: MELUDIA (Freelance), has: "profil CTO"}
   ai:
     eyebrow: Intelligence artificielle
     title: "L'IA a changé la manière de produire. L'organisation doit suivre."
