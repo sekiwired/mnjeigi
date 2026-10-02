@@ -1,9 +1,10 @@
 (function() {
+    if (isLocalPreview()) return;   // previews record no statistics
     var sid = sessionStorage.getItem('_asid');
     if (!sid) { sid = crypto.randomUUID(); sessionStorage.setItem('_asid', sid); }
 
     function endpoint() {
-        if (!ANALYTICS_ENDPOINT || isLocalPreview()) return null;
+        if (!ANALYTICS_ENDPOINT) return null;
         return decodeEndpoint(ANALYTICS_ENDPOINT);
     }
 
