@@ -3,7 +3,7 @@
     if (!sid) { sid = crypto.randomUUID(); sessionStorage.setItem('_asid', sid); }
 
     function endpoint() {
-        if (!ANALYTICS_ENDPOINT || location.hostname === 'localhost' || location.hostname === '127.0.0.1') return null;
+        if (!ANALYTICS_ENDPOINT || isLocalPreview()) return null;
         return decodeEndpoint(ANALYTICS_ENDPOINT);
     }
 

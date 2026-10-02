@@ -4,7 +4,6 @@
     var doc = document.documentElement;
     var lang = doc.lang;
     window.lang = lang; // read by tracker.js
-    var isLocal = ['localhost', '127.0.0.1', '[::1]', ''].indexOf(location.hostname) !== -1;
     var reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Links from the previous four-page site
@@ -270,7 +269,7 @@
         if (v('email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) { flag(['email']); return say(d.email, 'error'); }
         flag([]);
 
-        if (isLocal) return say(d.preview, 'ok');
+        if (isLocalPreview()) return say(d.preview, 'ok');
 
         button.disabled = true;
         say(d.sending);
