@@ -10,7 +10,7 @@ this_lang_label: FR
 
 meta:
   title: "Julien Grimal — System Designer, consultant indépendant & CTO à temps partagé"
-  description: "System Design, de l'intention au résultat. 18 ans de projets livrés pour Thales, Sanofi et L'Oréal, comme CTO puis COO, et comme fondateur. CTO à temps partagé, audit IA, formation IA, transformation des processus."
+  description: "System Design, de l'intention au résultat. Architecte d'entreprise pour Thales, Sanofi et L'Oréal ; CTO puis COO ; fondateur. CTO à temps partagé, audit IA, formation IA, transformation des processus par l'IA."
   job_title: "System Designer, consultant indépendant & CTO à temps partagé"
 
 nav:
@@ -46,9 +46,9 @@ situations:
   title: "Une vision transverse, de la stratégie à l'exécution."
   intro:
     - "Un projet perd rarement sa trajectoire au sein d'une expertise. Il la perd lorsque la stratégie, l'organisation et les systèmes cessent d'avancer ensemble : entre l'architecture et la livraison, entre le prestataire et les équipes internes, entre la décision et son adoption."
-    - "C'est là que j'interviens : aligner la stratégie, l'organisation et les systèmes, jusqu'au résultat."
+    - "C'est là que je me situe : j'assure la cohérence de l'ensemble, jusqu'à la mise en œuvre."
   rows:
-    - title: "Un standard à définir, puis à faire adopter."
+    - title: "Un standard à définir pour tout un groupe."
       source: "Thales Group"
       quote: {mission: THALES GROUP, has: "a été défini"}
     - title: "Un système critique, avec une échéance et des engagements de performance."
@@ -69,14 +69,14 @@ situations:
 services:
   eyebrow: Services
   title: "En quoi puis-je vous être utile ?"
-  intro: "Audit indépendant, conseil stratégique ou intervention directe : j'interviens sur le métier, l'organisation, les opérations et la technologie. Chaque mission se suffit à elle-même et n'en impose aucune autre. Le résultat attendu et le périmètre de mon intervention se définissent avec vous."
+  intro: "Audit indépendant, conseil stratégique ou intervention directe, sur le métier, l'organisation, les opérations et la technologie. Chaque mission se suffit à elle-même et n'en impose aucune autre. L'objectif et le périmètre de ma mission se définissent avec vous."
   discuss: En discuter
   output_label: Vous obtenez
   lead:
     topic: fractional-cto
     tag: Diriger
     title: CTO à temps partagé
-    tagline: "Un CTO expérimenté à temps partiel, pour concevoir et piloter le système technique de votre entreprise."
+    tagline: "Le système technique de votre entreprise, conçu et piloté par un CTO expérimenté, à temps partagé."
     points:
       - "Stratégie technologique et budget IT, arrêtés avec la direction"
       - "Architecture portée : core-model, choix techniques, sélection des prestataires"
@@ -86,7 +86,7 @@ services:
   ai:
     eyebrow: Intelligence artificielle
     title: "Avec l'IA, c'est tout le système qui change, pas seulement les outils."
-    intro: "Dès que l'IA produit une partie du travail, la décision, le contrôle et les coûts changent de mains. Ces trois missions l'abordent comme une transformation du système dans son ensemble : sens, responsabilité, qualité, coût et capacité à évoluer."
+    intro: "Dès que l'IA produit une partie du travail, qui décide, qui contrôle et ce que cela coûte : tout change. Ces trois missions l'abordent à ce niveau : sens, responsabilité, qualité, coût et capacité d'évolution."
     offers:
       - topic: ai-audit
         tag: Évaluer

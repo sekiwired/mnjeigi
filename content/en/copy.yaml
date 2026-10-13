@@ -10,7 +10,7 @@ this_lang_label: EN
 
 meta:
   title: "Julien Grimal — System Designer, independent consultant & fractional CTO"
-  description: "System Design, from intent to outcome. 18 years of delivery for Thales, Sanofi and L'Oréal, as CTO then COO, and as a founder. Fractional CTO, AI audit, AI training, process transformation."
+  description: "System Design, from intent to outcome. Enterprise architect for Thales, Sanofi and L'Oréal; CTO then COO; founder. Fractional CTO, AI audit, AI training, AI process transformation."
   job_title: "System Designer, independent consultant & fractional CTO"
 
 nav:
@@ -46,21 +46,21 @@ situations:
   title: "A cross-functional view, from strategy to execution."
   intro:
     - "Projects rarely lose their way inside one discipline. They lose it when strategy, organization and systems stop moving together: between architecture and delivery, between the vendor and the in-house teams, between the decision and its adoption."
-    - "That is where I work: keeping strategy, organization and systems aligned, all the way to the outcome."
+    - "That is where I work: I keep the whole coherent, through to delivery."
   rows:
-    - title: "A standard to define, then to get adopted."
+    - title: "A standard to define for an entire group."
       source: "Thales Group"
       quote: {mission: THALES GROUP, has: "standard was defined"}
     - title: "A critical system, with a deadline and performance commitments."
       source: "Sanofi · Lead Architect"
       quote: {mission: SANOFI, has: "Performance commitments"}
-    - title: "A project that is not reaching completion."
+    - title: "A project that has stalled."
       source: "Meludia · CTO then COO"
       quote: {mission: MELUDIA, has: "Google Play"}
-    - title: "A transition, or a seat left empty in the team."
+    - title: "A transition, or a key role left vacant."
       source: "Meludia · interim CTO, one day a week"
       quote: {mission: MELUDIA (Freelance), has: "CTO profile"}
-    - title: "A decision that needs an independent basis."
+    - title: "A decision that calls for an independent view."
       source: "L'Oréal Groupe"
       quote: {mission: L'ORÉAL GROUPE, has: "selection committee"}
   cta_text: "Recognize one of these?"
@@ -69,7 +69,7 @@ situations:
 services:
   eyebrow: Services
   title: "What can I help you with?"
-  intro: "Through independent audit, strategic counsel or direct intervention, I work across business, organization, operations and technology. Each is a complete engagement, and none is a prerequisite for another. We define the outcome and the scope of my involvement together."
+  intro: "Through independent audit, strategic counsel or direct intervention, I work across business, organization, operations and technology. Each is a complete engagement, and none is a prerequisite for another. We set the objective and the scope of my involvement together."
   discuss: Discuss this
   output_label: You get
   lead:
@@ -86,7 +86,7 @@ services:
   ai:
     eyebrow: Artificial intelligence
     title: "AI changes the system, not only the tools."
-    intro: "Once AI produces part of the work, who decides, who checks and what it costs all change. These three engagements treat it as a change to the whole system: meaning, responsibility, quality, cost and future evolution."
+    intro: "Once AI produces part of the work, who decides, who checks and what it costs all change. These three engagements address it at that level: meaning, responsibility, quality, cost and capacity to evolve."
     offers:
       - topic: ai-audit
         tag: Assess
