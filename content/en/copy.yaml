@@ -120,7 +120,7 @@ services:
         output: "An agentic delivery process that protects your existing stack, clarifies ownership across every boundary, and makes both the cost of change and AI consumption manageable and predictable."
     closing:
       line: "It might be time to slow down to really speed up."
-      sub: "Intentionally setting up strict architectural boundaries so you can accelerate long-term while keeping complete technical and financial visibility."
+      sub: "Intentionally setting up strict architectural boundaries so you can accelerate long-term while keeping complete technical and financial visibility. When agents build at scale, upfront architectural precision isn’t just a best practice—it’s the difference between velocity and total chaos."
   catalogue:
     eyebrow: Focused engagements
     title: "Scoped work, defined format."
