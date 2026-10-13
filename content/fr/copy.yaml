@@ -116,8 +116,10 @@ services:
         points:
           - "Sanctuariser les fondations : Verrouiller les contrats d'interface, la modélisation des données et les responsabilités métier avant que les agents ne construisent dessus."
           - "Adapter le flux de livraison : Reconfigurer le rythme de revue, de test et de recette pour absorber le volume généré par les agents sans jamais sacrifier la rigueur."
-          - "Maîtriser la trajectoire : Ralentir ponctuellement pour poser un cadre étanche (\"sanctuaire\"), afin d'accélérer durablement sans dégrader le patrimoine applicatif."
         output: "Un processus de livraison adapté à l'ère agentique qui protège votre existant, clarifie la responsabilité de chaque brique et maîtrise le coût du changement."
+    closing:
+      line: "Il est peut-être temps de ralentir pour vraiment accélérer."
+      sub: "Poser délibérément des frontières d'architecture strictes, pour accélérer dans la durée en gardant une visibilité technique et financière complète."
   catalogue:
     eyebrow: Missions ciblées
     title: "Un périmètre cadré, un format défini."
