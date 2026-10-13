@@ -43,10 +43,10 @@ stats:
 
 situations:
   eyebrow: When to bring me in
-  title: "Projects stall at the seams."
+  title: "A cross-functional view, from strategy to execution."
   intro:
-    - "A project rarely stalls inside one specialty. It stalls between them: between architecture and delivery, between the vendor and the internal team, between the decision and its adoption."
-    - "Everyone holds their part. Designing the whole, seams included, is a role of its own. That is the one I take."
+    - "Projects rarely lose their way inside one discipline. They lose it when strategy, organization and systems stop moving together: between architecture and delivery, between the vendor and the in-house teams, between the decision and its adoption."
+    - "Every expert masters their own field. Keeping strategy, organization and systems aligned, and the whole coherent, is a discipline in its own right. It is mine."
   rows:
     - title: "A standard to define, then to get adopted."
       source: "Thales Group"
