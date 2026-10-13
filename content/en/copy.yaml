@@ -36,7 +36,7 @@ hero:
   credential: "18 years. Thales, Sanofi and L'Oréal at group scale. CTO then COO of a company in restructuring. Founder."
 
 stats:
-  - {value: "18", unit: yrs, label: "Engineering, architecture, and operations"}
+  - {value: "18", icon: calendar, unit: yrs, label: "Engineering, architecture, and operations"}
   - {value: "35B+", icon: transactions, label: "transactions a year: the architecture designed and validated for Sanofi, across 400 factories"}
   - {value: "5", trend: down, suffix: "×", label: "cloud costs at Meludia, with three times the load capacity"}
   - {value: "12", icon: products, label: "B2B SaaS ERP tools built and delivered as founder and CTO"}
@@ -137,8 +137,8 @@ proof:
       context: "Sole Git reference and global point of contact for the entire Thales Group. Wrote the Group's Software Configuration Management standard, defined the enterprise-scale IBM GCL → Git migration strategy, designed infrastructure architectures, and delivered L3 technical support across all Thales entities worldwide."
       figures:
         - {value: "4.9", icon: star, label: "training rating"}
-        - {value: "120", label: "people trained"}
-        - {value: "22,000", label: "engineers impacted"}
+        - {value: "120", icon: people, label: "people trained"}
+        - {value: "22,000", icon: engineers, label: "engineers impacted"}
       quotes:
         - {has: "standard was defined", mark: "was defined for the Thales Group"}
         - {has: "migration guide", mark: "published and distributed"}
@@ -149,8 +149,8 @@ proof:
       context: "Defined and implemented the application core-model for EU pharmaceutical product traceability — collecting real-time manufacturing data from 400 production sites, detecting anomalies and counterfeits, and notifying health authorities for 35 billion transactions per year."
       figures:
         - {value: "35B+", icon: transactions, label: "transactions per year, designed and validated"}
-        - {value: "400", label: "factories worldwide"}
-        - {value: "6", label: "months to deliver the project"}
+        - {value: "400", icon: factory, label: "factories worldwide"}
+        - {value: "6", icon: calendar, label: "months to deliver the project"}
       quotes:
         - {has: "high-availability", mark: "Designed, validated and integrated"}
         - {has: "TOGAF", mark: "Integrated"}
@@ -162,7 +162,7 @@ proof:
       figures:
         - {value: "5", trend: down, suffix: "×", label: "cloud costs"}
         - {value: "3", trend: up, suffix: "×", label: "load capacity"}
-        - {value: "168", label: "countries, 15,000+ users"}
+        - {value: "168", icon: globe, label: "countries, 15,000+ users"}
       quotes:
         - {has: "Azure to AWS", mark: "reducing costs by a factor of 5"}
         - {has: "technical debt", mark: "reduced technical debt on the legacy by 60%"}
@@ -172,7 +172,7 @@ proof:
       kicker: Group strategy
       context: "Two strategic engagements at Group headquarters: defining the 3-year global integration roadmap (ETI/SOA) and building the RFP for vendors; then designing a custom Agile/Waterfall hybrid project management framework as the Group's engineering standard, in collaboration with Ernst & Young."
       figures:
-        - {value: "3", unit: yrs, label: "integration plan, validated by the Group CIO"}
+        - {value: "3", icon: calendar, unit: yrs, label: "integration plan, validated by the Group CIO"}
       quotes:
         - {has: "macro planning", mark: "validated by the Group CIO"}
         - {has: "selection committee", mark: "recommendations were provided to the selection committee"}

@@ -36,7 +36,7 @@ hero:
   credential: "18 ans. Thales, Sanofi et L'Oréal à l'échelle du groupe. CTO puis COO d'une entreprise en restructuration. Fondateur."
 
 stats:
-  - {value: "18", unit: ans, label: "Ingénierie, Architecture et Opérations"}
+  - {value: "18", icon: calendar, unit: ans, label: "Ingénierie, Architecture et Opérations"}
   - {value: "35 Md+", icon: transactions, label: "de transactions par an : l'architecture conçue et validée pour Sanofi, sur 400 usines"}
   - {value: "5", trend: down, suffix: "×", label: "les coûts cloud de Meludia, pour une capacité de charge triplée"}
   - {value: "12", icon: products, label: "outils ERP SaaS B2B construits et livrés comme fondateur et CTO"}
@@ -137,8 +137,8 @@ proof:
       context: "Seule référence Git et point de contact mondial pour l'ensemble du Groupe Thales. Rédaction du standard SCM du Groupe, définition de la stratégie de migration IBM GCL → Git à l'échelle entreprise, conception des architectures d'infrastructure, et support technique L3 auprès de toutes les entités Thales dans le monde."
       figures:
         - {value: "4,9", icon: star, label: "note des formations"}
-        - {value: "120", label: "personnes formées"}
-        - {value: "22 000", label: "ingénieurs concernés"}
+        - {value: "120", icon: people, label: "personnes formées"}
+        - {value: "22 000", icon: engineers, label: "ingénieurs concernés"}
       quotes:
         - {has: "a été défini", mark: "a été défini pour le groupe Thales"}
         - {has: "guide de migration", mark: "publié et distribué"}
@@ -149,8 +149,8 @@ proof:
       context: "Définition et implémentation du core-model applicatif pour la traçabilité pharmaceutique européenne — collecte en temps réel des données de fabrication de 400 sites de production, détection d'anomalies et de contrefaçons, notification des autorités sanitaires pour 35 milliards de transactions par an."
       figures:
         - {value: "35 Md+", icon: transactions, label: "de transactions par an, conçu et validé"}
-        - {value: "400", label: "usines dans le monde"}
-        - {value: "6", label: "mois pour livrer le projet"}
+        - {value: "400", icon: factory, label: "usines dans le monde"}
+        - {value: "6", icon: calendar, label: "mois pour livrer le projet"}
       quotes:
         - {has: "haute disponibilité", mark: "Conception, validation et intégration"}
         - {has: "TOGAF", mark: "Intégration"}
@@ -162,7 +162,7 @@ proof:
       figures:
         - {value: "5", trend: down, suffix: "×", label: "coûts cloud"}
         - {value: "3", trend: up, suffix: "×", label: "capacité de charge"}
-        - {value: "168", label: "pays, plus de 15 000 utilisateurs"}
+        - {value: "168", icon: globe, label: "pays, plus de 15 000 utilisateurs"}
       quotes:
         - {has: "Azure vers AWS", mark: "réduisant les coûts par un facteur 5"}
         - {has: "dette technique", mark: "réduction de 60% de la dette technique"}
@@ -172,7 +172,7 @@ proof:
       kicker: Stratégie groupe
       context: "Deux missions stratégiques au siège du Groupe : définition de la roadmap d'intégration groupe sur 3 ans (ETI/SOA) et construction de l'appel d'offres fournisseurs ; puis conception d'un référentiel méthodologique Agile/Waterfall hybride comme standard d'ingénierie du Groupe, en collaboration avec Ernst & Young."
       figures:
-        - {value: "3", unit: ans, label: "de plan d'intégration, validé par le DSI Groupe"}
+        - {value: "3", icon: calendar, unit: ans, label: "de plan d'intégration, validé par le DSI Groupe"}
       quotes:
         - {has: "macro planning", mark: "validés par le DSI Groupe"}
         - {has: "comité de sélection", mark: "des recommandations ont été fournies au comité de sélection"}
