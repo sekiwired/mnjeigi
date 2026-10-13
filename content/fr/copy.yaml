@@ -9,9 +9,9 @@ other_lang: {code: en, label: EN, href: "", title: English version}
 this_lang_label: FR
 
 meta:
-  title: "Julien Grimal — Consultant indépendant & CTO à temps partagé"
-  description: "Des projets complexes, menés à leur terme. 18 ans de projets livrés pour Thales, Sanofi et L'Oréal, comme CTO puis COO, et comme fondateur. CTO à temps partagé, audit IA, formation IA, transformation des processus."
-  job_title: "Consultant indépendant & CTO à temps partagé"
+  title: "Julien Grimal — System Designer, consultant indépendant & CTO à temps partagé"
+  description: "System Design, de l'intention au résultat. 18 ans de projets livrés pour Thales, Sanofi et L'Oréal, comme CTO puis COO, et comme fondateur. CTO à temps partagé, audit IA, formation IA, transformation des processus."
+  job_title: "System Designer, consultant indépendant & CTO à temps partagé"
 
 nav:
   skip: Aller au contenu
@@ -27,10 +27,10 @@ nav:
   menu_close: Fermer le menu
 
 hero:
-  eyebrow: [Julien Grimal, Consultant indépendant, CTO à temps partagé]
-  title_lines: ["Des projets complexes,", "menés à leur"]
-  title_accent: "terme."
-  sub: "J'interviens lorsqu'un projet peine à aboutir, afin d'en porter l'ensemble jusqu'à sa livraison. Audit, conseil ou intervention directe, à travers les enjeux métier, l'organisation, les opérations et la technologie."
+  eyebrow: [Julien Grimal, System Designer, CTO à temps partagé]
+  title_lines: ["System Design,", "de l'intention au"]
+  title_accent: "résultat."
+  sub: "Une organisation, un produit, un programme fonctionnent chacun comme un système : des équipes, des décisions, des processus et des technologies qui dépendent les uns des autres. Je vous aide à comprendre les situations complexes, à décider en connaissance de cause et à mener vos initiatives jusqu'à leur aboutissement."
   cta: Parlons de votre projet
   cta_secondary: Voir les références
   credential: "18 ans. Thales, Sanofi et L'Oréal à l'échelle du groupe. CTO puis COO d'une entreprise en restructuration. Fondateur."
@@ -43,10 +43,10 @@ stats:
 
 situations:
   eyebrow: Quand faire appel à moi
-  title: "Quand un projet n'aboutit pas."
+  title: "C'est aux interfaces que les projets se bloquent."
   intro:
-    - "Un projet s'enlise rarement au cœur d'une spécialité. Il s'enlise aux jointures : entre l'architecture et la livraison, entre le prestataire et l'équipe interne, entre la décision et son adoption."
-    - "Chacun porte sa part. Porter l'ensemble est un rôle à part entière. C'est celui que j'assume."
+    - "Un projet se bloque rarement au sein d'une expertise. Il se bloque entre elles : entre l'architecture et la livraison, entre le prestataire et l'équipe interne, entre la décision et son adoption."
+    - "Chacun maîtrise sa partie. Concevoir l'ensemble, interfaces comprises, est un métier à part entière : c'est le mien."
   rows:
     - title: "Un standard à définir, puis à faire adopter."
       source: "Thales Group"
@@ -69,14 +69,14 @@ situations:
 services:
   eyebrow: Services
   title: "En quoi puis-je vous être utile ?"
-  intro: "Chacune est une mission complète. Aucune n'est le préalable d'une autre. Nous définissons ensemble le résultat attendu et le périmètre de mon intervention."
+  intro: "Audit indépendant, conseil stratégique ou intervention directe : j'interviens sur le métier, l'organisation, les opérations et la technologie. Chaque mission se suffit à elle-même et n'en impose aucune autre. Le résultat attendu et le périmètre de mon intervention se définissent avec vous."
   discuss: En discuter
   output_label: Vous obtenez
   lead:
     topic: fractional-cto
     tag: Diriger
     title: CTO à temps partagé
-    tagline: "Un CTO expérimenté à vos côtés, à temps partiel."
+    tagline: "Un CTO expérimenté à temps partiel, pour concevoir et piloter le système technique de votre entreprise."
     points:
       - "Stratégie technologique et budget IT, arrêtés avec la direction"
       - "Architecture portée : core-model, choix techniques, sélection des prestataires"
@@ -85,8 +85,8 @@ services:
     format: "Périmètre et rythme définis ensemble"
   ai:
     eyebrow: Intelligence artificielle
-    title: "L'IA a changé la manière de produire. L'organisation doit suivre."
-    intro: "Trois missions pour transformer la capacité de l'IA en valeur fiable, en gardant la maîtrise du sens, de la responsabilité, de la qualité, du coût et des évolutions futures."
+    title: "Avec l'IA, c'est tout le système qui change, pas seulement les outils."
+    intro: "Dès que l'IA produit une partie du travail, la décision, le contrôle et les coûts changent de mains. Ces trois missions l'abordent comme une transformation du système dans son ensemble : sens, responsabilité, qualité, coût et capacité à évoluer."
     offers:
       - topic: ai-audit
         tag: Évaluer
@@ -209,7 +209,7 @@ about:
   title: "Je suis Julien Grimal."
   bio: 'J''ai 41 ans et je suis passionné par les apps et l''informatique depuis l''âge de 12 ans. Diplômé de <a href="https://www.telecom-sudparis.eu/en/about-us/about-telecom-sudparis/" target="_blank" rel="noopener">Telecom SudParis</a> en sécurité des systèmes d''information, j''ai 18 ans d''expérience professionnelle. J''ai créé des entreprises, des produits et des équipes, et je continue à construire des systèmes pour le plaisir.'
   roles_label: "Je suis"
-  roles: ["polyvalent", "un Architecte digital", "un Chef de projet", "un Entrepreneur", "un développeur full-stack", "un expert DevOps", "un Coach", "un Consultant", "un solveur de problèmes", "un innovateur", "efficace"]
+  roles: ["un System Designer", "polyvalent", "un Architecte digital", "un Chef de projet", "un Entrepreneur", "un développeur full-stack", "un expert DevOps", "un Coach", "un Consultant", "un solveur de problèmes", "un innovateur", "efficace"]
   principles_title: "Mon approche"
   principles:
     - title: Tout est mouvement
@@ -270,7 +270,7 @@ contact:
   alt_title: "Ou directement"
 
 footer:
-  tagline: "Des projets complexes, menés à leur terme."
+  tagline: "System Design, de l'intention au résultat."
   terms: Mentions légales
   privacy: Confidentialité
   top: Haut de page

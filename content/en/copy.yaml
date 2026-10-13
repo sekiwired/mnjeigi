@@ -9,9 +9,9 @@ other_lang: {code: fr, label: FR, href: "fr/", title: Version française}
 this_lang_label: EN
 
 meta:
-  title: "Julien Grimal — Independent consultant & fractional CTO"
-  description: "Complex projects, brought to completion. 18 years of delivery for Thales, Sanofi and L'Oréal, as CTO then COO, and as a founder. Fractional CTO, AI audit, AI training, process transformation."
-  job_title: "Independent consultant & fractional CTO"
+  title: "Julien Grimal — System Designer, independent consultant & fractional CTO"
+  description: "System Design, from intent to outcome. 18 years of delivery for Thales, Sanofi and L'Oréal, as CTO then COO, and as a founder. Fractional CTO, AI audit, AI training, process transformation."
+  job_title: "System Designer, independent consultant & fractional CTO"
 
 nav:
   skip: Skip to content
@@ -27,10 +27,10 @@ nav:
   menu_close: Close menu
 
 hero:
-  eyebrow: [Julien Grimal, Independent consultant, Fractional CTO]
-  title_lines: ["Complex projects,", "brought to"]
-  title_accent: "completion."
-  sub: "I step in when delivery is a challenge, taking ownership of the whole and carrying the project through. Audit, counsel or direct intervention, across business, organization, operations and technology."
+  eyebrow: [Julien Grimal, System Designer, Fractional CTO]
+  title_lines: ["System Design,", "from intent to"]
+  title_accent: "outcome."
+  sub: "An organization, a product, a program: each is a system of people, decisions, processes and technology. I help you understand complex situations, make sound decisions and bring initiatives to completion."
   cta: Discuss your project
   cta_secondary: See the track record
   credential: "18 years. Thales, Sanofi and L'Oréal at group scale. CTO then COO of a company in restructuring. Founder."
@@ -43,10 +43,10 @@ stats:
 
 situations:
   eyebrow: When to bring me in
-  title: "When delivery is a challenge."
+  title: "Projects stall at the seams."
   intro:
-    - "Projects rarely stall inside a specialty. They stall at the seams: between architecture and delivery, between the vendor and the internal team, between the decision and its adoption."
-    - "Everyone holds their part. Carrying the whole is a role of its own. That is the one I take."
+    - "A project rarely stalls inside one specialty. It stalls between them: between architecture and delivery, between the vendor and the internal team, between the decision and its adoption."
+    - "Everyone holds their part. Designing the whole, seams included, is a role of its own. That is the one I take."
   rows:
     - title: "A standard to define, then to get adopted."
       source: "Thales Group"
@@ -69,14 +69,14 @@ situations:
 services:
   eyebrow: Services
   title: "What can I help you with?"
-  intro: "Each is a complete engagement. None is a prerequisite for another. We define the outcome and the scope of my involvement together."
+  intro: "Through independent audit, strategic counsel or direct intervention, I work across business, organization, operations and technology. Each is a complete engagement, and none is a prerequisite for another. We define the outcome and the scope of my involvement together."
   discuss: Discuss this
   output_label: You get
   lead:
     topic: fractional-cto
     tag: Lead
     title: Fractional CTO
-    tagline: "A senior CTO on your side of the table, part-time."
+    tagline: "The technical system of your company, designed and steered by a senior CTO, part-time."
     points:
       - "Technology strategy and IT budget, decided with the leadership team"
       - "Architecture owned: core-model, technical choices, vendor selection"
@@ -85,8 +85,8 @@ services:
     format: "Scope and cadence agreed together"
   ai:
     eyebrow: Artificial intelligence
-    title: "AI changed how work is produced. The organization has to follow."
-    intro: "Three engagements to turn AI capacity into dependable business value, while keeping control of meaning, responsibility, quality, cost and future evolution."
+    title: "AI changes the system, not only the tools."
+    intro: "Once AI produces part of the work, who decides, who checks and what it costs all change. These three engagements treat it as a change to the whole system: meaning, responsibility, quality, cost and future evolution."
     offers:
       - topic: ai-audit
         tag: Assess
@@ -209,7 +209,7 @@ about:
   title: "I'm Julien Grimal."
   bio: 'I am 41 and have been passionate about apps and computing since I was 12. I graduated from <a href="https://www.telecom-sudparis.eu/en/about-us/about-telecom-sudparis/" target="_blank" rel="noopener">Telecom SudParis</a> in Information and Network Security, and I have 18 years of professional experience. I have built companies, products, and teams, and I still build systems for fun.'
   roles_label: "I am"
-  roles: ["versatile", "a Digital Architect", "a Project Manager", "an Entrepreneur", "a full-stack dev", "a DevOps expert", "a Coach", "a Consultant", "a problem solver", "an innovator", "efficient"]
+  roles: ["a System Designer", "versatile", "a Digital Architect", "a Project Manager", "an Entrepreneur", "a full-stack dev", "a DevOps expert", "a Coach", "a Consultant", "a problem solver", "an innovator", "efficient"]
   principles_title: "How I think & work"
   principles:
     - title: Everything is movement
@@ -270,7 +270,7 @@ contact:
   alt_title: "Or directly"
 
 footer:
-  tagline: "Complex projects, brought to completion."
+  tagline: "System Design, from intent to outcome."
   terms: Terms
   privacy: Privacy
   top: Back to top

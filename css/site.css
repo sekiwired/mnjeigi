@@ -157,10 +157,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .hero__eyebrow span:not(:last-child)::after { content: "·"; margin-left: .9rem; color: var(--mute); }
 /* sized so the longer line always fills the content width: two lines on every screen */
 .hero__title {
-  font-size: calc((min(100vw, var(--max)) - 2 * var(--gutter)) / 9.65);
+  font-size: calc((min(100vw, var(--max)) - 2 * var(--gutter)) / var(--hero-fit, 9.95));   /* width of the longer line, in font sizes, plus a margin */
   font-weight: 650; line-height: 1; letter-spacing: -.046em;
 }
 .hero__title .line { white-space: nowrap; }
+:lang(fr) .hero__title { --hero-fit: 10.35; }
 .hero__title .line { display: block; overflow: clip; overflow-clip-margin: .14em; padding-bottom: .09em; margin-bottom: -.09em; }
 .hero__title .line__in { display: block; }
 .land { font-style: normal; color: var(--blue); display: inline-block; white-space: nowrap; }
