@@ -43,10 +43,10 @@ stats:
 
 situations:
   eyebrow: Quand faire appel à moi
-  title: "Une vision transverse, de la stratégie à l'exécution."
+  title: "Là où un périmètre s'arrête et où le suivant commence."
   intro:
-    - "Un projet perd rarement sa trajectoire au sein d'une expertise. Il la perd lorsque la stratégie, l'organisation et les systèmes cessent d'avancer ensemble : entre l'architecture et la livraison, entre le prestataire et les équipes internes, entre la décision et son adoption."
-    - "C'est là que je me situe : j'assure la cohérence de l'ensemble, jusqu'à la mise en œuvre."
+    - "Entre l'architecture et la mise en œuvre, entre le prestataire et les équipes internes, entre la décision et son adoption."
+    - "C'est là que je me situe : j'assure la cohérence de l'ensemble."
   rows:
     - title: "Un standard à définir pour l'ensemble d'un groupe."
       source: "Thales Group"

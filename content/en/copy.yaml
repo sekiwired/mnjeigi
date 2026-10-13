@@ -43,10 +43,10 @@ stats:
 
 situations:
   eyebrow: When to bring me in
-  title: "A cross-functional view, from strategy to execution."
+  title: "Where one team's scope ends and the next begins."
   intro:
-    - "Projects rarely lose their way inside one discipline. They lose it when strategy, organization and systems stop moving together: between architecture and delivery, between the vendor and the in-house teams, between the decision and its adoption."
-    - "That is where I work: I keep the whole coherent, through to delivery."
+    - "Between architecture and delivery, between the vendor and the in-house teams, between the decision and its adoption."
+    - "That is where I work: I keep the whole coherent."
   rows:
     - title: "A standard to define for an entire group."
       source: "Thales Group"
