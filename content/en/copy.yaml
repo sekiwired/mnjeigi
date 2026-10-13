@@ -50,16 +50,21 @@ situations:
   rows:
     - title: "A critical system, with a deadline and performance commitments."
       source: "Sanofi · Lead Architect"
-      quote: {mission: SANOFI, has: "Performance commitments"}
+      quotes:
+        - {mission: SANOFI, has: "Performance commitments"}
     - title: "A standard to define for an entire group."
       source: "Thales Group"
-      quote: {mission: THALES GROUP, has: "standard was defined"}
-    - title: "A project that has stalled."
+      quotes:
+        - {mission: THALES GROUP, has: "standard was defined"}
+    - title: "A technical and operational organization to rebuild."
       source: "Meludia · CTO then COO"
-      quote: {mission: MELUDIA, has: "Google Play"}
+      quotes:
+        - {mission: MELUDIA, has: "6 technical profiles"}
+        - {mission: MELUDIA, has: "Design/Build/Run"}
     - title: "A decision that calls for an independent view."
       source: "L'Oréal Groupe"
-      quote: {mission: L'ORÉAL GROUPE, has: "selection committee"}
+      quotes:
+        - {mission: L'ORÉAL GROUPE, has: "selection committee"}
   cta_text: "Recognize one of these?"
   cta: Discuss your project
 

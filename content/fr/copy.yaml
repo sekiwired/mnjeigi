@@ -50,16 +50,21 @@ situations:
   rows:
     - title: "Un système critique, avec une échéance et des engagements de performance."
       source: "Sanofi · Lead Architect"
-      quote: {mission: SANOFI, has: "engagements de performance"}
+      quotes:
+        - {mission: SANOFI, has: "engagements de performance"}
     - title: "Un standard à définir pour l'ensemble d'un groupe."
       source: "Thales Group"
-      quote: {mission: THALES GROUP, has: "a été défini"}
-    - title: "Un projet qui s'enlise."
+      quotes:
+        - {mission: THALES GROUP, has: "a été défini"}
+    - title: "Une organisation technique et opérationnelle à reconstruire."
       source: "Meludia · CTO puis COO"
-      quote: {mission: MELUDIA, has: "Google Play"}
+      quotes:
+        - {mission: MELUDIA, has: "6 profils"}
+        - {mission: MELUDIA, has: "Design/Build/Run"}
     - title: "Une décision qui appelle un regard indépendant."
       source: "L'Oréal Groupe"
-      quote: {mission: L'ORÉAL GROUPE, has: "comité de sélection"}
+      quotes:
+        - {mission: L'ORÉAL GROUPE, has: "comité de sélection"}
   cta_text: "Vous reconnaissez l'une de ces situations ?"
   cta: Parlons de votre projet
 

@@ -45,7 +45,7 @@
         <li class="sit__row" data-reveal>
           <h3 class="sit__title">{{ it.title }}</h3>
           <div class="sit__proof">
-            <p><span class="sit__source">{{ it.source }}</span> {{ quote(it.quote.mission, it.quote.has) }}</p>
+            <p><span class="sit__source">{{ it.source }}</span> {% for q in it.quotes %}{{ quote(q.mission, q.has) }}{{ ' ' if not loop.last }}{% endfor %}</p>
           </div>
         </li>
         {% endfor %}
