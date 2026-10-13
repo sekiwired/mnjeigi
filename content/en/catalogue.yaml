@@ -52,3 +52,11 @@
   - 'Team assembled and steered: developers, design, vendors'
   - Structured handover — documentation, processes, and a team you keep
   format: Scoped per product · Multi-month engagement · Remote or hybrid
+- topic: ai-delivery-check
+  title: AI Delivery Check
+  tagline: "Your team ships more with AI but releases no faster: find where the time goes."
+  points:
+  - The flow mapped from generation to production
+  - Review, rework and waiting measured
+  - A sample of AI-made changes checked for hidden architecture choices
+  - A written summary and a debrief

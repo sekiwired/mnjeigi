@@ -94,29 +94,29 @@ services:
       - topic: ai-audit
         tag: Évaluer
         title: Audit IA
-        question: "Où la valeur, la qualité et la maîtrise de l'IA se perdent-elles ?"
+        question: "Vos équipes produisent plus de code avec l'IA. Pourquoi les livraisons ne vont-elles pas plus vite ?"
         points:
-          - "Économie de la livraison : où la production de l'IA déplace l'attente, la correction, la vérification et le coût d'exploitation"
-          - "Sens, responsabilité et autorité : l'intention, les engagements et le périmètre gardent-ils un sens partagé entre les parties prenantes, les outils et les décisions"
-          - "Qualité et évolutions futures : ce que les preuves de réussite établissent, et ce qui reste inconnu de la maintenabilité et de l'évolution"
+          - "Où le goulet s'est déplacé : revue, tests, mise en production"
+          - "Ce que les agents ont modifié dans votre architecture et que les tests au vert ne montrent pas"
+          - "Qui valide quoi, sur quelles preuves, quand les synthèses sont rédigées par des agents"
         output: "Des constats et une base de décision priorisée."
       - topic: ai-training
         tag: Former
         title: Formation IA
-        question: "Quel jugement professionnel nos équipes doivent-elles développer et conserver ?"
+        question: "Vos équipes relisent désormais plus qu'elles n'écrivent. Savent-elles encore voir ce qui a changé ?"
         points:
-          - "Le jugement professionnel face à l'IA : reconnaître les glissements de sens, l'expertise de surface et les affirmations convaincantes d'achèvement"
-          - "Continuité et délégation éclairée : le jugement que chaque rôle conserve"
-          - "Économie de l'IA et lecture des preuves : distinguer l'activité de la livraison, de la qualité, du risque et du coût sur la durée"
-        output: "Des compétences et des acquis définis par rôle."
+          - "Lire une production d'agent : repérer un sens, un périmètre ou une interface qui a glissé derrière une réponse convaincante"
+          - "Savoir quand cesser de corriger et restructurer, avant que la relecture ne devienne une reconstruction"
+          - "Déléguer à une IA assistante ou agentique sans vider chaque validation de son sens"
+        output: "Des compétences par rôle, avec des critères que chacun applique en autonomie."
       - topic: ai-transformation
         tag: Transformer
         title: Transformation des processus par l'IA
-        question: "Comment notre organisation doit-elle évoluer pour créer de la valeur durablement ?"
+        question: "Les agents arrivent à grande échelle. Votre chaîne de livraison est-elle prête à les absorber ?"
         points:
-          - "Alignement de l'intention, des décisions et de la livraison : comment l'intention métier devient des obligations partagées et des résultats acceptés"
-          - "Capacité, qualité et rythme : une capacité de vérification adaptée à une production accrue"
-          - "Architecture d'entreprise et évolution : capacités métier, intégration de l'existant et choix futurs sous contraintes économiques et de gouvernance"
+          - "Une capacité de revue, de test et de mise en production à la mesure de ce que produisent les agents"
+          - "Des règles claires de responsabilité et de coût pour ce que les agents construisent"
+          - "Une structure posée avant la génération, pour que l'architecture, les données et la sécurité restent cohérentes"
         output: "Des évolutions d'organisation et d'architecture convenues, reliées aux résultats métier."
   catalogue:
     eyebrow: Missions ciblées

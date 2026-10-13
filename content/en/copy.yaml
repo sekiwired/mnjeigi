@@ -94,29 +94,29 @@ services:
       - topic: ai-audit
         tag: Assess
         title: AI Audit
-        question: "Where are AI value, quality and control being lost?"
+        question: "Your teams produce more code with AI. Why isn't delivery any faster?"
         points:
-          - "Delivery economics: where AI output moves waiting, correction, verification and operating cost"
-          - "Meaning, responsibility and authority: whether intent, commitments and scope keep a shared meaning across stakeholders, tools and decisions"
-          - "Quality and future change: what success evidence establishes, and what remains unknown about maintainability and evolution"
+          - "Where the bottleneck moved: review, testing, deployment"
+          - "What agents changed in your architecture that passing tests do not show"
+          - "Who approves what, on which evidence, when the summaries are written by agents"
         output: "Findings and a prioritized decision basis."
       - topic: ai-training
         tag: Teach
         title: AI Training
-        question: "Which professional judgment must our people develop and retain?"
+        question: "Your people now review more than they write. Can they still tell what has changed?"
         points:
-          - "Professional judgment in AI interactions: recognizing shifts of meaning, superficial expertise and persuasive claims of completion"
-          - "Continuity and informed delegation: the judgment each role retains"
-          - "AI economics and evidence literacy: telling activity from delivery, quality, risk and lifetime cost"
-        output: "Role-specific capability and learning outcomes."
+          - "Reading agent output: spotting a shifted meaning, scope or interface behind a convincing answer"
+          - "Knowing when to stop correcting and restructure, before review turns into reconstruction"
+          - "Delegating to assistive and agentic AI while keeping each approval meaningful"
+        output: "Role-specific skills, with criteria each role applies on its own."
       - topic: ai-transformation
         tag: Transform
         title: AI Process Transformation
-        question: "How must our organization change to realize value durably?"
+        question: "Agents are arriving at scale. Is your delivery system ready for them?"
         points:
-          - "Alignment of intent, decisions and delivery: how business intent becomes shared obligations and accepted outcomes"
-          - "Capacity, quality and pace: verification capacity adapted to increased production"
-          - "Enterprise architecture and evolution: business capabilities, legacy integration and future choices under economic and governance constraints"
+          - "Review, testing and deployment capacity matched to what agents now produce"
+          - "Clear ownership and cost rules for what agents build"
+          - "Structure set before generation, so that architecture, data and security stay coherent"
         output: "Agreed operating and architectural changes, connected to business outcomes."
   catalogue:
     eyebrow: Focused engagements
