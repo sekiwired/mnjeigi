@@ -37,9 +37,9 @@ hero:
 
 stats:
   - {value: "18", unit: yrs, label: "Engineering, architecture, and operations"}
-  - {value: "35B+", unit: "", label: "transactions a year: the architecture designed and validated for Sanofi, across 400 factories"}
+  - {value: "35B+", icon: transactions, label: "transactions a year: the architecture designed and validated for Sanofi, across 400 factories"}
   - {value: "5", trend: down, suffix: "×", label: "cloud costs at Meludia, with three times the load capacity"}
-  - {value: "12", unit: "", label: "B2B SaaS ERP tools built and delivered as founder and CTO"}
+  - {value: "12", icon: products, label: "B2B SaaS ERP tools built and delivered as founder and CTO"}
 
 situations:
   eyebrow: When to bring me in
@@ -146,7 +146,7 @@ proof:
       kicker: Critical system
       context: "Defined and implemented the application core-model for EU pharmaceutical product traceability — collecting real-time manufacturing data from 400 production sites, detecting anomalies and counterfeits, and notifying health authorities for 35 billion transactions per year."
       figures:
-        - {value: "35B+", label: "transactions per year, designed and validated"}
+        - {value: "35B+", icon: transactions, label: "transactions per year, designed and validated"}
         - {value: "400", label: "factories worldwide"}
         - {value: "6", label: "months to deliver the project"}
       quotes:
