@@ -175,7 +175,6 @@
           <p class="tag"><span>0{{ loop.index }}</span>{{ case.kicker }}</p>
           {% for l in m.logos %}<img src="{{ root }}images/{{ l.file }}" alt="{{ l.name }}" loading="lazy" class="case__logo logo--{{ l.id }}">{% endfor %}
           <p class="case__role">{{ m.role }}</p>
-          <p class="case__period">{{ m.period }}</p>
         </div>
         <div class="case__body">
           <p class="case__context">{{ case.context }}</p>
