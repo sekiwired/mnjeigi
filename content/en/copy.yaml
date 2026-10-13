@@ -48,10 +48,10 @@ situations:
     - "Between architecture and delivery, between the vendor and the in-house teams, between the decision and its adoption."
     - "That is where I work: I keep the whole coherent."
   rows:
-    - title: "A critical system, with a deadline and performance commitments."
+    - title: "A critical architecture to design for 400 factories."
       source: "Sanofi · Lead Architect"
       quotes:
-        - {mission: SANOFI, has: "Performance commitments"}
+        - {mission: SANOFI, has: "high-availability"}
     - title: "A standard to define for an entire group."
       source: "Thales Group"
       quotes:
@@ -149,7 +149,7 @@ proof:
         - {value: "400", label: "factories worldwide"}
         - {value: "6", label: "months to deliver the project"}
       quotes:
-        - {has: "high-availability", mark: "Designed and validated"}
+        - {has: "high-availability", mark: "Designed, validated and integrated"}
         - {has: "TOGAF", mark: "Integrated"}
         - {has: "real load", mark: "validating the architecture under real load conditions"}
         - {has: "Performance commitments", mark: "validated by the client and deadlines were met"}

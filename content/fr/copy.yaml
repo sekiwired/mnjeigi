@@ -48,10 +48,10 @@ situations:
     - "Entre l'architecture et la mise en œuvre, entre le prestataire et les équipes internes, entre la décision et son adoption."
     - "C'est là que je me situe : j'assure la cohérence de l'ensemble."
   rows:
-    - title: "Un système critique, avec une échéance et des engagements de performance."
+    - title: "Une architecture critique à concevoir pour 400 usines."
       source: "Sanofi · Lead Architect"
       quotes:
-        - {mission: SANOFI, has: "engagements de performance"}
+        - {mission: SANOFI, has: "haute disponibilité"}
     - title: "Un standard à définir pour l'ensemble d'un groupe."
       source: "Thales Group"
       quotes:
@@ -149,7 +149,7 @@ proof:
         - {value: "400", label: "usines dans le monde"}
         - {value: "6", label: "mois pour livrer le projet"}
       quotes:
-        - {has: "haute disponibilité", mark: "Conception et validation"}
+        - {has: "haute disponibilité", mark: "Conception, validation et intégration"}
         - {has: "TOGAF", mark: "Intégration"}
         - {has: "charge réelles", mark: "validant l'architecture sous des conditions de charge réelles"}
         - {has: "engagements de performance", mark: "validés par le client et les délais respectés"}
