@@ -38,7 +38,7 @@ hero:
 stats:
   - {value: "18", unit: yrs, label: "Engineering, architecture, and operations"}
   - {value: "35B+", unit: "", label: "transactions a year: the architecture designed and validated for Sanofi, across 400 factories"}
-  - {value: "5×", unit: "", label: "lower cloud costs at Meludia, with 3× the load capacity"}
+  - {value: "5", trend: down, suffix: "×", label: "cloud costs at Meludia, with three times the load capacity"}
   - {value: "12", unit: "", label: "B2B SaaS ERP tools built and delivered as founder and CTO"}
 
 situations:
@@ -158,8 +158,8 @@ proof:
       kicker: Company turnaround
       context: "After 7 years and near-total staff reduction, the founders mandated me to restructure, transform, and reduce operational and technical costs — and to lead full production of a new mobile application from spec to delivery."
       figures:
-        - {value: "5×", label: "lower cloud costs"}
-        - {value: "3×", label: "load capacity"}
+        - {value: "5", trend: down, suffix: "×", label: "cloud costs"}
+        - {value: "3", trend: up, suffix: "×", label: "load capacity"}
         - {value: "168", label: "countries, 15,000+ users"}
       quotes:
         - {has: "Azure to AWS", mark: "reducing costs by a factor of 5"}

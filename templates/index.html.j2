@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{% from "_macros.html.j2" import arrow, down, plus, eyebrow, section_text with context %}
+{% from "_macros.html.j2" import arrow, down, plus, eyebrow, section_text, trend with context %}
 {% block main %}
 
 <section class="hero wrap">
@@ -23,7 +23,7 @@
   <dl class="stats">
     {% for s in c.stats %}
     <div class="stat" data-reveal style="--i:{{ loop.index0 }}">
-      <dt>{{ s.value }}{% if s.get('unit') %}<small>{{ s.unit }}</small>{% endif %}</dt>
+      <dt>{{ s.value }}{% if s.get('trend') %}{{ trend(s.trend) }}{{ s.suffix }}{% endif %}{% if s.get('unit') %}<small>{{ s.unit }}</small>{% endif %}</dt>
       <dd>{{ s.label }}</dd>
     </div>
     {% endfor %}
@@ -185,7 +185,7 @@
         </div>
         <dl class="case__figs">
           {% for f in case.figures %}
-          <div><dt>{{ f.value }}{% if f.get('unit') %}<small>{{ f.unit }}</small>{% endif %}</dt><dd>{{ f.label }}</dd></div>
+          <div><dt>{{ f.value }}{% if f.get('trend') %}{{ trend(f.trend) }}{{ f.suffix }}{% endif %}{% if f.get('unit') %}<small>{{ f.unit }}</small>{% endif %}</dt><dd>{{ f.label }}</dd></div>
           {% endfor %}
         </dl>
       </article>

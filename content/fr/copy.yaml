@@ -38,7 +38,7 @@ hero:
 stats:
   - {value: "18", unit: ans, label: "Ingénierie, Architecture et Opérations"}
   - {value: "35 Md+", unit: "", label: "de transactions par an : l'architecture conçue et validée pour Sanofi, sur 400 usines"}
-  - {value: "÷5", unit: "", label: "les coûts cloud de Meludia, pour une capacité de charge multipliée par 3"}
+  - {value: "5", trend: down, suffix: "×", label: "les coûts cloud de Meludia, pour une capacité de charge triplée"}
   - {value: "12", unit: "", label: "outils ERP SaaS B2B construits et livrés comme fondateur et CTO"}
 
 situations:
@@ -158,8 +158,8 @@ proof:
       kicker: Redressement d'entreprise
       context: "Après 7 ans et une quasi-totalité des effectifs réduits, les fondateurs m'ont mandaté pour restructurer, transformer et réduire les coûts opérationnels et techniques — et pour piloter la production complète d'une nouvelle application mobile de bout en bout."
       figures:
-        - {value: "÷5", label: "sur les coûts cloud"}
-        - {value: "×3", label: "de capacité de charge"}
+        - {value: "5", trend: down, suffix: "×", label: "coûts cloud"}
+        - {value: "3", trend: up, suffix: "×", label: "capacité de charge"}
         - {value: "168", label: "pays, plus de 15 000 utilisateurs"}
       quotes:
         - {has: "Azure vers AWS", mark: "réduisant les coûts par un facteur 5"}
