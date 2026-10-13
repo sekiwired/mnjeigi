@@ -61,10 +61,10 @@ situations:
       quotes:
         - {mission: MELUDIA, has: "6 profils"}
         - {mission: MELUDIA, has: "Design/Build/Run"}
-    - title: "Une décision qui appelle un regard indépendant."
+    - title: "Une stratégie d'intégration groupe à définir pour les trois années à venir."
       source: "L'Oréal Groupe"
       quotes:
-        - {mission: L'ORÉAL GROUPE, has: "comité de sélection"}
+        - {mission: L'ORÉAL GROUPE, has: "macro planning"}
   cta_text: "Vous reconnaissez l'une de ces situations ?"
   cta: Parlons de votre projet
 
