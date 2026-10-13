@@ -38,7 +38,7 @@ hero:
 stats:
   - {value: "18", icon: calendar, unit: ans, label: "Ingénierie, Architecture et Opérations"}
   - {value: "35 Md+", icon: transactions, label: "de transactions par an : l'architecture conçue et validée pour Sanofi, sur 400 usines"}
-  - {value: "5", icon: cloudcost, trend: down, suffix: "×", label: "les coûts cloud de Meludia, pour une capacité de charge triplée"}
+  - {value: "5", icon: cost, trend: down, suffix: "×", label: "les coûts cloud de Meludia, pour une capacité de charge triplée"}
   - {value: "12", icon: products, label: "outils ERP SaaS B2B construits et livrés comme fondateur et CTO"}
 
 situations:
@@ -160,7 +160,7 @@ proof:
       kicker: Redressement d'entreprise
       context: "Après 7 ans et une quasi-totalité des effectifs réduits, les fondateurs m'ont mandaté pour restructurer, transformer et réduire les coûts opérationnels et techniques — et pour piloter la production complète d'une nouvelle application mobile de bout en bout."
       figures:
-        - {value: "5", icon: cloudcost, trend: down, suffix: "×", label: "coûts cloud"}
+        - {value: "5", icon: cost, trend: down, suffix: "×", label: "coûts cloud"}
         - {value: "3", icon: load, trend: up, suffix: "×", label: "capacité de charge"}
         - {value: "168", icon: globe, label: "pays"}
         - {value: "15 000+", icon: users, label: "utilisateurs"}
