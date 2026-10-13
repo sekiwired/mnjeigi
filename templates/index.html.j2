@@ -99,7 +99,9 @@
           <h4 class="card__title">{{ o.title }}</h4>
           <p class="card__q">{{ o.question }}</p>
           <ul class="dashes">
-            {% for p in o.points %}<li>{{ p }}</li>{% endfor %}
+            {% for p in o.points %}
+            {% if ':' in p %}{% set head, rest = p.split(':', 1) %}<li><strong>{{ head.strip() }}</strong>{{ rest.strip() }}</li>{% else %}<li>{{ p }}</li>{% endif %}
+            {% endfor %}
           </ul>
           <p class="card__out"><span>{{ c.services.output_label }}</span>{{ o.output }}</p>
           <a class="link" href="#contact" data-topic="{{ o.topic }}">{{ c.services.discuss }}{{ arrow() }}</a>

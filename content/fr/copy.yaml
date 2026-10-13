@@ -74,7 +74,7 @@ services:
   title: "En quoi puis-je vous être utile ?"
   intro: "Audit indépendant, conseil stratégique ou intervention directe, sur le métier, l'organisation, les opérations et la technologie. Chaque mission se suffit à elle-même et n'en impose aucune autre. L'objectif et le périmètre de ma mission se définissent avec vous."
   discuss: En discuter
-  output_label: Vous obtenez
+  output_label: Ce que vous obtenez
   lead:
     topic: fractional-cto
     tag: Diriger
@@ -93,31 +93,31 @@ services:
     offers:
       - topic: ai-audit
         tag: Évaluer
-        title: Audit IA
-        question: "Vos équipes produisent plus de code avec l'IA. Pourquoi les livraisons ne vont-elles pas plus vite ?"
+        title: "Audit IA"
+        question: "L'IA a accéléré la production de code. La facture s'est déplacée en aval."
         points:
-          - "Où le goulet s'est déplacé : revue, tests, mise en production"
-          - "Ce que les agents ont modifié dans votre architecture et que les tests au vert ne montrent pas"
-          - "Qui valide quoi, sur quelles preuves, quand les synthèses sont rédigées par des agents"
-        output: "Des constats et une base de décision priorisée."
+          - "Rendre visible la dette cachée : Tracer la charge réelle réinjectée dans la revue, la correction, le déploiement et la maintenance."
+          - "Démasquer les faux succès : Révéler le couplage parasite, la dérive des interfaces et les pertes de responsabilité métier que des tests unitaires valides dissimulent."
+          - "Révéler le coût réel : Mesurer le taux de reprise (rework) et le coût marginal du changement, systématiquement ignorés des indicateurs de productivité superficiels."
+        output: "Un état des lieux sans concession de la dette technique générée par les agents, son coût financier réel, et une feuille de route priorisée pour intervenir immédiatement."
       - topic: ai-training
         tag: Former
-        title: Formation IA
-        question: "Vos équipes relisent désormais plus qu'elles n'écrivent. Savent-elles encore voir ce qui a changé ?"
+        title: "Formation & Montée en compétences"
+        question: "Les agents rédigent et exécutent. La maîtrise de l'architecture et du sens métier devient critique."
         points:
-          - "Lire une production d'agent : repérer un sens, un périmètre ou une interface qui a glissé derrière une réponse convaincante"
-          - "Savoir quand cesser de corriger et restructurer, avant que la relecture ne devienne une reconstruction"
-          - "Déléguer à une IA assistante ou agentique sans vider chaque validation de son sens"
-        output: "Des compétences par rôle, avec des critères que chacun applique en autonomie."
+          - "Maîtriser l'effet papillon : Former les équipes à comprendre comment une imprécision dans les exigences ou la terminologie engendre une amplification d'erreurs en chaîne par les agents."
+          - "Élever le niveau d'exigence : Développer l'esprit critique pour évaluer la cohérence architecturale et la maintenabilité au-delà du simple succès des tests automatisés."
+          - "Préserver le jugement humain : Conserver la souveraineté des décisions techniques et fonctionnelles, y compris lorsque les phases de revue ou de synthèse sont assistées par des agents."
+        output: "Des critères stricts de délégation, de revue et de validation, partagés entre le produit et l'ingénierie pour garder une totale maîtrise du système."
       - topic: ai-transformation
         tag: Transformer
-        title: Transformation des processus par l'IA
-        question: "Les agents arrivent à grande échelle. Votre chaîne de livraison est-elle prête à les absorber ?"
+        title: "Intégration des Agents IA"
+        question: "Les agents accélèrent le débit. L'architecture et les garde-fous garantissent la trajectoire."
         points:
-          - "Une capacité de revue, de test et de mise en production à la mesure de ce que produisent les agents"
-          - "Des règles claires de responsabilité et de coût pour ce que les agents construisent"
-          - "Une structure posée avant la génération, pour que l'architecture, les données et la sécurité restent cohérentes"
-        output: "Des évolutions d'organisation et d'architecture convenues, reliées aux résultats métier."
+          - "Sanctuariser les fondations : Verrouiller les contrats d'interface, la modélisation des données et les responsabilités métier avant que les agents ne construisent dessus."
+          - "Adapter le flux de livraison : Reconfigurer le rythme de revue, de test et de recette pour absorber le volume généré par les agents sans jamais sacrifier la rigueur."
+          - "Maîtriser la trajectoire : Ralentir ponctuellement pour poser un cadre étanche (\"sanctuaire\"), afin d'accélérer durablement sans dégrader le patrimoine applicatif."
+        output: "Un processus de livraison adapté à l'ère agentique qui protège votre existant, clarifie la responsabilité de chaque brique et maîtrise le coût du changement."
   catalogue:
     eyebrow: Missions ciblées
     title: "Un périmètre cadré, un format défini."
