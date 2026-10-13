@@ -94,30 +94,30 @@ services:
       - topic: ai-audit
         tag: Assess
         title: AI Audit
-        question: "Your teams produce more code with AI. Why isn't delivery any faster?"
+        question: "AI accelerated production. The bill moved downstream."
         points:
-          - "Where the bottleneck moved: review, testing, deployment"
-          - "What agents changed in your architecture that passing tests do not show"
-          - "Who approves what, on which evidence, when the summaries are written by agents"
-        output: "Findings and a prioritized decision basis."
+          - "Trace the work agents add to review, correction, release and maintenance."
+          - "Expose coupling, interface drift and misplaced responsibilities that passing tests leave hidden."
+          - "Measure the rework and cost of change missing from productivity figures."
+        output: "A clear account of where agent-created technical debt is accumulating, what it costs, and where to intervene first."
       - topic: ai-training
         tag: Teach
         title: AI Training
-        question: "Your people now review more than they write. Can they still tell what has changed?"
+        question: "Agents now implement, review and summarize work. Expert judgment has to keep pace."
         points:
-          - "Reading agent output: spotting a shifted meaning, scope or interface behind a convincing answer"
-          - "Knowing when to stop correcting and restructure, before review turns into reconstruction"
-          - "Delegating to assistive and agentic AI while keeping each approval meaningful"
-        output: "Role-specific skills, with criteria each role applies on its own."
+          - "Examine how agent-made decisions change business meaning, system boundaries and responsibilities."
+          - "Assess maintainability and architectural coherence beyond passing tests."
+          - "Preserve independent judgment when the review itself is produced by agents."
+        output: "Stronger criteria for delegation, review and acceptance across product and technical teams."
       - topic: ai-transformation
         tag: Transform
-        title: AI Process Transformation
-        question: "Agents are arriving at scale. Is your delivery system ready for them?"
+        title: Agentic AI Integration
+        question: "Agents accelerate production. Architecture and workflow keep delivery under control."
         points:
-          - "Review, testing and deployment capacity matched to what agents now produce"
-          - "Clear ownership and cost rules for what agents build"
-          - "Structure set before generation, so that architecture, data and security stay coherent"
-        output: "Agreed operating and architectural changes, connected to business outcomes."
+          - "Define business responsibilities, data and interface boundaries before agents build across them."
+          - "Adapt the delivery workflow so review, testing and acceptance keep pace with agent output."
+          - "Track rework and cost of change through release, operations and subsequent delivery."
+        output: "An agentic delivery process that protects the existing stack, keeps ownership clear and controls the cost of change."
   catalogue:
     eyebrow: Focused engagements
     title: "Scoped work, defined format."
