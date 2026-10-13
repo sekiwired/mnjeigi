@@ -136,7 +136,9 @@ proof:
       kicker: Group-wide standard
       context: "Sole Git reference and global point of contact for the entire Thales Group. Wrote the Group's Software Configuration Management standard, defined the enterprise-scale IBM GCL → Git migration strategy, designed infrastructure architectures, and delivered L3 technical support across all Thales entities worldwide."
       figures:
-        - {value: "5", label: "countries trained: AU, DE, NO, UK, US"}
+        - {value: "4.9", icon: star, label: "training rating"}
+        - {value: "120", label: "people trained"}
+        - {value: "22,000", label: "engineers impacted"}
       quotes:
         - {has: "standard was defined", mark: "was defined for the Thales Group"}
         - {has: "migration guide", mark: "published and distributed"}

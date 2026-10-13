@@ -136,7 +136,9 @@ proof:
       kicker: Standard à l'échelle du groupe
       context: "Seule référence Git et point de contact mondial pour l'ensemble du Groupe Thales. Rédaction du standard SCM du Groupe, définition de la stratégie de migration IBM GCL → Git à l'échelle entreprise, conception des architectures d'infrastructure, et support technique L3 auprès de toutes les entités Thales dans le monde."
       figures:
-        - {value: "5", label: "pays formés : AU, DE, NO, UK, US"}
+        - {value: "4,9", icon: star, label: "note des formations"}
+        - {value: "120", label: "personnes formées"}
+        - {value: "22 000", label: "ingénieurs concernés"}
       quotes:
         - {has: "a été défini", mark: "a été défini pour le groupe Thales"}
         - {has: "guide de migration", mark: "publié et distribué"}
