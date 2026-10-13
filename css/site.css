@@ -199,12 +199,13 @@ section { position: relative; }
 .head .lede { padding-bottom: .3em; }
 
 .split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 7vw, 7rem); }
+.situations .split { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(2rem, 5vw, 5rem); }
 .split__aside { position: sticky; top: calc(var(--header) + 2.5rem); align-self: start; }
 .split__aside .h2 { margin-bottom: 2rem; }
 
 .sit { border-top: 2px solid var(--ink); }
 .sit__row { padding-block: clamp(1.5rem, 2.6vw, 2.2rem); border-bottom: 1px solid var(--line); }
-.sit__title { font-size: clamp(1.4rem, 2.35vw, 2.05rem); font-weight: 620; letter-spacing: -.032em; line-height: 1.12; text-wrap: balance; }
+.sit__title { font-size: clamp(1.4rem, 2.35vw, 2.05rem); font-weight: 620; letter-spacing: -.032em; line-height: 1.12; text-wrap: pretty; }
 .sit__proof { margin-top: .9rem; padding-left: 1rem; border-left: 2px solid var(--blue); font-size: .9688rem; color: var(--mute); line-height: 1.5; }
 .sit__source { display: block; font-weight: 650; color: var(--ink); }
 .inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; padding-top: clamp(1.6rem, 3vw, 2.4rem); }
