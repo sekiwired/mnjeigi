@@ -48,12 +48,12 @@ situations:
     - "Entre l'architecture et la mise en œuvre, entre le prestataire et les équipes internes, entre la décision et son adoption."
     - "C'est là que je me situe : j'assure la cohérence de l'ensemble."
   rows:
-    - title: "Un standard à définir pour l'ensemble d'un groupe."
-      source: "Thales Group"
-      quote: {mission: THALES GROUP, has: "a été défini"}
     - title: "Un système critique, avec une échéance et des engagements de performance."
       source: "Sanofi · Lead Architect"
       quote: {mission: SANOFI, has: "engagements de performance"}
+    - title: "Un standard à définir pour l'ensemble d'un groupe."
+      source: "Thales Group"
+      quote: {mission: THALES GROUP, has: "a été défini"}
     - title: "Un projet qui s'enlise."
       source: "Meludia · CTO puis COO"
       quote: {mission: MELUDIA, has: "Google Play"}

@@ -48,12 +48,12 @@ situations:
     - "Between architecture and delivery, between the vendor and the in-house teams, between the decision and its adoption."
     - "That is where I work: I keep the whole coherent."
   rows:
-    - title: "A standard to define for an entire group."
-      source: "Thales Group"
-      quote: {mission: THALES GROUP, has: "standard was defined"}
     - title: "A critical system, with a deadline and performance commitments."
       source: "Sanofi · Lead Architect"
       quote: {mission: SANOFI, has: "Performance commitments"}
+    - title: "A standard to define for an entire group."
+      source: "Thales Group"
+      quote: {mission: THALES GROUP, has: "standard was defined"}
     - title: "A project that has stalled."
       source: "Meludia · CTO then COO"
       quote: {mission: MELUDIA, has: "Google Play"}
