@@ -490,6 +490,14 @@ mark { background: none; color: var(--on-ink); font-weight: 600; box-shadow: ins
 }
 
 /* ---------- responsive ---------- */
+@media (min-width: 1101px) {
+  /* figures of a selected mission: right-aligned, icon just before each number */
+  .case__figs { align-items: flex-end; text-align: right; }
+  .case__figs dt { justify-content: flex-end; }
+  .case__figs .figslot { flex: 0 0 auto; }
+  .case__figs .figslot:empty { display: none; }
+  .case__figs dd { padding-left: 0; margin-left: auto; }
+}
 @media (max-width: 1100px) {
   .nav { display: none; }
   .burger { display: block; }
