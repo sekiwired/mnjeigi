@@ -52,10 +52,11 @@ situations:
       source: "Sanofi · Lead Architect"
       quotes:
         - {mission: SANOFI, has: "haute disponibilité"}
-    - title: "Un standard à définir pour l'ensemble d'un groupe."
+    - title: "Un standard unique pour un groupe mondial, à définir et à rendre opérationnel."
       source: "Thales Group"
       quotes:
         - {mission: THALES GROUP, has: "a été défini"}
+        - {mission: THALES GROUP, has: "socle technique"}
     - title: "Une organisation technique et opérationnelle à reconstruire."
       source: "Meludia · CTO puis COO"
       quotes:

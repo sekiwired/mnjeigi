@@ -52,10 +52,11 @@ situations:
       source: "Sanofi · Lead Architect"
       quotes:
         - {mission: SANOFI, has: "high-availability"}
-    - title: "A standard to define for an entire group."
+    - title: "A single standard for a global group, to define and make operational."
       source: "Thales Group"
       quotes:
         - {mission: THALES GROUP, has: "standard was defined"}
+        - {mission: THALES GROUP, has: "reference baseline"}
     - title: "A technical and operational organization to rebuild."
       source: "Meludia · CTO then COO"
       quotes:
