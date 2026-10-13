@@ -122,7 +122,7 @@ services:
       sub: "Fixer des règles d'engagement et un découpage clair assure un alignement stratégique durable et un pilotage financier. Au moment d'octroyer l'autonomie de delivery aux agents, la précision architecturale cesse d'être une bonne pratique : elle devient l'instrument de gouvernance qui sépare l'efficience du chaos."
   catalogue:
     eyebrow: Missions ciblées
-    title: "Un périmètre cadré, un format défini."
+    title: "D'autres façons de vous être utile."
     intro: "J'aide les équipes à aller plus vite avec une architecture claire, une delivery solide, et des systèmes plus simples."
     cta: Me contacter pour ce service
 
