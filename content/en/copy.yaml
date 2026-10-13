@@ -36,9 +36,9 @@ hero:
   credential: "18 years. Thales, Sanofi and L'Oréal at group scale. CTO then COO of a company in restructuring. Founder."
 
 stats:
-  - {value: "18", icon: calendar, unit: yrs, label: "Engineering, architecture, and operations"}
+  - {value: "18", unit: yrs, label: "Engineering, architecture, and operations"}
   - {value: "35B+", icon: transactions, label: "transactions a year: the architecture designed and validated for Sanofi, across 400 factories"}
-  - {value: "5", icon: cost, trend: down, suffix: "×", label: "cloud costs at Meludia, with three times the load capacity"}
+  - {value: "5", trend: down, suffix: "×", label: "cloud costs at Meludia, with three times the load capacity"}
   - {value: "12", icon: products, label: "B2B SaaS ERP tools built and delivered as founder and CTO"}
 
 situations:
