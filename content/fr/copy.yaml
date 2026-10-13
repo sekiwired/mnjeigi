@@ -43,10 +43,10 @@ stats:
 
 situations:
   eyebrow: Quand faire appel à moi
-  title: "C'est aux interfaces que les projets se bloquent."
+  title: "Une vision transverse, de la stratégie à l'exécution."
   intro:
-    - "Un projet se bloque rarement au sein d'une expertise. Il se bloque entre elles : entre l'architecture et la livraison, entre le prestataire et l'équipe interne, entre la décision et son adoption."
-    - "Chacun maîtrise sa partie. Concevoir l'ensemble, interfaces comprises, est un métier à part entière : c'est le mien."
+    - "Un projet perd rarement sa trajectoire au sein d'une expertise. Il la perd lorsque la stratégie, l'organisation et les systèmes cessent d'avancer ensemble : entre l'architecture et la livraison, entre le prestataire et les équipes internes, entre la décision et son adoption."
+    - "Chaque expert maîtrise son domaine. Aligner la stratégie, l'organisation et les systèmes, et garantir la cohérence de l'ensemble, est un métier à part entière : c'est le mien."
   rows:
     - title: "Un standard à définir, puis à faire adopter."
       source: "Thales Group"
