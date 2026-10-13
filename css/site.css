@@ -308,8 +308,11 @@ details[open]::details-content { opacity: 1; }
 .case__results li { padding-block: .85rem; border-bottom: 1px solid var(--line-ink); color: var(--on-ink-mute); font-size: .9688rem; line-height: 1.5; }
 mark { background: none; color: var(--on-ink); font-weight: 600; box-shadow: inset 0 -.5em 0 var(--blue); padding-inline: .12em; margin-inline: -.12em; }
 .case__figs { display: flex; flex-direction: column; gap: clamp(1.4rem, 2.4vw, 2rem); }
-.case__figs dt { font-size: clamp(3.6rem, 8.2vw, 8rem); font-weight: 650; line-height: .86; letter-spacing: -.06em; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.case__figs dd { margin-top: .55rem; color: var(--on-ink-mute); font-size: .9375rem; line-height: 1.4; max-width: 17em; }
+.case__figs { --slot: clamp(2.6rem, 4.4vw, 4.2rem); }
+.case__figs dt { display: flex; align-items: baseline; font-size: clamp(3.6rem, 8.2vw, 8rem); font-weight: 650; line-height: .86; letter-spacing: -.06em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.figslot { flex: 0 0 var(--slot); display: flex; justify-content: flex-end; padding-right: clamp(.5rem, 1vw, .9rem); }
+.figslot .figicon { width: clamp(1.7rem, 2.9vw, 2.8rem); height: clamp(1.7rem, 2.9vw, 2.8rem); margin: 0; }
+.case__figs dd { margin-top: .55rem; padding-left: var(--slot); color: var(--on-ink-mute); font-size: .9375rem; line-height: 1.4; max-width: 17em; }
 .case__figs div + div dt { font-size: clamp(2.4rem, 4.6vw, 4.4rem); }
 
 .marquee { border-block: 1px solid var(--line-ink); padding-block: clamp(1.6rem, 3vw, 2.6rem); overflow: hidden; }

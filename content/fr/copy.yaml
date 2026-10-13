@@ -162,7 +162,8 @@ proof:
       figures:
         - {value: "5", trend: down, suffix: "×", label: "coûts cloud"}
         - {value: "3", trend: up, suffix: "×", label: "capacité de charge"}
-        - {value: "168", icon: globe, label: "pays, plus de 15 000 utilisateurs"}
+        - {value: "168", icon: globe, label: "pays"}
+        - {value: "15 000+", icon: users, label: "utilisateurs"}
       quotes:
         - {has: "Azure vers AWS", mark: "réduisant les coûts par un facteur 5"}
         - {has: "dette technique", mark: "réduction de 60% de la dette technique"}
@@ -172,7 +173,7 @@ proof:
       kicker: Stratégie groupe
       context: "Deux missions stratégiques au siège du Groupe : définition de la roadmap d'intégration groupe sur 3 ans (ETI/SOA) et construction de l'appel d'offres fournisseurs ; puis conception d'un référentiel méthodologique Agile/Waterfall hybride comme standard d'ingénierie du Groupe, en collaboration avec Ernst & Young."
       figures:
-        - {value: "3", icon: calendar, unit: ans, label: "de plan d'intégration, validé par le DSI Groupe"}
+        - {value: "3", icon: plan, unit: ans, label: "de plan d'intégration, validé par le DSI Groupe"}
       quotes:
         - {has: "macro planning", mark: "validés par le DSI Groupe"}
         - {has: "comité de sélection", mark: "des recommandations ont été fournies au comité de sélection"}

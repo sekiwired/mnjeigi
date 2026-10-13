@@ -37,7 +37,7 @@
 </script>
 {% endif %}
 <link rel="preload" href="{{ root }}fonts/HankenGrotesk.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="{{ root }}css/site.css">
+<link rel="stylesheet" href="{{ root }}css/site.css?v={{ version('css/site.css') }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ root }}apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ root }}favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ root }}favicon-16x16.png">
@@ -96,8 +96,8 @@
   <p class="footer__mark" aria-hidden="true">Julien Grimal</p>
 </footer>
 
-<script src="{{ root }}js/config.js" defer></script>
-<script src="{{ root }}js/tracker.js" defer></script>
-<script src="{{ root }}js/site.js" defer></script>
+<script src="{{ root }}js/config.js?v={{ version('js/config.js') }}" defer></script>
+<script src="{{ root }}js/tracker.js?v={{ version('js/tracker.js') }}" defer></script>
+<script src="{{ root }}js/site.js?v={{ version('js/site.js') }}" defer></script>
 </body>
 </html>

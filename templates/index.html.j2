@@ -185,7 +185,7 @@
         </div>
         <dl class="case__figs">
           {% for f in case.figures %}
-          <div><dt>{% if f.get('icon') %}{{ figure_icon(f.icon) }}{% endif %}{{ f.value }}{% if f.get('trend') %}{{ trend(f.trend) }}{{ f.suffix }}{% endif %}{% if f.get('unit') %}<small>{{ f.unit }}</small>{% endif %}</dt><dd>{{ f.label }}</dd></div>
+          <div><dt><span class="figslot">{% if f.get('icon') %}{{ figure_icon(f.icon) }}{% endif %}</span>{{ f.value }}{% if f.get('trend') %}{{ trend(f.trend) }}{{ f.suffix }}{% endif %}{% if f.get('unit') %}<small>{{ f.unit }}</small>{% endif %}</dt><dd>{{ f.label }}</dd></div>
           {% endfor %}
         </dl>
       </article>

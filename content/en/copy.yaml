@@ -162,7 +162,8 @@ proof:
       figures:
         - {value: "5", trend: down, suffix: "×", label: "cloud costs"}
         - {value: "3", trend: up, suffix: "×", label: "load capacity"}
-        - {value: "168", icon: globe, label: "countries, 15,000+ users"}
+        - {value: "168", icon: globe, label: "countries"}
+        - {value: "15,000+", icon: users, label: "users"}
       quotes:
         - {has: "Azure to AWS", mark: "reducing costs by a factor of 5"}
         - {has: "technical debt", mark: "reduced technical debt on the legacy by 60%"}
@@ -172,7 +173,7 @@ proof:
       kicker: Group strategy
       context: "Two strategic engagements at Group headquarters: defining the 3-year global integration roadmap (ETI/SOA) and building the RFP for vendors; then designing a custom Agile/Waterfall hybrid project management framework as the Group's engineering standard, in collaboration with Ernst & Young."
       figures:
-        - {value: "3", icon: calendar, unit: yrs, label: "integration plan, validated by the Group CIO"}
+        - {value: "3", icon: plan, unit: yrs, label: "integration plan, validated by the Group CIO"}
       quotes:
         - {has: "macro planning", mark: "validated by the Group CIO"}
         - {has: "selection committee", mark: "recommendations were provided to the selection committee"}

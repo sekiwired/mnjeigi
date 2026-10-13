@@ -5,6 +5,7 @@ Run from the repo root:  uv run --with jinja2 --with pyyaml python build.py
 Mission texts are read from the validated documents in MISSIONS_DIR; nothing in
 this repo holds a copy of them. The build stops if a quote cannot be found.
 """
+import hashlib
 import re
 import sys
 from pathlib import Path
@@ -111,6 +112,7 @@ def build(lang, env, logos, mission_list):
         root="../" if copy["path"] else "",
         site_url=SITE_URL,
         langs=[load(f"{l}/copy.yaml") for l in LANGS],
+        version=asset_version,
     )
     html = env.get_template("index.html.j2").render(
         **shared,
@@ -136,6 +138,11 @@ def build(lang, env, logos, mission_list):
         )
         write(lang, copy, f"{page}.html", html)
         print(f"built {copy['path']}{page}.html")
+
+
+def asset_version(path):
+    """Short hash of a static file, appended to its link so browsers fetch the new copy after a change."""
+    return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:10]
 
 
 def write(lang, copy, name, html):
