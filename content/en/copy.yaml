@@ -53,7 +53,7 @@ situations:
       quotes:
         - {mission: SANOFI, has: "high-availability"}
     - title: "A single standard for a global group, to define and make operational."
-      source: "Thales Group"
+      source: "Thales Group · Sole Git reference for the Group"
       quotes:
         - {mission: THALES GROUP, has: "standard was defined"}
         - {mission: THALES GROUP, has: "reference baseline"}
