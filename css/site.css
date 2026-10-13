@@ -176,7 +176,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .stat { padding: 1.6rem 1.5rem 0 0; }
 .stat + .stat { padding-left: 1.5rem; border-left: 1px solid var(--line); }
 .stat dt { font-size: clamp(2.4rem, 4.6vw, 4.4rem); font-weight: 640; letter-spacing: -.05em; line-height: 1; font-variant-numeric: tabular-nums; }
-.trend { display: inline-block; width: .5em; height: .63em; margin: 0 0 .04em .06em; vertical-align: 0; color: var(--blue); }   /* centred on the height of the digits */
+.trend { display: inline-block; width: .56em; height: .7em; margin: 0 0 0 .06em; vertical-align: 0; color: var(--blue); }   /* centred on the height of the digits */
 .proof .trend { color: var(--blue-light); }
 .stat dt small, .case__figs dt small { font-size: .32em; font-weight: 650; letter-spacing: .02em; margin-left: .25em; text-transform: uppercase; }
 .stat dd { margin-top: .8rem; font-size: .9375rem; line-height: 1.45; color: var(--mute); max-width: 19em; }
