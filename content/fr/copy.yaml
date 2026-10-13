@@ -119,7 +119,7 @@ services:
         output: "Un processus de livraison adapté à l'ère agentique qui protège votre existant, clarifie la responsabilité de chaque brique et maîtrise le coût du changement."
     closing:
       line: "Il est peut-être temps de ralentir pour vraiment accélérer."
-      sub: "Poser délibérément des frontières d'architecture strictes, pour accélérer dans la durée en gardant une visibilité technique et financière complète. Quand les agents construisent à grande échelle, la précision de l'architecture en amont n'est plus une simple bonne pratique : c'est ce qui sépare la vitesse du chaos."
+      sub: "Fixer des règles d'engagement et un découpage clair assure un alignement stratégique durable et un pilotage financier. Au moment d'octroyer l'autonomie de delivery aux agents, la précision architecturale cesse d'être une bonne pratique : elle devient l'instrument de gouvernance qui sépare l'efficience du chaos."
   catalogue:
     eyebrow: Missions ciblées
     title: "Un périmètre cadré, un format défini."
