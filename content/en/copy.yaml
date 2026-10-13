@@ -74,7 +74,7 @@ services:
   title: "What can I help you with?"
   intro: "Through independent audit, strategic counsel or direct intervention, I work across business, organization, operations and technology. Each is a complete engagement, and none is a prerequisite for another. We set the objective and the scope of my involvement together."
   discuss: Discuss this
-  output_label: What you get
+  output_label: You get
   lead:
     topic: fractional-cto
     tag: Lead
