@@ -111,12 +111,13 @@ services:
         output: "Des critères stricts de délégation, de revue et de validation, partagés entre le produit et l'ingénierie pour garder une totale maîtrise du système."
       - topic: ai-transformation
         tag: Transformer
-        title: "Intégration des Agents IA"
-        question: "Les agents accélèrent le débit. L'architecture et les garde-fous garantissent la trajectoire."
+        title: "Socle IA & Custom Harness"
+        question: "Context engineering, skills réutilisables, specifications et contrôles d'exécution transforment les coding agents en un système de delivery maîtrisé."
         points:
-          - "Sanctuariser les fondations : Verrouiller les contrats d'interface, la modélisation des données et les responsabilités métier avant que les agents ne construisent dessus."
-          - "Adapter le flux de livraison : Reconfigurer le rythme de revue, de test et de recette pour absorber le volume généré par les agents sans jamais sacrifier la rigueur."
-        output: "Un processus de livraison adapté à l'ère agentique qui protège votre existant, clarifie la responsabilité de chaque brique et maîtrise le coût du changement."
+          - "Concevoir le harness commun : Structurer les instructions, les skills réutilisables, les rôles agents, leurs droits d'exécution et les mécanismes de contrôle."
+          - "Relier SDD et CI/CD : Piloter chaque changement par les specifications, les tests automatisés, les quality gates et les preuves d'acceptance."
+          - "Adapter le socle à chaque SI : Intégrer APIs, sécurité et observabilité dans les environnements Java/Open, COBOL/Mainframe et les autres toolchains."
+        output: "Un socle d'assistance au développement réutilisable et intégré aux toolchains, avec des agents gouvernés et un passage maîtrisé de l'expérimentation à la production."
     closing:
       line: "Il est peut-être temps de ralentir pour vraiment accélérer."
       sub: "Fixer des règles d'engagement et un découpage clair assure un alignement stratégique durable et un pilotage financier. Au moment d'octroyer l'autonomie de delivery aux agents, la précision architecturale cesse d'être une bonne pratique : elle devient l'instrument de gouvernance qui sépare l'efficience du chaos."

@@ -111,13 +111,13 @@ services:
         output: "Rigorously defined delegation, review, and acceptance criteria shared across product and engineering teams to retain complete system control."
       - topic: ai-transformation
         tag: Transform
-        title: "Agentic AI Integration"
-        question: "Agents accelerate output. Architecture, governance, and cost control keep delivery on track."
+        title: "Custom AI Development Harness"
+        question: "Context engineering, reusable skills, specifications and execution controls turn coding agents into a governed delivery system."
         points:
-          - "Sanctify the foundations: Lock down business responsibilities, data models, and interface contracts before agents start building across them."
-          - "Adapt the delivery flow: Reconfigure review, testing, and acceptance rhythms to absorb high agent output without sacrificing engineering rigor."
-          - "Govern and predict costs: Monitor agent usage closely to manage operational expenses, track resource consumption, and forecast spend as you scale."
-        output: "An agentic delivery process that protects your existing stack, clarifies ownership across every boundary, and makes both the cost of change and AI consumption manageable and predictable."
+          - "Build the common harness: Configure instructions, reusable skills, agent roles, execution boundaries and control mechanisms."
+          - "Connect SDD to CI/CD: Drive each change from specifications through automated tests, quality gates and acceptance evidence."
+          - "Adapt it to each environment: Integrate assistant APIs, security and observability across Java/Open, COBOL/Mainframe and other development toolchains."
+        output: "A reusable AI development foundation, integrated with your toolchain, that governs agent execution and takes teams from isolated experiments to controlled production delivery."
     closing:
       line: "It might be time to slow down to really speed up."
       sub: "Establishing strict rules of engagement and clear domain boundaries ensures lasting strategic alignment and total financial control. When granting delivery autonomy to agents, upfront architectural precision ceases to be a best practice: it becomes the governance instrument that separates efficiency from chaos."
