@@ -1,5 +1,6 @@
 # The 24 organizations shown on the logo wall, in display order.
 # file: asset used on the dark wall. The -cut files are solid marks with their lettering cut out, so every logo can be drawn in one grey.
+- {id: jeigi, name: Jeigi Solutions, file: jeigi.webp, wall: false}
 - {id: thales, name: Thales, file: thales.webp}
 - {id: loreal, name: L'Oréal, file: loreal-w.webp}
 - {id: natixis, name: Natixis, file: natixis-w.webp}

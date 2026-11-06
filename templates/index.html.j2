@@ -151,7 +151,7 @@
     <header class="head head--proof">
       <div>
         {{ eyebrow(c.proof.eyebrow) }}
-        <h2 class="h2 h2--xl">{% for l in c.proof.title_lines %}<span>{{ l | replace('{logo_count}', logos | length) }}</span> {% endfor %}</h2>
+        <h2 class="h2 h2--xl">{% for l in c.proof.title_lines %}<span>{{ l | replace('{logo_count}', wall_logos | length) }}</span> {% endfor %}</h2>
       </div>
       <p class="lede">{{ c.proof.lede }}</p>
     </header>
@@ -159,7 +159,7 @@
     <div class="wall" data-reveal>
       <p class="wall__title">{{ c.proof.wall_title }}</p>
       <ul class="wall__grid">
-        {% for l in logos %}
+        {% for l in wall_logos %}
         <li style="--n:{{ loop.index0 }}"><img src="{{ root }}images/{{ l.file }}" alt="{{ l.name }}" loading="lazy" class="logo logo--{{ l.id }}"></li>
         {% endfor %}
       </ul>

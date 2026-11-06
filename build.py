@@ -106,6 +106,7 @@ def build(lang, env, logos, mission_list):
     record = [{**m, **missions[m["key"]], "logos": [logo_by_id[i] for i in m["logos"]]} for m in mission_list]
     record.sort(key=years, reverse=True)
     by_key = {m["key"]: m for m in record}
+    wall_logos = [logo for logo in logos if logo.get("wall", True)]
 
     shared = dict(
         c=copy,
@@ -119,6 +120,7 @@ def build(lang, env, logos, mission_list):
         page_file="", home="", robots="index, follow",
         page_title=copy["meta"]["title"], page_description=copy["meta"]["description"],
         logos=logos,
+        wall_logos=wall_logos,
         record=record,
         by_key=by_key,
         catalogue=load(f"{lang}/catalogue.yaml"),
@@ -126,7 +128,7 @@ def build(lang, env, logos, mission_list):
         quote=lambda mission, has, mark=None: quote(missions, lang, mission, has, mark),
     )
     write(lang, copy, "index.html", html)
-    print(f"built {copy['path']}index.html  ({len(record)} missions, {len(logos)} logos)")
+    print(f"built {copy['path']}index.html  ({len(record)} missions, {len(wall_logos)} wall logos)")
 
     for page in LEGAL_PAGES:
         body = (CONTENT / lang / f"{page}.html").read_text(encoding="utf-8")
